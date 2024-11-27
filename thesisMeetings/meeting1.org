@@ -1,0 +1,66 @@
+* quantum problems
+** dihedral hidden subgroup
+  get the lay of the land first in hidden subgroup problems; what's solved, not solved.
+  Bacon Childs and Van Damne survey article, optimal measurements for the dihedral hidden subgroup problem
+  (2007)
+  ideas on how to chip away at this problem
+  shakeel asif thesis, showed better initial character query
+  extremely hard problem
+** finite group of unitary matrices
+   Easier problem.
+   teacher chooses one of the unitary matricies, want to determine which has been chosen.
+   choose any input vector, get back the unitary matrix acting on that vector.
+   Connected this problem with the representation theory of finite group.
+   more general problem, coset identification.
+   someone chooses permutation of n elements, want you to identify which permuation was chosen.
+   can evaluate the permutation on any single element.
+   other problem, unknown permutation, want to know if permutation is even or odd.
+   needs lot of represntation theory to do this.
+   any group, group action, or homomorphism has a quantum analog. If you understand representation well
+   enough, you can answer this problem.
+   Hasn't been done for the general linear group.
+   a representation is a homomorphism to invertible matricies.
+   If you have a finite group, there is only a finite way of representing them up to irreducibility.
+   email me daniel and jamie's 2 papers.
+   Pommershiem and copeland; two papers called quantum query complexity
+   mark zhandry, wrote some overlap with daniel paper? interested in abelian groups.
+   
+* base paper
+** need to know
+   Wreath product (with product action?), irreducible character, permutation character,
+   weird generating set with character and homomorphism --> actually this -->V
+   standard scalar product of complex valued class functions
+   sign character is relevant to previous work
+   orbit-counting lemma (burnsides lemma)
+* Things to include in introduction
+  wreath products certainly
+  representation theory;
+  certainly characters, basic definitions from representation theory,
+  theorems we end up using.
+  Remind readers of algebra definitions informally and quickly.
+
+* regular orbit
+  regular orbit is an orbit where each element has trival pointwise stabilizer,
+  sufficent to say one element has trivial pointwise stabilizer
+  rewrite lemma 2.2 as a proof at a undergraduate level
+  finding a regular orbit in the l-tuple of your set implies theres a
+  l-element subset of the set which has trivial pointwise stabilizer
+  We can find the size of the base, but does this help us compute what the base is?
+* Nov 15
+  Try to see if people have tried to do representation theory of permutations of b partitions
+  into sets of size a; use GAP to generate these representations, then we can use the
+  resulting young tableux to make conjectures about the representations and thus
+  the quantum query complexity.
+  try to find nonstandard actions of S_n and we can answer quantum questions about them;
+  actions where base size is known already?
+  What i have to do: find the representation of this partition action, then use GAP to
+  find the irreducible representations corresponding to this representation,
+  then take increasing tensor products and again look at the irreducible representations.
+  Try to find a pattern in the irreducible representations.
+  Deeper explanation: first we will define an action of Sn on a set.
+  This action is equivalent to a homomorphism from Sn to S on the x elements of the set.
+  The image of this action must be a subgroup of S on the x elements of the set.
+  We can then find the representation of this subgroup, find the irreducibles that compose it.
+  We can also take the tensor product of this subgroup and look at the new irreducibles?
+* Nov 22
+  compute the character table of S_4, conjugacy classes (1), (12), (123), (1234), (12)(34)

@@ -1,0 +1,19 @@
+\contentsline {chapter}{The First}{xv}{}%
+\contentsline {section}{\numberline {0.1}References, Labels, Custom Commands and Footnotes}{xv}{}%
+\contentsline {subsection}{\numberline {0.1.1}References and Labels}{xv}{}%
+\contentsline {subsection}{\numberline {0.1.2}Custom Commands}{xv}{}%
+\contentsline {subsection}{\numberline {0.1.3}Footnotes and Endnotes}{xvi}{}%
+\contentsline {section}{\numberline {0.2}Bibliographies}{xvi}{}%
+\contentsline {subsection}{\numberline {0.2.1}Tips for Bibliographies}{xvi}{}%
+\contentsline {section}{\numberline {0.3}Anything else?}{xvii}{}%
+\contentsline {chapter}{Mathematics and Science}{xix}{}%
+\contentsline {section}{\numberline {0.4}Math}{xix}{}%
+\contentsline {chapter}{Tables and Graphics}{xxi}{}%
+\contentsline {section}{\numberline {0.5}Tables}{xxi}{}%
+\contentsline {section}{\numberline {0.6}Figures}{xxii}{}%
+\contentsline {section}{\numberline {0.7}More Figure Stuff}{xxiii}{}%
+\contentsline {section}{\numberline {0.8}Even More Figure Stuff}{xxiii}{}%
+\contentsline {subsection}{\numberline {0.8.1}Common Modifications}{xxiii}{}%
+\contentsline {chapter}{Conclusion}{xxv}{}%
+\contentsline {section}{\numberline {4.1}More info}{xxv}{}%
+\contentsline {chapter}{References}{xxvii}{}%
