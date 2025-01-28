@@ -64,3 +64,7 @@
   We can also take the tensor product of this subgroup and look at the new irreducibles?
 * Nov 22
   compute the character table of S_4, conjugacy classes (1), (12), (123), (1234), (12)(34)
+
+* Dec 6
+  To find the optimal success prob for a given number of queries, take the sum of the squares of the dimensions of the constiuent characters
+  and divide by the size of the group.

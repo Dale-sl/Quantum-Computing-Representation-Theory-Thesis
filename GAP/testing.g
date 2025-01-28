@@ -22,6 +22,7 @@ quantumQueryComplexity := function(group, character)
         constituents := ConstituentsOfCharacter(groupTable, tensorChar);                                                            
         Print(constituents);
         Print("\n");
+        Print("\n");
         tensorChar := Tensored([character], [tensorChar])[1];
     until IsEqualSet(constituents, Irr(groupTable));
     return count;
@@ -33,6 +34,12 @@ end;
 
 regSymActChar := function(n)
     return PermutationCharacter(SymmetricGroup(n), [1..n], OnPoints);
+end;
+
+# natural action of symmetric group on k element subsets of [1..n]
+
+regSymActSubsetsChar := function(n,k)
+    return PermutationCharacter(SymmetricGroup(n), Combinations([1..n], k), OnSets);
 end;
 
 # We create functions to create regular partitions, which will be the domain of our action of the symmetric group on regular partitions.
