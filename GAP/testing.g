@@ -192,7 +192,7 @@ ProcessQuantumQueryComplexities := function(groupConstructor, groupName, b, file
         n := a * b;
         Print("Starting computation for n = ", n, "\n");
         
-        ret := IO_CallWithTimeout( rec(seconds := 60), 
+        ret := IO_CallWithTimeout( rec(seconds := 30), 
             function()
                 return quantumQueryComplexity(
                            CharacterTable(groupName, n),
@@ -228,7 +228,7 @@ ProcessQuantumQueryComplexitiesSubsets := function(groupConstructor, groupName, 
     while true do
         Print("Starting computation for n = ", n, "\n");
         
-        ret := IO_CallWithTimeout( rec(seconds := 60), 
+        ret := IO_CallWithTimeout( rec(seconds := 30), 
             function()
                 return quantumQueryComplexity(
                            CharacterTable(groupName, n),
@@ -255,10 +255,10 @@ ProcessQuantumQueryComplexitiesSubsets := function(groupConstructor, groupName, 
 end;
 
 
-ProcessQuantumQueryComplexities(SymmetricGroup, "symmetric", 3, "SnPartitions3.csv");
-ProcessQuantumQueryComplexities(AlternatingGroup, "alternating", 3, "AnPartitions3.csv");
-ProcessQuantumQueryComplexitiesSubsets(SymmetricGroup, "symmetric", 3, "SnSubsets3.csv");
-ProcessQuantumQueryComplexitiesSubsets(AlternatingGroup, "alternating", 3, "AnSubsets3.csv");
+# ProcessQuantumQueryComplexities(SymmetricGroup, "symmetric", 3, "SnPartitions3.csv");
+# ProcessQuantumQueryComplexities(AlternatingGroup, "alternating", 3, "AnPartitions3.csv");
+# ProcessQuantumQueryComplexitiesSubsets(SymmetricGroup, "symmetric", 3, "SnSubsets3.csv");
+# ProcessQuantumQueryComplexitiesSubsets(AlternatingGroup, "alternating", 3, "AnSubsets3.csv");
 
 
 

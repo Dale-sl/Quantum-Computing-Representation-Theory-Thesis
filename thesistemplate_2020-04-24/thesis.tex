@@ -32,7 +32,9 @@
 %%
 \usepackage{graphicx,latexsym} 
 \usepackage{amssymb,amsthm,amsmath}
-\usepackage{longtable,booktabs,setspace} 
+\usepackage{longtable,booktabs,setspace}
+\usepackage{braket}
+
 \usepackage[hyphens]{url}
 \usepackage{rotating}
 %\usepackage{natbib}
@@ -44,6 +46,131 @@
 %\bibliography{thesis}
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+
+% beware, math preamble paste begins
+
+\theoremstyle{plain}   % This is the default, anyway
+\newtheorem{thm}{Theorem}[section] % numbered theorem
+\makeatletter\let\c@thm\c@thm\makeatother
+\newtheorem{cor}{Corollary}[section]
+\makeatletter\let\c@cor\c@thm\makeatother
+\newtheorem{lemma}{Lemma}[section]
+\makeatletter\let\c@lemma\c@thm\makeatother
+\newtheorem{prop}{Proposition}[section]
+\makeatletter\let\c@prop\c@thm\makeatother
+\newtheorem{claim}{Claim}[section]
+\makeatletter\let\c@claim\c@thm\makeatother
+
+
+\newtheorem*{unnumberedtheorem}{Theorem}  % unnumbered theorem
+\newtheorem*{unnumberedcorollary}{Corollary}
+\newtheorem*{unnumberedlemma}{Lemma}
+\newtheorem*{unnumberedproposition}{Proposition}
+\newtheorem*{unnumberedclaim}{Claim}
+
+\theoremstyle{definition}
+
+\newtheorem{defn}{Definition}[section]
+\makeatletter\let\c@defn\c@thm\makeatother
+\newtheorem{const}{Construction}[section]
+\makeatletter\let\c@const\c@thm\makeatother
+\newtheorem{notn}{Notation}[section]
+\makeatletter\let\c@notn\c@thm\makeatother
+\newtheorem{outline}{Proof Outline}[section]
+\makeatletter\let\c@outline\c@thm\makeatother
+\newtheorem{post}{Postulate}[section]
+\makeatletter\let\c@outline\c@thm\makeatother
+
+
+\theoremstyle{remark}
+
+\newtheorem{rem}{Remark}[section]
+\makeatletter\let\c@rem\c@thm\makeatother
+\newtheorem{ex}{Example}[section]
+\makeatletter\let\c@ex\c@thm\makeatother
+\newtheorem{observation}{Observation}[section]
+\makeatletter\let\c@observationn\c@thm\makeatother
+
+\newtheorem*{unnumberedtheoremremark}{Remark}
+\newtheorem*{unnumberedtheoremexample}{Example}
+\newtheorem*{unnumberedtheoremdefinition}{Defintion}
+
+\makeatletter
+\let\c@equation\c@thm
+\numberwithin{equation}{section}
+\makeatother
+
+\def\cA{\mathcal{A}}\def\cB{\mathcal{B}}\def\cC{\mathcal{C}}\def\cD{\mathcal{D}}\def\cE{\mathcal{E}}\def\cF{\mathcal{F}}\def\cG{\mathcal{G}}\def\cH{\mathcal{H}}\def\cI{\mathcal{I}}\def\cJ{\mathcal{J}}\def\cK{\mathcal{K}}\def\cL{\mathcal{L}}\def\cM{\mathcal{M}}\def\cN{\mathcal{N}}\def\cO{\mathcal{O}}\def\cP{\mathcal{P}}\def\cQ{\mathcal{Q}}\def\cR{\mathcal{R}}\def\cS{\mathcal{S}}\def\cT{\mathcal{T}}\def\cU{\mathcal{U}}\def\cV{\mathcal{V}}\def\cW{\mathcal{W}}\def\cX{\mathcal{X}}\def\cY{\mathcal{Y}}\def\cZ{\mathcal{Z}}
+
+\def\AA{\mathbb{A}} \def\BB{\mathbb{B}} \def\CC{\mathbb{C}} \def\DD{\mathbb{D}} \def\EE{\mathbb{E}} \def\FF{\mathbb{F}} \def\GG{\mathbb{G}} \def\HH{\mathbb{H}} \def\II{\mathbb{I}} \def\JJ{\mathbb{J}} \def\KK{\mathbb{K}} \def\LL{\mathbb{L}} \def\MM{\mathbb{M}} \def\NN{\mathbb{N}} \def\OO{\mathbb{O}} \def\PP{\mathbb{P}} \def\QQ{\mathbb{Q}} \def\RR{\mathbb{R}} \def\SS{\mathbb{S}} \def\TT{\mathbb{T}} \def\UU{\mathbb{U}} \def\VV{\mathbb{V}} \def\WW{\mathbb{W}} \def\XX{\mathbb{X}} \def\YY{\mathbb{Y}} \def\ZZ{\mathbb{Z}}  
+
+\def\fa{\mathfrak{a}} \def\fb{\mathfrak{b}} \def\fc{\mathfrak{c}} \def\fd{\mathfrak{d}} \def\fe{\mathfrak{e}} \def\ff{\mathfrak{f}} \def\fg{\mathfrak{g}} \def\fh{\mathfrak{h}} \def\fj{\mathfrak{j}} \def\fk{\mathfrak{k}} \def\fl{\mathfrak{l}} \def\fm{\mathfrak{m}} \def\fn{\mathfrak{n}} \def\fo{\mathfrak{o}} \def\fp{\mathfrak{p}} \def\fq{\mathfrak{q}} \def\fr{\mathfrak{r}} \def\fs{\mathfrak{s}} \def\ft{\mathfrak{t}} \def\fu{\mathfrak{u}} \def\fv{\mathfrak{v}} \def\fw{\mathfrak{w}} \def\fx{\mathfrak{x}} \def\fy{\mathfrak{y}} \def\fz{\mathfrak{z}}
+\def\fN{\mathfrak{N}}
+\def\fgl{\mathfrak{gl}}  \def\fsl{\mathfrak{sl}}  \def\fso{\mathfrak{so}}  \def\fsp{\mathfrak{sp}}  
+\def\GL{\mathrm{GL}} \def\SL{\mathrm{SL}}  \def\SP{\mathrm{SL}}\def\OG{\mathrm{O}}
+
+\def\aa{\mathbf{a}} \def\bb{\mathbf{b}} \def\cc{\mathbf{c}} \def\dd{\mathbf{d}} \def\ee{\mathbf{e}} \def\ff{\mathbf{f}}
+%\def\gg{\mathbf{g}}
+\def\hh{\mathbf{h}} \def\ii{\mathbf{i}} \def\jj{\mathbf{j}} \def\kk{\mathbf{k}}
+%\def\ll{\mathbf{l}}
+\def\mm{\mathbf{m}} \def\nn{\mathbf{n}} \def\oo{\mathbf{o}} \def\pp{\mathbf{p}} \def\qq{\mathbf{q}} \def\rr{\mathbf{r}} \def\ss{\mathbf{s}}  \def\uu{\mathbf{u}} \def\vv{\mathbf{v}} \def\ww{\mathbf{w}} \def\xx{\mathbf{x}} \def\yy{\mathbf{y}} \def\zz{\mathbf{z}}
+\def\zzero{\mathbf{0}}
+
+\def\<{\langle} \def\>{\rangle}
+\def\Aut{\mathrm{Aut}}
+\def\ch{ \stackrel}
+\def\col{\mathrm{col}}
+\def\dim{\mathrm{dim}} 
+\def\End{\mathrm{End}} 
+\def\ev{\mathrm{ev}} 
+\def\f{\varphi}
+\def\gcd{\mathrm{gcd}}
+\def\half{\hbox{$\frac12$}}
+\def\Hom{\mathrm{Hom}}
+\def\img{\mathrm{img}}
+\def\id{\mathrm{id}} 
+\def\Inn{\mathrm{Inn}}
+\def\lcm{\mathrm{lcm}}
+\def\normeq{\trianglelefteq}
+%\def\ch{ \stackrel{\mathrm{ch}}{\trianglelefteq}}
+%\def\normeq{\trianglelefteq}
+\def\nul{\mathrm{nullity}}
+\def\row{\mathrm{row}}
+\def\rk{\mathrm{rank}}
+\def\sgn{\mathrm{sgn}}
+\def\sp{\mathrm{span}}
+\def\supp{\mathrm{supp}}
+\def\Syl{\mathrm{Syl}}
+\def\tr{\mathrm{tr}} 
+\def\vep{\varepsilon}
+
+%\usepackage{mathabx}
+\def\acts{\circlearrowright} %group action
+
+ %Cleveref definitions
+% \crefname{lemma}{Lemma}{Lemmas}
+% \crefname{thm}{Theorem}{Theorems}
+% \crefname{defn}{Definition}{Definitions}
+% \crefname{notn}{Notation}{Notations}
+% \crefname{const}{Construction}{Constructions}
+% \crefname{prop}{Proposition}{Propositions}
+% \crefname{rem}{Remark}{Remarks}
+% \crefname{cor}{Corollary}{Corollaries}
+% \crefname{equation}{Diagram}{Diagrams}
+% \crefname{ex}{Example}{Examples}
+
+% Arrays:
+\newcommand\Pmatrix[1]{\begin{pmatrix}#1\end{pmatrix}}
+\newcommand\smatrix[1]{\text{\small$\begin{pmatrix}#1\end{pmatrix}$}}
+\newcommand\fmatrix[1]{\text{\footnotesize$\begin{pmatrix}#1\end{pmatrix}$}}
+\newcommand\tmatrix[1]{\text{\tiny$\begin{pmatrix}#1\end{pmatrix}$}}
+
+
+% math preamble ends
+
+
+
+
 
 \title{Representation Theory in Quantum Computing}
 \author{Dale D. Schandelmeier-Lynch}
@@ -123,11 +250,80 @@
     \chapter{Introduction}
 
     \chapter{Background}
-
-    We will offer a preliminary introduction to quantum computing and representation theory so our results can be understood in context.
     
-
-    \chapter{Results}
+   We first introduce quantum computing and representation theory.
+   \section{Quantum Computing}
+   Quantum computing exploits the nonclassical nature of quantum mechanics to achieve asymptotic improvements in runtime over classical algorithms.
+   Not all problems admit a quantum speedup; we will be more specific about our specific computational framework after the neccesary background.
+   To illuminate the physical-mathematical framework in which quantum computing takes place, we will expound some neccesary linear algebra and the postulates of quantum mechanics from \cite{neilsen2010}[Chapter 2].
+   \subsection{Quantum Mechanics}
+   Throughout this section we use the ``bra-ket'' notation to represents vectors in vector spaces. This is inherited from physics and uses the symbols
+   $ket{\cdot}$ called ket, $bra{\cdot}$ called bra, and $braket{\cdot | \cdot}$ called braket (as we have ``bracketed'' the symbols); 
+   \[ \ket{\psi} \]
+   is a vector we have labeled $\psi$. In quantum computing we are concerned with complex vector spaces by postulate; we need to define inner products both for this postulate and to elaborate on bra-ket notation.
+   \begin{defn}[Inner product, \cite{neilsen2010}[2.1.4]]
+     A function $(\cdot, \cdot): V \times V \to \CC$ is a (complex) inner product if it satisfies the following requirements:
+     \begin{enumerate}
+     \item $(\cdot, \cdot)$ is linear in the second argument:
+       \[ \left( \ket{v}, \sum_i \lambda_i \ket{w_i} \right) = \sum_i \lambda_i \left( \ket{v}, \ket{w_i} \right).\]
+     \item $(\ket{v}, \ket{w}) = (\ket{v}, \ket{w})^*$.
+     \item $(\ket{v}, \ket{v}) \geq 0$ with equality if and and only if $\ket{v} = 0$.
+     \end{enumerate}
+   \end{defn}
+   The intuition of braket notation is that $\bra{\phi}$ is the dual of the vector $\ket{\phi}$, which we notate in matrices turning a column vector into a row vector. Therefore taking the standard matrix product
+   \[\bra{\phi} \ket{\psi}\]
+   is equivalent to the standard inner product $(\ket{\phi}, \ket{\psi}) = \sum_{k=1}^n \phi_k^* \psi_k$, which we notate as
+   \[\braket{\phi | \psi};\]
+   here the symbol $\cdot^*$ represents the unary complex conjugation operation.
+   The elegance of braket notation, apart from saving space, is that we can easily tell the output of complicated linear expressions; it easy to see that $\braket{\phi | \psi} \braket{x | y}$ outputs a scalar, while it takes a little thinking to see that
+   \[
+     \begin{bmatrix}
+       x & y
+     \end{bmatrix}
+     \begin{bmatrix}
+       x \\ y
+     \end{bmatrix}
+     \begin{bmatrix}
+       x & y
+     \end{bmatrix}
+     \begin{bmatrix}
+       x \\ y
+     \end{bmatrix}
+   \]
+   outputs a scalar. \par
+   We are now ready to introduce our first postulate. As mathematicians we needn't worry about how pysicists experimentally constructed these postulates, although their
+   (relative) truth is neccesary if we are to physically realize quantum computers and employ the alogrithms we design.
+   If we take these postulates at face value, phenomenon that are strange from a classical physics standpoint feel like natural consequences of the mathematics;
+   in that sense it can be helpful to abstract away your physical intution and instead focus on the consequences of these postulates when we start doing computation.
+   \begin{post}[\cite{neilsen2010}[2.2.1]]
+     Associated to any isolated physical system is a complex vector space
+     with inner product (that is, a Hilbert space) known as the \emph{state space} of the
+     system. The system is completely described by its \emph{state vector}, which is a unit
+     vector in the system's state space.
+   \end{post}
+   In our quantum computing model we regard these physical systems as memory and perform operations on this memory through the appropriate mathematical morphism, which in this case are linear operators.
+   A minor detail is that Hilbert spaces have more properties when they are infinite dimensional, but in our case we will only ever use finite memory and so our hilbert spaces are always finite dimensional.
+   The simplest quantum mechanical system is the \emph{qubit}. A qubit resides in $\CC^2$ and so has a two dimensional state space.
+   We use $\ket{0}$ and $\ket{1}$ to label the elements of an orthonormal basis for the qubit; in practice we let
+   \[\ket{0} =
+     \begin{pmatrix}
+       1 \\
+       0
+     \end{pmatrix},
+     \quad
+     \ket{1} =
+     \begin{pmatrix}
+       0 \\
+       1
+     \end{pmatrix}.
+   \]
+   Note that $\ket{0}$ is not the zero vector $0$; we use $\ket{0}$ despite this overlap in reference to the two states of a bit, $0$ and $1$.
+   What makes the qubit interesting in contrast is that we are not limited to state vectors $\ket{0}$ and $\ket{1}$; we know from linear algebrea that
+   we can express any element of the state basis as
+   \[\ket{\phi} = a \ket{0} + b \ket{1}, \]
+   where $a$ and $b$ are in the complex numbers. Even with the condition that $\ket{\phi}$ be a unit vector --- that is, that $\braket{\phi | \phi} = 1$ ---
+   the state of the qubit is described by 4 real numbers instead of one bit! In practice
+   \chapter{Results}
 
 
 
@@ -398,7 +594,7 @@ And here's some other random info: the first paragraph after a chapter title or 
 % replace ``plainnat'' with the style of choice. You can refer to files in the bsts or APA 
 % subfolder, e.g. 
  \bibliographystyle{annotate}  % or
- \bibliography{thesisdsl}
+ \bibliography{thesisdsldesktop}
  % Comment the above two lines and uncomment the next line to use biblatex-chicago.
  %\printbibliography[heading=bibintoc]
 

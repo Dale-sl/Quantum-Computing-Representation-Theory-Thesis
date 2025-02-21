@@ -1,19 +1,24 @@
-\contentsline {chapter}{The First}{xv}{}%
-\contentsline {section}{\numberline {0.1}References, Labels, Custom Commands and Footnotes}{xv}{}%
-\contentsline {subsection}{\numberline {0.1.1}References and Labels}{xv}{}%
-\contentsline {subsection}{\numberline {0.1.2}Custom Commands}{xv}{}%
-\contentsline {subsection}{\numberline {0.1.3}Footnotes and Endnotes}{xvi}{}%
-\contentsline {section}{\numberline {0.2}Bibliographies}{xvi}{}%
-\contentsline {subsection}{\numberline {0.2.1}Tips for Bibliographies}{xvi}{}%
-\contentsline {section}{\numberline {0.3}Anything else?}{xvii}{}%
-\contentsline {chapter}{Mathematics and Science}{xix}{}%
-\contentsline {section}{\numberline {0.4}Math}{xix}{}%
-\contentsline {chapter}{Tables and Graphics}{xxi}{}%
-\contentsline {section}{\numberline {0.5}Tables}{xxi}{}%
-\contentsline {section}{\numberline {0.6}Figures}{xxii}{}%
-\contentsline {section}{\numberline {0.7}More Figure Stuff}{xxiii}{}%
-\contentsline {section}{\numberline {0.8}Even More Figure Stuff}{xxiii}{}%
-\contentsline {subsection}{\numberline {0.8.1}Common Modifications}{xxiii}{}%
-\contentsline {chapter}{Conclusion}{xxv}{}%
-\contentsline {section}{\numberline {4.1}More info}{xxv}{}%
-\contentsline {chapter}{References}{xxvii}{}%
+\contentsline {chapter}{Introduction}{xv}{}%
+\contentsline {chapter}{Background}{xvii}{}%
+\contentsline {section}{\numberline {0.1}Quantum Computing}{xvii}{}%
+\contentsline {subsection}{\numberline {0.1.1}Quantum Mechanics}{xvii}{}%
+\contentsline {chapter}{Results}{xix}{}%
+\contentsline {chapter}{The First}{xxi}{}%
+\contentsline {section}{\numberline {0.2}References, Labels, Custom Commands and Footnotes}{xxi}{}%
+\contentsline {subsection}{\numberline {0.2.1}References and Labels}{xxi}{}%
+\contentsline {subsection}{\numberline {0.2.2}Custom Commands}{xxi}{}%
+\contentsline {subsection}{\numberline {0.2.3}Footnotes and Endnotes}{xxii}{}%
+\contentsline {section}{\numberline {0.3}Bibliographies}{xxii}{}%
+\contentsline {subsection}{\numberline {0.3.1}Tips for Bibliographies}{xxii}{}%
+\contentsline {section}{\numberline {0.4}Anything else?}{xxiii}{}%
+\contentsline {chapter}{Mathematics and Science}{xxv}{}%
+\contentsline {section}{\numberline {0.5}Math}{xxv}{}%
+\contentsline {chapter}{Tables and Graphics}{xxvii}{}%
+\contentsline {section}{\numberline {0.6}Tables}{xxvii}{}%
+\contentsline {section}{\numberline {0.7}Figures}{xxviii}{}%
+\contentsline {section}{\numberline {0.8}More Figure Stuff}{xxix}{}%
+\contentsline {section}{\numberline {0.9}Even More Figure Stuff}{xxix}{}%
+\contentsline {subsection}{\numberline {0.9.1}Common Modifications}{xxix}{}%
+\contentsline {chapter}{Conclusion}{xxxi}{}%
+\contentsline {section}{\numberline {4.1}More info}{xxxi}{}%
+\contentsline {chapter}{References}{xxxiii}{}%
