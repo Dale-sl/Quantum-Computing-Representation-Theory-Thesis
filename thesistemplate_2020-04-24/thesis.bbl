@@ -1,36 +1,50 @@
-\begin{thebibliography}{BMMN98}
+\begin{thebibliography}{BMMN}
 
-\bibitem[BMMN98]{bhattacharjeeWreathProducts1998}
-Meenaxi Bhattacharjee, Dugald Macpherson, R{\"o}gnvaldur~G. M{\"o}ller, and
-  Peter~M. Neumann.
+\bibitem[BMMN]{bhattacharjeeWreathProducts1998}
+Meenaxi Bhattacharjee, Dugald Macpherson, Rögnvaldur~G. Möller, and Peter~M.
+  Neumann.
 \newblock Wreath products.
 \newblock In {\em Notes on {{Infinite Permutation Groups}}}, pages 67--76.
-  Springer, Berlin, Heidelberg, 1998.
+  Springer.
 
-\bibitem[CP21]{copelandQuantumQueryComplexity2021}
+\bibitem[CP]{copeland}
 Daniel Copeland and Jamie Pommersheim.
-\newblock Quantum query complexity of symmetric oracle problems, March 2021.
+\newblock Quantum query complexity of symmetric oracle problems.
 
-\bibitem[dV24]{valleCharacterTheoreticFormula2024}
-Coen del Valle.
-\newblock A character theoretic formula for base size, September 2024.
+\bibitem[fam]{valleCharacterTheoreticFormula2024}
+prefix=del~useprefix=false family=Valle, given=Coen.
+\newblock A character theoretic formula for base size.
 
-\bibitem[JL01]{jamesRepresentationsCharactersGroups2001}
+\bibitem[Ful]{fulton}
+William Fulton.
+\newblock {\em Young {{Tableaux}}: {{With Applications}} to {{Representation
+  Theory}} and {{Geometry}}}.
+\newblock Cambridge University Press.
+
+
+\bibitem[JL]{jamesRepresentationsCharactersGroups2001}
 Gordon James and Martin Liebeck.
 \newblock {\em Representations and {{Characters}} of {{Groups}}}.
-\newblock Cambridge University Press, Cambridge, 2 edition, 2001.
+\newblock Cambridge University Press, 2 edition.
 
 
-\bibitem[NC10]{nielsenQuantumComputationQuantum2010}
+\bibitem[NC]{nielsen2010}
 Michael~A. Nielsen and Isaac~L. Chuang.
 \newblock {\em Quantum {{Computation}} and {{Quantum Information}}: 10th
   {{Anniversary Edition}}}.
-\newblock Cambridge University Press, December 2010.
+\newblock Cambridge University Press.
 
 
-\bibitem[Zha15]{zhandryQuantumOracleClassification2015}
+\bibitem[Sag]{sagan}
+Bruce~E. Sagan.
+\newblock {\em The {{Symmetric Group}}}, volume 203 of {\em Graduate {{Texts}}
+  in {{Mathematics}}}.
+\newblock Springer.
+
+
+\bibitem[Zha]{zhandryQuantumOracleClassification2015}
 Mark Zhandry.
 \newblock Quantum {{Oracle Classification}} - {{The Case}} of {{Group
-  Structure}}, October 2015.
+  Structure}}.
 
 \end{thebibliography}
