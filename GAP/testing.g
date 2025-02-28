@@ -48,6 +48,11 @@ quantumQueryComplexity := function(tbl, permutationCharacter, groupDegree)
     
     # Get the list of irreducible characters from the table.
     irr := Irr(tbl);
+    if Size(ConstituentsOfCharacter(tbl, permutationCharacter)) = 1 then
+        Print("Initial character only contains the trivial character, would loop forever.");
+        return;
+    fi;
+    
     # Compute group order as the sum of squares of the degrees.
     groupOrder := Sum(irr, x -> x[1]^2);
     
@@ -95,6 +100,36 @@ quantumQueryComplexity := function(tbl, permutationCharacter, groupDegree)
     );
 end;
 
+quantumQueryProbabilityHistory := function(tbl, permutationCharacter, groupDegree)
+    local tensorChar, constituents, probabilityOfSuccess, groupOrder, irr, probHistory;
+    
+    tensorChar := permutationCharacter;
+    irr := Irr(tbl);
+    if Size(ConstituentsOfCharacter(tbl, permutationCharacter)) = 1 then
+        Print("Initial character only contains the trivial character.");
+        return;
+    fi;
+    
+    # Compute the group order as the sum of the squares of the degrees.
+    groupOrder := Sum(irr, x -> x[1]^2);
+    
+    # Initialize the list that will store the probability of success at each iteration.
+    probHistory := [];
+    
+    repeat
+        constituents := ConstituentsOfCharacter(tbl, tensorChar);
+        probabilityOfSuccess := Sum(constituents, x -> x[1]^2) / groupOrder;
+        Add(probHistory, probabilityOfSuccess);
+        
+        # Tensor the permutationCharacter with the current tensorChar.
+        tensorChar := permutationCharacter * tensorChar;
+    until IsEqualSet(constituents, irr);
+    
+    return rec(
+      groupDegree   := groupDegree,
+      probabilities := probHistory
+    );
+end;
 
 
 
@@ -251,6 +286,77 @@ ProcessQuantumQueryComplexitiesSubsets := function(groupConstructor, groupName, 
     od;
     
     PrintCSV(filename, results, ["groupDegree", "queries", "boundedQueries", "partitionHistory"]);
+    return results;
+end;
+
+ProcessQuantumQueryProbabilityHistoryRegular := function(groupConstructor, groupName, b, filename)
+    local results, a, n, ret;
+    
+    results := [];
+    a := 2;  # a starts at 2 to ensure a nontrivial action
+    
+    while true do
+        n := a * b;
+        Print("Starting computation for n = ", n, "\n");
+        
+        ret := IO_CallWithTimeout( rec(seconds := 30), 
+            function()
+                return quantumQueryProbabilityHistory(
+                           CharacterTable(groupName, n),
+                           regActPartsChar(a, b, groupConstructor),
+                           n
+                       );
+            end );
+        
+        if ret[1] = false then
+            Print("Timeout encountered for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = fail then
+            Print("Computation failed for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = true then
+            Add(results, ret[2]);
+        fi;
+        
+        a := a + 1;
+    od;
+    
+    PrintCSV(filename, results, ["groupDegree", "probabilities"]);
+    return results;
+end;
+
+ProcessQuantumQueryProbabilityHistorySubsets := function(groupConstructor, groupName, k, filename)
+    local results, n, ret;
+    
+    results := [];
+    n := k + 1;  # We need at least k points to form k-element subsets; k+1 ensures nontrivial action
+    
+    while true do
+        Print("Starting computation for n = ", n, "\n");
+        
+        ret := IO_CallWithTimeout( rec(seconds := 30), 
+            function()
+                return quantumQueryProbabilityHistory(
+                           CharacterTable(groupName, n),
+                           regActSubsetsChar(n, k, groupConstructor),
+                           n
+                       );
+            end );
+        
+        if ret[1] = false then
+            Print("Timeout encountered for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = fail then
+            Print("Computation failed for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = true then
+            Add(results, ret[2]);
+        fi;
+        
+        n := n + 1;
+    od;
+    
+    PrintCSV(filename, results, ["groupDegree", "probabilities"]);
     return results;
 end;
 
