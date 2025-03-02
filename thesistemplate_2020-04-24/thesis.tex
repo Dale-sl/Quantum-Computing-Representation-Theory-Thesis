@@ -137,6 +137,7 @@
 \def\gcd{\mathrm{gcd}}
 \def\half{\hbox{$\frac12$}}
 \def\Hom{\mathrm{Hom}}
+\def\Sym{\mathrm{Sym}}
 \def\img{\mathrm{img}}
 \def\id{\mathrm{id}} 
 \def\Inn{\mathrm{Inn}}
@@ -281,10 +282,10 @@
   For most oracle problems, this pattern holds true classically; the algorithms knows nearly nothing about the function until it knows the whole function.
   Effectively, bounded error learning is equivalent to exact learning in this case.
   Shockingly, quantum algorithms have a different tendency.
-  The function will be nearly unknown for the first few queries, but after some number of queries asymptotically smaller than the number of queries needed for exact learning nearly the whole function will be known!
+  The function will be nearly unknown for the first few queries, but after some asymptotically smaller number of queries than that needed for exact learning, nearly the whole function will be known!
   We are thus concerned with comparing the exact classical query complexity with both the exact and bounded error quantum query complexity of a given oracle problem.
   Of note is that we are proving we have found a neccesary and sufficent number of queries to solve the problem; we have an algorithm which solves the problem with the given asymptotics, and it is optimal,
-  meaning no algorithm can do asymptotically better.
+  meaning no algorithm make asymptotically less queries.
   % In fact, we will be able to prove that there exists an algorithm which has a given query complexity, and that furthermore no algorithm exists which can do better --- the algorithm will be optimal.
   \par
   Our oracle problem comes from \cite{copeland}, as a specfication of the more general coset identification problem:
@@ -297,7 +298,8 @@
   Taking the tensor product of a representation derived from our $G$-set $\Omega$ with itself repeatedly will be equivalent to making oracle queries, turning our quantum computing problem
   into one of representation theory.
   By understanding the representation corresponding to $\Omega$ and the way it tensors with itself, we will be able to find the query complexity.
-  Because our $G$-sets have $S_n$ and $A_n$ as groups, we will be deeply concerned with the representation theory of $S_n$.
+  Because our $G$-sets have $S_n$ and $A_n$ as groups, we will be deeply concerned with the representation theory of $S_n$;
+  combinatorial structures known as \emph{Young diagrams} and \emph{Young tableaux} will offer a useful lens through which we can analyze the representation theory.
   
   
   \chapter{Background}
@@ -638,9 +640,31 @@
 
   \section{Representation Theory of the Symmetric Group}
   \subsection{Motivation}\label{motivation} \hfill\\
-  We will consider the symmetric group $S_n$ and its representations; in doing so, we will find how these representations correspond to mathematical objects known as Young tableaux. \par
+  We will consider the symmetric group $S_n$ and its representations; in doing so, we will find how these representations correspond to mathematical objects known as Young diagrams.
+  \begin{defn}
+    A \emph{Young diagram} is pictoral presentation of a \emph{integer partition}.
+    We define an integer partition $\lambda$ of an integer $n \in \ZZ$ to be a sequence of integers, indexed by $\lambda_i$, such that:
+    \begin{enumerate}
+    \item the sequence is (weakly) decreasing:
+      \[\forall i \in \NN, \lambda_i \geq \lambda_{i+1}.\]
+    \item
+      The sequence sums to $n$:
+      \[ \sum_{i \in \NN} \lambda_i = n. \]
+    \item
+      And each index is nonnegative:
+      \[\forall i \in \NN, \lambda_i \geq 0.\]
+    \end{enumerate}
+    We usually leave out the trailing zeros of an integer partition, and denote an integer partiton of $n$ with the notation $\lambda \vdash n$ or $(\lambda_1,\lambda_2,\cdots) \vdash n$.
+    A Young diagram represents an integer partition as a picture by drawing $\lambda_i$ boxes in the $i$-th row, from top to bottom.
+    For example, the integer partition $(3,2,1) \vdash 6$ is represented by the Young diagram
+    \[
+      \ydiagram{3,2,1}.
+    \]
+  \end{defn}
+  
+  \par
   We state without proof that the number of irreducible representations (up to isomorphism) of a group is equal to the number of conjugacy classes in
-  the group \cite[Proposition 1.10.1]{sagan}; this comes from character theory outside of our scope\todo{not out of scope, explain this}. Fundemental abstact algebra tells us that 
+  the group \cite[Proposition 1.10.1]{sagan}; this comes from character theory outside of our scope\todo{not out of scope, explain this}. It is a fundemental abstact algebra fact that 
   conjugacy classes of $S_n$ are in bijection with the cycle types of $S_n$,
   and because cycle types are unordered lists we can map each cycle type to its unique weakly decreasing ordering.
   This forms a bijection between cycle types of $S_n$ and integer partitions of $n$.
@@ -902,10 +926,13 @@
     \]
   \end{ex}
 
-  We need the following results for the next 2 proofs (both being excercises from \cite{fulton}):
-  \begin{proof}
-    We prove that, for all $q' \in C(T)$,
+  We need the following lemmas for the next 2 proofs:
+  \begin{lemma}
+    For all $q' \in C(T)$,
     \[q' \cdot b_T = \sgn(q') b_T.\]
+  \end{lemma}
+  \begin{proof}
+    
     First we compute
     \[q' \cdot b_T = q' \cdot \sum_{q \in C(T)} \sgn(q)\{q \cdot T\} = \sum_{q \in C(T)} \sgn(q)\{q' \cdot q \cdot T\}.\]
     We know from abstract algebra that $q' C(T) = C(T)$ because $q' \in C(T) \leq S_n$; the function of applying $q'$ to every element of $C(T)$ is a
@@ -916,8 +943,10 @@
     \[\sum_{q \in C(T)} \sgn(q)\{q' \cdot q \cdot T\} = \sum_{q \in C(T)} \sgn(q)\sgn(q') \{q \cdot T\}
       = \sgn(q') \sum_{q \in C(T)} \sgn(q) \{q \cdot T\} = \sgn(q') b_T.\]
   \end{proof}
+  \begin{lemma}
+    \[b_T \cdot b_T = |C(T)| \cdot b_T,\] where $\cdot$ here is multiplication in the group ring.
+  \end{lemma}
   \begin{proof}
-    We prove that $b_T \cdot b_T = |C(T)| \cdot b_T$, where $\cdot$ here is multiplication in the group ring.
     We linearly extend the result we just proved:
     \[ b_T \cdot b_T = (\sum_{q \in C(T)} \sgn(q)q) \cdot b_T = |C(T)|\sgn(q)\sgn(q) \cdot b_T = |C(T)| \cdot b_T.\]  
   \end{proof}
@@ -1050,8 +1079,105 @@
   % $S_{n+1}$ or $S_{n-1}$ can be induced or restricted from representations of $S_n$ by taking direct sums of $S^\mu$ for greater or lesser covering partitions
   % of $\lambda$ of $n$ in Young's diagram!
 
+  \section{Oracle Formalism}
+  We are now equipped to state our oracle problem and key theorem formally.
+  \begin{defn}[{ \cite[Section 2]{copeland} }]
+    A \emph{classical oracle problem} is a tuple $(Y, \Omega, \pi, f)$ where
+    \begin{enumerate}
+    \item $Y$ is a set of hidden information.
+    \item $\Omega$ is a set of inputs algorithms can query.
+    \item $\pi$ is a function $\pi: Y \to \Sym(\Omega )$, where $\Sym(\Omega)$ is the group of permutations of $\Omega$.
+    \item And $f: Y \to X$ is the function to learn; it is known to the algorithm. 
+    \end{enumerate}
+    A classical computer has access to $\pi(y)$ for some unknown $y \in Y$ by spending one query to learn $\pi(y) \cdot \omega$.
+    The goal is to determine $f(y)$.
+    The average case case success probability is the probability of correctly outputting $f(y)$ assuming $y$ is sampled uniformly from $Y$.
+  \end{defn}
+  \begin{defn}[{ \cite[Section 2]{copeland} }]
+    A \emph{quantum oracle problem} is a tuple $(Y, V, \pi, f)$ where
+    \begin{enumerate}
+    \item $Y$ is a set of hidden information.
+    \item $V$ is a Hilbert space appearing as a register in our quantum circuit.
+    \item $\pi$ is a function $\pi: Y \to U(V)$, where $U(V)$ is the set of unitary operators of $V$.
+    \item And $f: Y \to X$ is the function to learn.
+    \end{enumerate}
+    A quantum computer spends one query to input a state $\ket{\psi} \in V$ to $\pi(y)$ to acquire the state $\pi(y) \ket{\psi}$.
+    Any classical oracle problem $(Y,\omega, \pi, f)$ determines a quantum oracle problem via linearization:
+    oracles will act on the Hilbert space $\CC \Omega$ \todo{doesn't Omega need to be an abelian group?} by permutation matrices.
+    Henceforth when we provide an instance of a classical oracle problem we are also providing an instance of a quantum oracle problem.
+  \end{defn}
+  \begin{defn}[{ \cite[Section 2]{copeland} }]
+    A \emph{symmetric oracle problem} is a classical/quantum oracle problem where
+    \begin{enumerate}
+    \item we require that the hidden information $Y$ be a group $G$.
+    \item $\Omega$ or $V$ are as they were before.
+    \item $\pi$ is as before, but now also is a homomorphism to the group $\Sym(\Omega)$ in the classical case and to the group $U(V)$ in the quantum case.
+    \item And $f$ is as it was before.
+    \end{enumerate}
+    When $\pi: G \to U(V)$ is a homorphism, it is a representation as we have defined before;
+    it is therefore natural to regard $V$ as a (left) $\CC G$-module where $\CC G$ is the group algebra of $G$ (spanned by the orthonormal basis $\{g | g \in G\}$ where we leave out kets to indicate their use as an action),
+    due to the relationship between representations and modules.
+  \end{defn}
 
-
+  \begin{defn}[{ \cite[Section 2]{copeland} }]
+    A \emph{coset identification problem} is a symmetric oracle problem where
+    the function to be learned $f: G \to X$ is constant on left cosets of a subgroup $H \leq G$ and distinct on distinct cosets.
+    We also assume $f$ is surjective.
+    The typical example is when $X = \{gH | g \in G\}$ is the set of left cosets of $H$ and $f(g) = gH$.
+    We cite without proof the fact that worst case and average case success probabilities are equal in the coset identification problem.
+  \end{defn}
+  \begin{defn}[{ \cite[Section 2]{copeland} }]
+    The \emph{exact}
+    query complexity of a learning problem is the minimum number of queries needed by an algorithm
+    to compute $f (y)$ with zero probability of error. The \emph{bounded} error query complexity is the minimum
+    number of queries needed by an algorithm to compute $f (y)$ with probability $\geq 2/3$. The bounded
+    error query complexity is often studied for a family of problems growing with a parameter $n$ and
+    so changing the constant $2/3$ above to any number strictly greater than $1/2$ will only change the
+    query complexity by a constant factor mostly ignored in asymptotic analysis.
+  \end{defn}
+  \begin{defn}[{ \cite[Section 4]{copeland} }]
+    \emph{Symmetric oracle discrimination} is a coset identification problem a la the typical example where $X = \{gH | g \in G\}$, $f(g) = gH$, and $H = \{e\}$, so $f(g) = g e = g$.
+    This means an element $g$ is hidden and the goal is to find $g$.
+    We have fixed $f$, so such a problem is determined by a choice of finite group $G$, a $G$-set $\Omega$ or a vector space $\CC \Omega$, and an action $G \acts \Omega$ or a (finite dimensional) unitary representation $\pi: G \to U(V)$.
+  \end{defn}
+  Our problem is thus two instances of symmetric oracle discrimination where, in the first case,
+  \begin{enumerate}
+  \item $G$ = $S_n$ \todo{and $A_n$}.
+  \item $\Omega$ is the set of $k$ elements subsets of $[n] = \{ 1, 2, \cdots, n\}$.
+  \item $S_n \acts \Omega$ is the natural action of $S_n$:
+    \[\sigma \acts \{ \omega_1, \omega_2, \cdots, \omega_k \} \mapsto \{ \sigma(\omega_1), \sigma(\omega_2), \cdots, \sigma(\omega_k)\}.\]
+  \end{enumerate}
+  And in the second case,
+  \begin{enumerate}
+  \item $G$ = $S_n$ \todo{and $A_n$}.
+  \item $\Omega$ is the set of regular partitions of $[n]$ into $b$ parts of size $a$, so $ab = n$.
+  \item $S_n \acts \Omega$ is the natural action of $S_n$:
+    \begin{align*}
+      &\sigma \acts \{ \{ \omega_1, \omega_2, \cdots, \omega_a \}, \{ \omega_{a+1}, \omega_{a+2}, \cdots, \omega_{2a} \}, \cdots, \{ \omega_{(a-1)b + 1}, \omega_{(a-1)b + 2}, \cdots, \omega_{ab} \}  \} \mapsto &\\
+      &\{ \{ \sigma(\omega_1), \sigma(\omega_2), \cdots, \sigma(\omega_a )\}, \{ \sigma(\omega_{a+1}), \sigma(\omega_{a+2}), \cdots, \sigma(\omega_{2a}) \}, \cdots, \\
+      & \{ \sigma(\omega_{(a-1)b + 1}), \sigma(\omega_{(a-1)b + 2}), \cdots, \sigma(\omega_{ab}) \} \}.
+    \end{align*}
+  \end{enumerate}
+  Finally, we introduce the theorem which our results rely upon.
+  \begin{thm}
+    Suppose $G$ is a finite group and $\pi : G \to U (V )$ a unitary representation of $G$. Then
+    an optimal t-query algorithm to solve symmetric oracle discrimination succeeds with probability
+    \[ P_{opt} = \dfrac{d_{V^{\otimes t}}}{|G|} \]
+    where
+    \[ d_{V^{\otimes t}} = \sum_{\chi \in I(V^{\otimes t})} \chi (e)^2.\]
+    Note that $I(V^{\otimes t})$ is the irreducible constituent characters of the character $V^{\otimes t}$.
+  \end{thm}
+  \begin{outline}
+    In a paper seperate to the one we cite, Copeland and Pommershiem proved a similar theorem for a single query algorithm, where only the irreducible consituent characters of $V$ were considered.
+    In \cite{copeland}, Copeland and Pommershiem prove that nonadaptive (all oracle queries made in parallel) quantum algorithms have equivalent strength to adaptive (arbitary unitary transformations allowed between queries)
+    algorithms.
+    Furthermore, they prove that a $t$-query nonadaptive algorithm has equivalent success probability to a a single query algorithm which uses the natural extension of the representation $\pi:G \to U(V)$ to the
+    representation $\pi^{\otimes t}:G \to U(V^{ \otimes t})$.
+    We can thus substitute $\pi^{\otimes t}:G \to U(V^{ \otimes t})$ in for the single query theorem to find the optimal $t$-query success chance.
+  \end{outline}
+  This theorem tells us that we can determine the query complexity of a symmetric oracle discrimination problem just by understanding how the consituent irreducibles of the representation $\pi : G \to U (V)$ change as $n$ grows,
+  and how the repeated tensor product of these constituents introduces new irreducible representations.
+  To make our work computationally possible we will use the characters of these irreducible representations to do our analysis rather than the representations themselves.
   \chapter{Results}
 
 

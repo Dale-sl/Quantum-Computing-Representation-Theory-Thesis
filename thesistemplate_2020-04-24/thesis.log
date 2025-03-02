@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  1 MAR 2025 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  2 MAR 2025 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -600,20 +600,20 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 210.
+LaTeX Font Info:    ... okay on input line 210.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count325
@@ -671,18 +671,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 21
-1.
+2.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 211
+LaTeX Font Info:    Trying to load font information for U+msa on input line 212
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 211
+LaTeX Font Info:    Trying to load font information for U+msb on input line 212
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -853,7 +853,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Overfull \hbox (10.93774pt too wide) in paragraph at lines 639--639
+Overfull \hbox (10.93774pt too wide) in paragraph at lines 641--641
 []\OT1/cmr/bx/n/17.28 Representation The-ory of the Sym-met-ric Group 
  []
 
@@ -866,16 +866,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Overfull \hbox (16.95825pt too wide) in paragraph at lines 679--682
-\OT1/cmr/m/n/12 If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A \OML/
-cmm/m/it/12 T$ \OT1/cmr/m/n/12 we now see that $\OML/cmm/m/it/12 ^^[\OT1/cmr/m/
-n/12 (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = (12)(34)(143)(12)(34) =
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -885,6 +875,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
+Overfull \hbox (16.95825pt too wide) in paragraph at lines 703--706
+\OT1/cmr/m/n/12 If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A \OML/
+cmm/m/it/12 T$ \OT1/cmr/m/n/12 we now see that $\OML/cmm/m/it/12 ^^[\OT1/cmr/m/
+n/12 (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = (12)(34)(143)(12)(34) =
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -930,7 +926,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-Overfull \hbox (23.59337pt too wide) detected at line 917
+Overfull \hbox (23.59337pt too wide) detected at line 944
 [] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 f\OML
 /cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 q \OMS/cmsy/m/n/12 ^^A \
 OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 q\
@@ -943,7 +939,15 @@ m/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 q[]\OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 927--929
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 956--958
 
  []
 
@@ -955,16 +959,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [25]
+Underfull \vbox (badness 5533) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -982,15 +980,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27] [28
+[27]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+Overfull \hbox (11.18324pt too wide) in paragraph at lines 1110--1111
+[]\OT1/cmr/bx/n/12 Definition 1.4.3 \OT1/cmr/m/n/12 ( [[], Sec-tion 2] )\OT1/cm
+r/bx/n/12 . []\OT1/cmr/m/n/12 A \OT1/cmr/m/it/12 sym-met-ric or-a-cle prob-lem 
+\OT1/cmr/m/n/12 is a clas-si-cal/quantum
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+Overfull \hbox (31.36456pt too wide) detected at line 1159
+[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31] [32
 
 ]
 Chapter 2.
-[29] [30
+[33] [34
 
 ]
 Chapter 3.
-[31]
+[35]
 Underfull \vbox (badness 7362) has occurred while \output is active []
 
 
@@ -1002,7 +1046,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[36]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1011,19 +1055,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33] [34
+[37] [38
 
 ]
 Chapter 4.
-[35] [36
+[39] [40
 
 ]
 Chapter 5.
-[37]
-<subdivision.pdf, id=193, 220.825pt x 89.33376pt>
+[41]
+<subdivision.pdf, id=206, 220.825pt x 89.33376pt>
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1246.
+Package pdftex.def Info: subdivision.pdf  used on input line 1372.
 (pdftex.def)             Requested size: 220.82445pt x 89.33353pt.
 
 
@@ -1034,20 +1078,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38
+[42
 
  <./subdivision.pdf>]
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1259.
+Package pdftex.def Info: subdivision.pdf  used on input line 1385.
 (pdftex.def)             Requested size: 110.41222pt x 44.66676pt.
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1271.
+Package pdftex.def Info: subdivision.pdf  used on input line 1397.
 (pdftex.def)             Requested size: 72.26979pt x 72.26979pt.
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1282.
+Package pdftex.def Info: subdivision.pdf  used on input line 1408.
 (pdftex.def)             Requested size: 110.41222pt x 44.66676pt.
 
 
@@ -1058,13 +1102,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39
+[43
 
-] [40
+] [44
 
-] [41] [42
+] [45] [46
 
-] (./thesis.bbl) [43
+] (./thesis.bbl) [47
 
 ] (./thesis.aux)
  ***********
@@ -1073,13 +1117,13 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18407 strings out of 474927
- 363787 string characters out of 5763541
- 1943785 words of memory out of 5000000
- 39609 multiletter control sequences out of 15000+600000
+ 18434 strings out of 474927
+ 364403 string characters out of 5763541
+ 1939785 words of memory out of 5000000
+ 39636 multiletter control sequences out of 15000+600000
  569394 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,13n,101p,842b,1011s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 96i,13n,101p,842b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-di
@@ -1098,10 +1142,10 @@ fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (59 pages, 345221 bytes).
+Output written on thesis.pdf (63 pages, 360888 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 338 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  24 words of extra memory for PDF output out of 10000 (max. 10000000)
 

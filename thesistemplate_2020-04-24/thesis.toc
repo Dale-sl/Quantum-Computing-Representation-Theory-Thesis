@@ -6,27 +6,28 @@
 \contentsline {section}{\numberline {1.2}Introductory Representation Theory}{13}{}%
 \contentsline {section}{\numberline {1.3}Representation Theory of the Symmetric Group}{17}{}%
 \contentsline {subsection}{\numberline {1.3.1}Motivation}{17}{}%
-\contentsline {subsection}{\numberline {1.3.2}Tableaux and Tabloids}{17}{}%
+\contentsline {subsection}{\numberline {1.3.2}Tableaux and Tabloids}{18}{}%
 \contentsline {subsection}{\numberline {1.3.3}The modules $M^\lambda $ and $S^\lambda $}{19}{}%
 \contentsline {subsection}{\numberline {1.3.4}Irreducibility and completeness of the $S^\lambda $ modules}{21}{}%
-\contentsline {subsection}{\numberline {1.3.5}A basis for $S^\lambda $}{26}{}%
-\contentsline {chapter}{Chapter 2: Results}{29}{}%
-\contentsline {chapter}{Chapter 3: The First}{31}{}%
-\contentsline {section}{\numberline {3.1}References, Labels, Custom Commands and Footnotes}{31}{}%
-\contentsline {subsection}{\numberline {3.1.1}References and Labels}{31}{}%
-\contentsline {subsection}{\numberline {3.1.2}Custom Commands}{32}{}%
-\contentsline {subsection}{\numberline {3.1.3}Footnotes and Endnotes}{32}{}%
-\contentsline {section}{\numberline {3.2}Bibliographies}{32}{}%
-\contentsline {subsection}{\numberline {3.2.1}Tips for Bibliographies}{33}{}%
-\contentsline {section}{\numberline {3.3}Anything else?}{33}{}%
-\contentsline {chapter}{Chapter 4: Mathematics and Science}{35}{}%
-\contentsline {section}{\numberline {4.1}Math}{35}{}%
-\contentsline {chapter}{Chapter 5: Tables and Graphics}{37}{}%
-\contentsline {section}{\numberline {5.1}Tables}{37}{}%
-\contentsline {section}{\numberline {5.2}Figures}{38}{}%
-\contentsline {section}{\numberline {5.3}More Figure Stuff}{39}{}%
-\contentsline {section}{\numberline {5.4}Even More Figure Stuff}{39}{}%
-\contentsline {subsection}{\numberline {5.4.1}Common Modifications}{39}{}%
-\contentsline {chapter}{Conclusion}{41}{}%
-\contentsline {section}{\numberline {4.1}More info}{41}{}%
-\contentsline {chapter}{References}{43}{}%
+\contentsline {subsection}{\numberline {1.3.5}A basis for $S^\lambda $}{27}{}%
+\contentsline {section}{\numberline {1.4}Oracle Formalism}{28}{}%
+\contentsline {chapter}{Chapter 2: Results}{33}{}%
+\contentsline {chapter}{Chapter 3: The First}{35}{}%
+\contentsline {section}{\numberline {3.1}References, Labels, Custom Commands and Footnotes}{35}{}%
+\contentsline {subsection}{\numberline {3.1.1}References and Labels}{35}{}%
+\contentsline {subsection}{\numberline {3.1.2}Custom Commands}{36}{}%
+\contentsline {subsection}{\numberline {3.1.3}Footnotes and Endnotes}{36}{}%
+\contentsline {section}{\numberline {3.2}Bibliographies}{36}{}%
+\contentsline {subsection}{\numberline {3.2.1}Tips for Bibliographies}{37}{}%
+\contentsline {section}{\numberline {3.3}Anything else?}{37}{}%
+\contentsline {chapter}{Chapter 4: Mathematics and Science}{39}{}%
+\contentsline {section}{\numberline {4.1}Math}{39}{}%
+\contentsline {chapter}{Chapter 5: Tables and Graphics}{41}{}%
+\contentsline {section}{\numberline {5.1}Tables}{41}{}%
+\contentsline {section}{\numberline {5.2}Figures}{42}{}%
+\contentsline {section}{\numberline {5.3}More Figure Stuff}{43}{}%
+\contentsline {section}{\numberline {5.4}Even More Figure Stuff}{43}{}%
+\contentsline {subsection}{\numberline {5.4.1}Common Modifications}{43}{}%
+\contentsline {chapter}{Conclusion}{45}{}%
+\contentsline {section}{\numberline {4.1}More info}{45}{}%
+\contentsline {chapter}{References}{47}{}%

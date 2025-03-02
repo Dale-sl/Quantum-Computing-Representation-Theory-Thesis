@@ -154,6 +154,7 @@
     "gcd"
     "half"
     "Hom"
+    "Sym"
     "img"
     "id"
     "Inn"
