@@ -269,8 +269,8 @@
   Theoretical quantum computing often employs a model\todo{maybe this shouldn't be called a model}
   of asymptotic analysis known as \emph{oracle problems} as an abstraction to make comparisons between classical and quantum computers easier.
   An oracle is a theoretical function whose inner workings cannot be observed or manipulated; algorithms are only allowed to choose an input to the oracle and recieve its output.
-  The goal when given an oracle problem is to create an algorithm which learns a given characteristic of the function hidden by the oracle;
-  we usually assume that the function hidden by the oracle is sampled randomly from a distribution known to the algorithm.
+  The goal when given an oracle problem is to create an algorithm which learns a given characteristic of the function hidden by the oracle.
+  We usually assume that the function hidden by the oracle is sampled randomly from a distribution known to the algorithm.
   A simple example is as follows. For a function $f: \{a_0, a_1 \} \to \ZZ / 2\ZZ$ uniformly sampled from the space of possible functions, determine the mod $2$ sum $a_0 \oplus a_1$.
   Here we define the oracle $O$ to offer information to the algorithm through the black-box function $O(x) \coloneq f(x)$.
   A classical algorithm would have to make $2$ queries to $O$ for exact learning, as it must query every element of the codomain to learn the values of $a_o$ and $a_1$.
@@ -609,8 +609,8 @@
     A \emph{$G$-isomorphism} is a bijective $G$-homomorphism.
   \end{defn}
 
-  Finally, we introduce two results without proof that we will need for the representation theory of $S_n$. The first one, called
-  Matchske's theorem, is the theorem that tells us that any representation can be constructed out of irreducible representations.
+  Finally, we introduce a main theorem that we will need for the representation theory of $S_n$.
+  This theorem that tells us that any representation can be constructed out of irreducible representations.
   To understand it we first need the notion of a direct sum.
   \begin{defn}[{\cite[Definition 1.5.1]{sagan}}]
     Let $V$ be a vector space with subspaces $U$ and $W$.
@@ -625,7 +625,44 @@
     where each $W_i$ is an irreducible $G$-submodule of $V$.
   \end{thm}
 
-  This next proposition gives us results from character theory which characterize the relationship between irreducible representations
+  We tack on one extra definition for the tensor product of representations; while we won't need it for the representation theory of the symmetric group,
+  we will use it in our problem statement and our results.
+  \begin{defn}[{\cite[Definition 1.11.1]{sagan}}]
+    Let $G$ and $H$ have matrix representations $X$ and $Y$,respectively.The tensor product representation, $X  \otimes Y$, assigns to each $(g, h) \in G times H$ the matrix
+    \[( X \otimes Y (g,h) = X(g)  \otimes Y(h). \]
+  \end{defn}
+
+  \subsection{Character Theory}
+  It turns out that much of the information of a representation can be obtained from the trace of its corresponding matrices.
+  This is shocking and useful because the information of a matrix with $n^2$ entries can be obtained from the sum of just $n$ entries.
+  We now define the character, which stores all the traces of a representation.
+  \begin{defn}[{ \cite[Definition 1.8.1]{sagan} }]
+    Let $X(g)$ where $g \in G$ be a matrix representation. Then the \emph{character} of $X$ is
+    \[ \chi{g} = \tr (X(g)),\]
+    where $\tr$ denotes the trace of a matrix. In other words $\chi$ is the function
+    \[\chi: G \to \CC\]
+    where
+    \[g \mapsto \tr (X(g)).\]
+    If $V$ is a $G$-module, then its character is the character of a matrix represention $X$ corresponding to $V$.
+    If matrices $X$ and $Y$ both correspond to $V$, then we know $Y = TXT^{-1}$ for some $T$. Thus, for all $g \in G$,
+    \[\tr ( Y(g)) = \tr( TX(g)T^{-1}) = \tr( X(g)),\]
+    since trace is invariant under conugation. So $X$ and $Y$ have the same character and our notion of module character is well defined.
+  \end{defn}
+  The following proposition describes the basic properties of a character:
+  \begin{prop}[{ \cite[Proposition 1.8.5]{sagan} }]
+    Let $X$ be a matrix representation of a group $G$ of degree $d$ with character $\chi$.
+    \begin{enumerate}
+    \item $\chi( \epsilon) = d$.
+    \item If $K$ is a conjugacy class of $G$ then
+      \[ g, h \in K \implies \chi(g) = \chi(h). \]
+    \item If $Y$ is a representation of $G$ with character $\psi$, then
+      \[ X \cong Y \implies \chi(g) = \psi(g) \]
+      for all $g \in G$.
+    \end{enumerate}
+    Note that we proved $3$ in our definition of a character.
+  \end{prop}
+    
+  This next proposition is similar in flavour and characterizes the relationship between irreducible representations
   and their corresponding group.
 
   \begin{prop}[{\cite[Proposition 1.10.1]{sagan}}]
@@ -636,7 +673,7 @@
     \item the number of $V_i$ equals the number of conjugacy classes of $G$.
     \end{enumerate}
   \end{prop}   
-  \todo{ need to introduce character theory}
+  
 
   \section{Representation Theory of the Symmetric Group}
   \subsection{Motivation}\label{motivation} \hfill\\
@@ -661,10 +698,9 @@
       \ydiagram{3,2,1}.
     \]
   \end{defn}
-  
   \par
   We state without proof that the number of irreducible representations (up to isomorphism) of a group is equal to the number of conjugacy classes in
-  the group \cite[Proposition 1.10.1]{sagan}; this comes from character theory outside of our scope\todo{not out of scope, explain this}. It is a fundemental abstact algebra fact that 
+  the group \cite[Proposition 1.10.1]{sagan}. It is a fundemental abstact algebra fact that 
   conjugacy classes of $S_n$ are in bijection with the cycle types of $S_n$,
   and because cycle types are unordered lists we can map each cycle type to its unique weakly decreasing ordering.
   This forms a bijection between cycle types of $S_n$ and integer partitions of $n$.
@@ -1171,7 +1207,7 @@
     In a paper seperate to the one we cite, Copeland and Pommershiem proved a similar theorem for a single query algorithm, where only the irreducible consituent characters of $V$ were considered.
     In \cite{copeland}, Copeland and Pommershiem prove that nonadaptive (all oracle queries made in parallel) quantum algorithms have equivalent strength to adaptive (arbitary unitary transformations allowed between queries)
     algorithms.
-    Furthermore, they prove that a $t$-query nonadaptive algorithm has equivalent success probability to a a single query algorithm which uses the natural extension of the representation $\pi:G \to U(V)$ to the
+    Furthermore, they prove that a $t$-query nonadaptive algorithm has equivalent success probability to a a single query algorithm which takes the tensor product of the representation $\pi:G \to U(V)$ with itself multiple times to the
     representation $\pi^{\otimes t}:G \to U(V^{ \otimes t})$.
     We can thus substitute $\pi^{\otimes t}:G \to U(V^{ \otimes t})$ in for the single query theorem to find the optimal $t$-query success chance.
   \end{outline}

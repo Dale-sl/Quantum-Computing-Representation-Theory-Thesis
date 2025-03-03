@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  2 MAR 2025 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  2 MAR 2025 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,7 +853,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Overfull \hbox (10.93774pt too wide) in paragraph at lines 641--641
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+Overfull \hbox (10.93774pt too wide) in paragraph at lines 678--678
 []\OT1/cmr/bx/n/17.28 Representation The-ory of the Sym-met-ric Group 
  []
 
@@ -865,22 +874,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [18]
-Overfull \hbox (16.95825pt too wide) in paragraph at lines 703--706
-\OT1/cmr/m/n/12 If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A \OML/
-cmm/m/it/12 T$ \OT1/cmr/m/n/12 we now see that $\OML/cmm/m/it/12 ^^[\OT1/cmr/m/
-n/12 (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = (12)(34)(143)(12)(34) =
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -890,6 +884,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
+Overfull \hbox (16.95825pt too wide) in paragraph at lines 739--742
+\OT1/cmr/m/n/12 If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A \OML/
+cmm/m/it/12 T$ \OT1/cmr/m/n/12 we now see that $\OML/cmm/m/it/12 ^^[\OT1/cmr/m/
+n/12 (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = (12)(34)(143)(12)(34) =
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -926,7 +930,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-Overfull \hbox (23.59337pt too wide) detected at line 944
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Overfull \hbox (23.59337pt too wide) detected at line 980
 [] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 f\OML
 /cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 q \OMS/cmsy/m/n/12 ^^A \
 OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 q\
@@ -939,29 +961,9 @@ m/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 q[]\OT1/cmr
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 956--958
+Underfull \hbox (badness 10000) in paragraph at lines 992--994
 
  []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]
-Underfull \vbox (badness 5533) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -981,6 +983,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -990,12 +995,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-Overfull \hbox (11.18324pt too wide) in paragraph at lines 1110--1111
-[]\OT1/cmr/bx/n/12 Definition 1.4.3 \OT1/cmr/m/n/12 ( [[], Sec-tion 2] )\OT1/cm
-r/bx/n/12 . []\OT1/cmr/m/n/12 A \OT1/cmr/m/it/12 sym-met-ric or-a-cle prob-lem 
-\OT1/cmr/m/n/12 is a clas-si-cal/quantum
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1005,8 +1004,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
-Overfull \hbox (31.36456pt too wide) detected at line 1159
-[]
+Overfull \hbox (11.18324pt too wide) in paragraph at lines 1146--1147
+[]\OT1/cmr/bx/n/12 Definition 1.4.3 \OT1/cmr/m/n/12 ( [[], Sec-tion 2] )\OT1/cm
+r/bx/n/12 . []\OT1/cmr/m/n/12 A \OT1/cmr/m/it/12 sym-met-ric or-a-cle prob-lem 
+\OT1/cmr/m/n/12 is a clas-si-cal/quantum
  []
 
 
@@ -1026,15 +1027,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31] [32
+[31]
+Overfull \hbox (31.36456pt too wide) detected at line 1195
+[]
+ []
 
-]
-Chapter 2.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
 [33] [34
 
 ]
+Chapter 2.
+[35] [36
+
+]
 Chapter 3.
-[35]
+[37]
 Underfull \vbox (badness 7362) has occurred while \output is active []
 
 
@@ -1046,7 +1069,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36]
+[38]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1055,19 +1078,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37] [38
-
-]
-Chapter 4.
 [39] [40
 
 ]
+Chapter 4.
+[41] [42
+
+]
 Chapter 5.
-[41]
-<subdivision.pdf, id=206, 220.825pt x 89.33376pt>
+[43]
+<subdivision.pdf, id=212, 220.825pt x 89.33376pt>
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1372.
+Package pdftex.def Info: subdivision.pdf  used on input line 1408.
 (pdftex.def)             Requested size: 220.82445pt x 89.33353pt.
 
 
@@ -1078,20 +1101,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42
+[44
 
  <./subdivision.pdf>]
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1385.
+Package pdftex.def Info: subdivision.pdf  used on input line 1421.
 (pdftex.def)             Requested size: 110.41222pt x 44.66676pt.
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1397.
+Package pdftex.def Info: subdivision.pdf  used on input line 1433.
 (pdftex.def)             Requested size: 72.26979pt x 72.26979pt.
 File: subdivision.pdf Graphic file (type pdf)
 <use subdivision.pdf>
-Package pdftex.def Info: subdivision.pdf  used on input line 1408.
+Package pdftex.def Info: subdivision.pdf  used on input line 1444.
 (pdftex.def)             Requested size: 110.41222pt x 44.66676pt.
 
 
@@ -1102,13 +1125,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43
+[45
 
-] [44
+] [46
 
-] [45] [46
+] [47] [48
 
-] (./thesis.bbl) [47
+] (./thesis.bbl) [49
 
 ] (./thesis.aux)
  ***********
@@ -1117,10 +1140,10 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18434 strings out of 474927
- 364403 string characters out of 5763541
- 1939785 words of memory out of 5000000
- 39636 multiletter control sequences out of 15000+600000
+ 18416 strings out of 474927
+ 363981 string characters out of 5763541
+ 1941785 words of memory out of 5000000
+ 39618 multiletter control sequences out of 15000+600000
  569394 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,13n,101p,842b,1025s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1142,10 +1165,10 @@ fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/te
 xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (63 pages, 360888 bytes).
+Output written on thesis.pdf (65 pages, 364665 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
+ 344 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  24 words of extra memory for PDF output out of 10000 (max. 10000000)
 

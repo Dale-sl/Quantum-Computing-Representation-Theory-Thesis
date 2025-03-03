@@ -4,30 +4,31 @@
 \contentsline {subsection}{\numberline {1.1.1}Quantum Mechanics}{5}{}%
 \contentsline {subsection}{\numberline {1.1.2}Our Computational Model}{12}{}%
 \contentsline {section}{\numberline {1.2}Introductory Representation Theory}{13}{}%
-\contentsline {section}{\numberline {1.3}Representation Theory of the Symmetric Group}{17}{}%
-\contentsline {subsection}{\numberline {1.3.1}Motivation}{17}{}%
-\contentsline {subsection}{\numberline {1.3.2}Tableaux and Tabloids}{18}{}%
-\contentsline {subsection}{\numberline {1.3.3}The modules $M^\lambda $ and $S^\lambda $}{19}{}%
-\contentsline {subsection}{\numberline {1.3.4}Irreducibility and completeness of the $S^\lambda $ modules}{21}{}%
-\contentsline {subsection}{\numberline {1.3.5}A basis for $S^\lambda $}{27}{}%
-\contentsline {section}{\numberline {1.4}Oracle Formalism}{28}{}%
-\contentsline {chapter}{Chapter 2: Results}{33}{}%
-\contentsline {chapter}{Chapter 3: The First}{35}{}%
-\contentsline {section}{\numberline {3.1}References, Labels, Custom Commands and Footnotes}{35}{}%
-\contentsline {subsection}{\numberline {3.1.1}References and Labels}{35}{}%
-\contentsline {subsection}{\numberline {3.1.2}Custom Commands}{36}{}%
-\contentsline {subsection}{\numberline {3.1.3}Footnotes and Endnotes}{36}{}%
-\contentsline {section}{\numberline {3.2}Bibliographies}{36}{}%
-\contentsline {subsection}{\numberline {3.2.1}Tips for Bibliographies}{37}{}%
-\contentsline {section}{\numberline {3.3}Anything else?}{37}{}%
-\contentsline {chapter}{Chapter 4: Mathematics and Science}{39}{}%
-\contentsline {section}{\numberline {4.1}Math}{39}{}%
-\contentsline {chapter}{Chapter 5: Tables and Graphics}{41}{}%
-\contentsline {section}{\numberline {5.1}Tables}{41}{}%
-\contentsline {section}{\numberline {5.2}Figures}{42}{}%
-\contentsline {section}{\numberline {5.3}More Figure Stuff}{43}{}%
-\contentsline {section}{\numberline {5.4}Even More Figure Stuff}{43}{}%
-\contentsline {subsection}{\numberline {5.4.1}Common Modifications}{43}{}%
-\contentsline {chapter}{Conclusion}{45}{}%
-\contentsline {section}{\numberline {4.1}More info}{45}{}%
-\contentsline {chapter}{References}{47}{}%
+\contentsline {subsection}{\numberline {1.2.1}Character Theory}{17}{}%
+\contentsline {section}{\numberline {1.3}Representation Theory of the Symmetric Group}{18}{}%
+\contentsline {subsection}{\numberline {1.3.1}Motivation}{18}{}%
+\contentsline {subsection}{\numberline {1.3.2}Tableaux and Tabloids}{19}{}%
+\contentsline {subsection}{\numberline {1.3.3}The modules $M^\lambda $ and $S^\lambda $}{21}{}%
+\contentsline {subsection}{\numberline {1.3.4}Irreducibility and completeness of the $S^\lambda $ modules}{23}{}%
+\contentsline {subsection}{\numberline {1.3.5}A basis for $S^\lambda $}{29}{}%
+\contentsline {section}{\numberline {1.4}Oracle Formalism}{30}{}%
+\contentsline {chapter}{Chapter 2: Results}{35}{}%
+\contentsline {chapter}{Chapter 3: The First}{37}{}%
+\contentsline {section}{\numberline {3.1}References, Labels, Custom Commands and Footnotes}{37}{}%
+\contentsline {subsection}{\numberline {3.1.1}References and Labels}{37}{}%
+\contentsline {subsection}{\numberline {3.1.2}Custom Commands}{38}{}%
+\contentsline {subsection}{\numberline {3.1.3}Footnotes and Endnotes}{38}{}%
+\contentsline {section}{\numberline {3.2}Bibliographies}{38}{}%
+\contentsline {subsection}{\numberline {3.2.1}Tips for Bibliographies}{39}{}%
+\contentsline {section}{\numberline {3.3}Anything else?}{39}{}%
+\contentsline {chapter}{Chapter 4: Mathematics and Science}{41}{}%
+\contentsline {section}{\numberline {4.1}Math}{41}{}%
+\contentsline {chapter}{Chapter 5: Tables and Graphics}{43}{}%
+\contentsline {section}{\numberline {5.1}Tables}{43}{}%
+\contentsline {section}{\numberline {5.2}Figures}{44}{}%
+\contentsline {section}{\numberline {5.3}More Figure Stuff}{45}{}%
+\contentsline {section}{\numberline {5.4}Even More Figure Stuff}{45}{}%
+\contentsline {subsection}{\numberline {5.4.1}Common Modifications}{45}{}%
+\contentsline {chapter}{Conclusion}{47}{}%
+\contentsline {section}{\numberline {4.1}More info}{47}{}%
+\contentsline {chapter}{References}{49}{}%
