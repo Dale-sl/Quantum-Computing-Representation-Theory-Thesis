@@ -131,7 +131,41 @@ quantumQueryProbabilityHistory := function(tbl, permutationCharacter, groupDegre
     );
 end;
 
-
+quantumQueryCharacterPartitions := function(tbl, permutationCharacter, groupDegree)
+    local constituents, irr, cp, mapping, partitionList, i, pos;
+    
+    # Get the list of irreducible characters from the table.
+    irr := Irr(tbl);
+    
+    # Get the character parameters; each entry is of the form [ 1, partition ].
+    cp := CharacterParameters(tbl);
+    
+    # Build a mapping: for each irreducible (by position), store the associated partition.
+    mapping := [];
+    for i in [1..Length(cp)] do
+        mapping[i] := cp[i][2];
+    od;
+    
+    # Compute the constituents of the given permutation character.
+    constituents := ConstituentsOfCharacter(tbl, permutationCharacter);
+    
+    # For each constituent, find its associated partition.
+    partitionList := [];
+    for constituent in constituents do
+        pos := Position(irr, constituent);
+        if pos = fail then
+            Add(partitionList, []);
+            Print("Something is very wrong, couldn't find partition associated to irreducible!");
+        else
+            Add(partitionList, mapping[pos]);
+        fi;
+    od;
+    
+    return rec(
+         groupDegree := groupDegree,
+         partitions  := partitionList
+    );
+end;
 
 
 # Now we want to define group actions and find their permutation character.
@@ -359,6 +393,128 @@ ProcessQuantumQueryProbabilityHistorySubsets := function(groupConstructor, group
     PrintCSV(filename, results, ["groupDegree", "probabilities"]);
     return results;
 end;
+
+
+ProcessCharacterPartitionsFactorizations := function(groupConstructor, groupName, filename)
+    local results, n, factors, a, b, ret, factorPairs, factorFound, recEntry, usedFactorPairs;
+    
+    results := [];
+    n := 2;
+    
+    while true do
+        Print("Starting computations for n = ", n, "\n");
+        
+        # Get all factors of n
+        factors := FactorsInt(n);
+        
+        # Initialize list to store used ordered pairs to avoid duplicate calls.
+        usedFactorPairs := [];
+        factorPairs := [];
+        for a in factors do
+            b := n / a;
+            if a > 1 and b > 1 then
+                if not ([a, b] in usedFactorPairs) then
+                    Add(factorPairs, [a, b]);
+                    Add(usedFactorPairs, [a, b]);
+                    # If the factors are distinct, mark both orders as used.
+                    if a <> b then
+                        Add(usedFactorPairs, [b, a]);
+                    fi;
+                fi;
+            fi;
+        od;
+        
+        # If no nontrivial factorization exists for n, skip to the next n.
+        if Length(factorPairs) = 0 then
+            Print("No nontrivial factorizations for n = ", n, ". Skipping to next n.\n");
+            n := n + 1;
+            continue;
+        fi;
+        
+        factorFound := false;
+        # Iterate over each factor pair.
+        for factors in factorPairs do
+            a := factors[1];
+            b := factors[2];
+            
+            if a = b then
+                # For a square factorization, call only once.
+                Print("Trying factorization: ", a, " * ", b, " = ", n, "\n");
+                ret := IO_CallWithTimeout(rec(seconds := 600),
+                    function()
+                        return quantumQueryCharacterPartitions(
+                                   CharacterTable(groupName, n),
+                                   regActPartsChar(a, b, groupConstructor),
+                                   n
+                               );
+                    end);
+                if ret[1] = true then
+                    factorFound := true;
+                    recEntry := rec(
+                        a           := a,
+                        b           := b,
+                        groupDegree := n,
+                        partitions  := ret[2].partitions
+                    );
+                    Add(results, recEntry);
+                fi;
+            else
+                # For distinct factors, make two calls: (a, b) and (b, a).
+                Print("Trying factorization: ", a, " * ", b, " = ", n, "\n");
+                ret := IO_CallWithTimeout(rec(seconds := 600),
+                    function()
+                        return quantumQueryCharacterPartitions(
+                                   CharacterTable(groupName, n),
+                                   regActPartsChar(a, b, groupConstructor),
+                                   n
+                               );
+                    end);
+                if ret[1] = true then
+                    factorFound := true;
+                    recEntry := rec(
+                        a           := a,
+                        b           := b,
+                        groupDegree := n,
+                        partitions  := ret[2].partitions
+                    );
+                    Add(results, recEntry);
+                fi;
+                
+                Print("Trying factorization: ", b, " * ", a, " = ", n, "\n");
+                ret := IO_CallWithTimeout(rec(seconds := 600),
+                    function()
+                        return quantumQueryCharacterPartitions(
+                                   CharacterTable(groupName, n),
+                                   regActPartsChar(b, a, groupConstructor),
+                                   n
+                               );
+                    end);
+                if ret[1] = true then
+                    factorFound := true;
+                    recEntry := rec(
+                        a           := b,
+                        b           := a,
+                        groupDegree := n,
+                        partitions  := ret[2].partitions
+                    );
+                    Add(results, recEntry);
+                fi;
+            fi;
+        od;
+        
+        # If no factorization for this n produced a successful call, stop looping.
+        if not factorFound then
+            Print("All calls failed for n = ", n, ". Stopping loop.\n");
+            break;
+        fi;
+        
+        n := n + 1;
+    od;
+    
+    PrintCSV(filename, results, ["a", "b", "groupDegree", "partitions"]);
+    return results;
+end;
+
 
 
 # ProcessQuantumQueryComplexities(SymmetricGroup, "symmetric", 3, "SnPartitions3.csv");
