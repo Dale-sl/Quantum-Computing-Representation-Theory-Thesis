@@ -167,6 +167,9 @@ quantumQueryCharacterPartitions := function(tbl, permutationCharacter, groupDegr
     );
 end;
 
+# manually getting a csv of the partitions of a specific action
+# PrintCSV("SnParts16.csv", quantumQueryCharacterPartitions(CharacterTable("symmetric", 16), regActPartsChar(4,4, SymmetricGroup), 16), ["groupDegree", "partitions"]);
+
 
 # Now we want to define group actions and find their permutation character.
 
