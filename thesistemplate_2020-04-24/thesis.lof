@@ -3,7 +3,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A Figure}}{44}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces A Smaller Figure, Flipped Upside Down}}{45}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces A Cropped Figure}}{45}{}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Subdivision of arc segments}}{45}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A Figure}}{46}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A Smaller Figure, Flipped Upside Down}}{47}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A Cropped Figure}}{47}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Subdivision of arc segments}}{47}{}%
