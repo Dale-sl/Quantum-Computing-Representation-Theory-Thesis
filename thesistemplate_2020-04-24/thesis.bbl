@@ -11,9 +11,16 @@ Meenaxi Bhattacharjee, Dugald Macpherson, Rögnvaldur~G. Möller, and Peter~M.
 Daniel Copeland and Jamie Pommersheim.
 \newblock Quantum query complexity of symmetric oracle problems.
 
-\bibitem[fam]{valleCharacterTheoreticFormula2024}
+\bibitem[fam]{spiga24}
 prefix=del~useprefix=false family=Valle, given=Coen.
 \newblock A character theoretic formula for base size.
+
+\bibitem[FH]{fulton2004}
+William Fulton and Joe Harris.
+\newblock {\em Representation {{Theory}}}, volume 129 of {\em Graduate
+  {{Texts}} in {{Mathematics}}}.
+\newblock Springer.
+
 
 \bibitem[Ful]{fulton}
 William Fulton.
@@ -27,6 +34,16 @@ Gordon James and Martin Liebeck.
 \newblock {\em Representations and {{Characters}} of {{Groups}}}.
 \newblock Cambridge University Press, 2 edition.
 
+
+\bibitem[MSa]{spiga23}
+Giovanni Mecenero and Pablo Spiga.
+\newblock A formula for the base size of the symmetric group in its action on
+  subsets.
+
+\bibitem[MSb]{morris2021}
+Joy Morris and Pablo Spiga.
+\newblock On the base size of the symmetric and the alternating group acting on
+  partitions.
 
 \bibitem[NC]{nielsen2010}
 Michael~A. Nielsen and Isaac~L. Chuang.

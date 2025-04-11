@@ -167,6 +167,54 @@ quantumQueryCharacterPartitions := function(tbl, permutationCharacter, groupDegr
     );
 end;
 
+TensorPartitions := function(partition1, partition2, n)
+    local tbl, cp, irr, mapping, pos1, pos2, chi1, chi2, tensorChar, constituents, result, constituent, pos;
+    
+    # Create the symmetric group character table for degree n.
+    tbl := CharacterTable("symmetric", n);
+    
+    # Obtain the character parameters; each entry is of the form [ 1, partition ].
+    cp := CharacterParameters(tbl);
+    
+    # Get the list of irreducible characters.
+    irr := Irr(tbl);
+    
+    # Build a mapping so that mapping[i] is the partition corresponding to irr[i].
+    mapping := [];
+    for i in [1..Length(cp)] do
+        mapping[i] := cp[i][2];
+    od;
+    
+    # Find the positions corresponding to partition1 and partition2.
+    pos1 := Position(mapping, partition1);
+    pos2 := Position(mapping, partition2);
+    if pos1 = fail or pos2 = fail then
+        Error("One of the given partitions is not valid for S_", n, ".");
+    fi;
+    
+    chi1 := irr[pos1];
+    chi2 := irr[pos2];
+    
+    # Compute the tensor product of the two characters.
+    tensorChar := chi1 * chi2;
+    
+    # Decompose the tensor product into irreducible constituents.
+    constituents := ConstituentsOfCharacter(tbl, tensorChar);
+    
+    # For each constituent, look up its corresponding partition.
+    result := [];
+    for constituent in constituents do
+        pos := Position(irr, constituent);
+        if pos = fail then
+            Add(result, "Error");
+        else
+            Add(result, mapping[pos]);
+        fi;
+    od;
+    
+    return result;
+end;
+
 # manually getting a csv of the partitions of a specific action
 # PrintCSV("SnParts16.csv", quantumQueryCharacterPartitions(CharacterTable("symmetric", 16), regActPartsChar(4,4, SymmetricGroup), 16), ["groupDegree", "partitions"]);
 

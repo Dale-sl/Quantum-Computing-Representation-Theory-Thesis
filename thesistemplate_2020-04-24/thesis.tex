@@ -156,6 +156,9 @@
 \def\tr{\mathrm{tr}} 
 \def\vep{\varepsilon}
 
+\def\ind{\mathrm{Ind}}
+\def\res{\mathrm{Res}}
+
 % \usepackage{mathabx}
 \def\acts{\circlearrowright} %group action
 
@@ -280,12 +283,13 @@
   Contrast the previous example with a problem where the algorithm has to learn $f$ exactly; before making any queries the classical algorithm has a $\frac{1}{2}$ of guessing $a_0 \oplus a_1$ correctly,
   and this doesn't change after making a query. On the other hand learning the exact function has a $\frac{1}{4}$ chance of success with $0$ queries, and a $\frac{1}{2}$ chance of success with $1$ query.
   If we considered an extreme version of this problem, $f: \{a_0, a_1 \} \to \ZZ / 1000\ZZ$, then we observe that a classical algorithm has a near-zero chance of guessing the function before it makes its final query.
-  For most oracle problems, this pattern holds true classically; the algorithms knows nearly nothing about the function until it knows the whole function.
-  Effectively, bounded error learning is equivalent to exact learning in this case.
+  For most oracle problems, this pattern holds true in the classic case; the algorithm knows nearly nothing about the function until it knows the whole function.
+  Effectively, bounded error learning is equivalent to exact learning classically. \par
   Shockingly, quantum algorithms have a different tendency.
-  The function will be nearly unknown for the first few queries, but after some asymptotically smaller number of queries than that needed for exact learning, nearly the whole function will be known!
+  The function will be nearly unknown for the first few queries, but after some asymptotically \todo{maybe this asymptotic claim is false}
+  smaller number of queries than that needed for exact learning, nearly the whole function will be known!
   We are thus concerned with comparing the exact classical query complexity with both the exact and bounded error quantum query complexity of a given oracle problem.
-  Of note is that we are proving we have found a neccesary and sufficent number of queries to solve the problem; we have an algorithm which solves the problem with the given asymptotics, and it is optimal,
+  Of note is that we are proving we have found a neccesary and sufficent number of queries to solve the problem; we prove the existence of an algorithm which solves the problem with the given asymptotics, and it is optimal,
   meaning no algorithm make asymptotically less queries.
   % In fact, we will be able to prove that there exists an algorithm which has a given query complexity, and that furthermore no algorithm exists which can do better --- the algorithm will be optimal.
   \par
@@ -300,7 +304,7 @@
   into one of representation theory.
   By understanding the representation corresponding to $\Omega$ and the way it tensors with itself, we will be able to find the query complexity.
   Because our $G$-sets have $S_n$ and $A_n$ as groups, we will be deeply concerned with the representation theory of $S_n$;
-  combinatorial structures known as \emph{Young diagrams} and \emph{Young tableaux} will offer a useful lens through which we can analyze the representation theory.
+  combinatorial structures known as \emph{Young diagrams} and \emph{Young tableaux} will offer a useful correspondence through which we can understand $S_n$'s representations.
   
   
   \chapter{Background}
@@ -630,7 +634,7 @@
   we will use it in our problem statement and our results.
   \begin{defn}[{\cite[Definition 1.11.1]{sagan}}]
     Let $G$ and $H$ have matrix representations $X$ and $Y$,respectively.The tensor product representation, $X  \otimes Y$, assigns to each $(g, h) \in G \times H$ the matrix
-    \[( X \otimes Y (g,h) = X(g)  \otimes Y(h). \]
+    \[( X \otimes Y) (g,h) = X(g)  \otimes Y(h). \]
   \end{defn}
 
   \subsection{Character Theory}
@@ -1179,21 +1183,23 @@
   Our problem is thus two instances of symmetric oracle discrimination where, in the first case,
   \begin{enumerate}
   \item $G$ = $S_n$ \todo{and $A_n$}.
-  \item $\Omega$ is the set of $k$ elements subsets of $[n] = \{ 1, 2, \cdots, n\}$.
-  \item $S_n \acts \Omega$ is the natural action of $S_n$:
+  \item $\Omega$ is the set of $k$ elements subsets of $[n] = \{ 1, 2, \cdots, n\}$, denoted $\Omega_k$.
+  \item $S_n \acts \Omega_k$ is the natural action of $S_n$:
     \[\sigma \acts \{ \omega_1, \omega_2, \cdots, \omega_k \} \mapsto \{ \sigma(\omega_1), \sigma(\omega_2), \cdots, \sigma(\omega_k)\}.\]
   \end{enumerate}
-  And in the second case,
+  We will refer to this problem as $k$-element subset discrimination, and the relevant module will be called the $k$-element module, and the relevant action the $k$-element action.
+  In the second case,
   \begin{enumerate}
   \item $G$ = $S_n$ \todo{and $A_n$}.
-  \item $\Omega$ is the set of regular partitions of $[n]$ into $b$ parts of size $a$, so $ab = n$.
-  \item $S_n \acts \Omega$ is the natural action of $S_n$:
+  \item $\Omega$ is the set of regular partitions of $[n]$ into $b$ parts of size $a$, so $ab = n$. We denote this set as $\Omega_p$.
+  \item $S_n \acts \Omega_p$ is the natural action of $S_n$:
     \begin{align*}
       &\sigma \acts \{ \{ \omega_1, \omega_2, \cdots, \omega_a \}, \{ \omega_{a+1}, \omega_{a+2}, \cdots, \omega_{2a} \}, \cdots, \{ \omega_{(a-1)b + 1}, \omega_{(a-1)b + 2}, \cdots, \omega_{ab} \}  \} \mapsto &\\
       &\{ \{ \sigma(\omega_1), \sigma(\omega_2), \cdots, \sigma(\omega_a )\}, \{ \sigma(\omega_{a+1}), \sigma(\omega_{a+2}), \cdots, \sigma(\omega_{2a}) \}, \cdots, \\
       & \{ \sigma(\omega_{(a-1)b + 1}), \sigma(\omega_{(a-1)b + 2}), \cdots, \sigma(\omega_{ab}) \} \}.
     \end{align*}
   \end{enumerate}
+  We will likewise refer to the associated objects here with the ``regular partion'' prefix.
   Finally, we introduce the theorem which our results rely upon.
   \begin{thm}
     Suppose $G$ is a finite group and $\pi : G \to U (V )$ a unitary representation of $G$. Then
@@ -1244,8 +1250,199 @@
   Both these partitions and the behavior of the query complexity as $n$ increased helped us make conjectures regarding the general query complexity of these actions.
   
   \chapter{Results}
-
-
+  We will first provide a decomposition of the $k$-element module and the decomposition of the module $V \otimes \CC \Omega_k$ ($\CC \Omega_k$ the $k$-element module) for any $S_n$ module and vector space $V$ when $k=1$.
+  The latter result is assumed in \cite{copeland} but no proof is provided or easily accessible online.
+  Our other results will revolve around conjectures regarding the quantum query complexity of each oracle problem and the behavior of the tensor products of representations leading to this behavior.
+  \par
+  We will also introduce the \emph{base size} of $S_n \acts \Omega$ for the $k$-element action and the regular partition action as found in \cite{spiga23} and \cite{spiga24}.
+  The base size as defined in \cite{copeland} is the length of the smallest tuple $(\omega_1, \cdots, \omega_t) \in \Omega^t$ with the property that $(g\cdot \omega_1, \cdots, g\cdot \omega_t) = (\omega_1, \cdots, \omega_t)$
+  if and only if $g=1$, which is to say the tuple has trivial pointwise stabilizer.
+  This definition corresponds to the non-adaptive (queries all made at the same time) classical query complexity; by the orbit stabilizer theorem there is a bijective function
+  which given $g \cdot x$ returns the coset $gG_{\Omega^t}$, and because the tuple has trivial pointwise stabilizer this is just the element $g$ we aimed to find. \par
+  This in fact proves that the base size is also the \emph{adaptive} classical query complexity, where the algorithm is allowed to consider $g \cdot \omega_i$ before choosing $\omega_{i+1}$ to query.
+  Any sequence $(\omega_1, \cdots, \omega_t)$ which was chosen adaptively and suffices to identify some particular $g \in G$ can identify \emph{any} element of $G$, because the sequence has to have pointwise
+  trivial stabilizer to rule out every other group element that $g \in G$ could have been, and the same orbit stabilizer argument follows. Base size is thus equivalent to classical query complexity for symmetric oracle discrimination,
+  and the results of \cite{spiga23} and \cite{spiga24} will allow us to compare the classical and quantum query complexity of our oracle problems.
+  In fact, they will play an important role in our conjectures, because our data indicates that the classical and quantum query complexities are the same for $k$-element discrimination.
+  \section{Decompositions}
+  To decompose the $k$-element module, we will need more theorems from the representation theory of the symmetric group.
+  Like before, we will be using Young tableaux; however, we are now interested in a less restrictive version of standard young tableaux:
+  \begin{defn}[{ \cite{sagan}[2.9.1] }]
+    A tableau is \emph{semistandard} if the nodes of the Young diagram of the partition $\lambda$ are filled with positive integers, repetitions allowed;
+    additionally, its rows must be weakly increasing and its columns must be strongly increasing.
+    The latter condition follows suite with standard tableau, while now repetitions and integers greater than the number of nodes in the diagram are allowed.
+    The \emph{type} of a semistandard tableaux is the tuple $\mu = (\mu_1, \mu_2, \cdots, \mu_m)$, where $\mu_i$ equals the number of the integer $i$ in the tableaux.
+  \end{defn}
+  \begin{ex}
+    The tableaux
+    \[
+      \begin{ytableau}
+        1 & 1 & 2 \\
+        2 & 6 
+      \end{ytableau}
+    \]
+    is semistandard with type $(2,2,0,0,0,1)$, whereas
+    \[
+      \begin{ytableau}
+        2 & 1 & 1 \\
+        6 & 2 
+      \end{ytableau}
+    \]
+    is not a semistandard tableaux.
+  \end{ex}
+  \begin{defn}[{ \cite{sagan}[2.11.1] }]
+    The \emph{Kostka numbers} $K_{\lambda \mu }$ are the number of semistandard tableaux of a partition $\lambda$ with type $\mu$.
+  \end{defn}
+  \begin{thm}[{ \cite{sagan}[2.11.2], Young's Rule }]
+    The multiplicity of the specht module $S^\lambda$ in the permutation module $M^\mu$ is equal to the number of semistandard tableaux of shape $\lambda$ and content $\mu$; that is,
+    \[ M^\mu \cong \bigoplus_\lambda K_{\lambda \mu} S^\lambda .\]
+  \end{thm}
+  Thanks to the following (unrelated) corollary, we will only have to calculate the Kostka numbers $K_{\lambda \mu}$ when $\lambda \normeq \mu$, as they are otherwise zero.
+  \begin{cor}[{ \cite{sagan}[2.4.7] }]
+    The permutation modules decompose as
+    \[M^\mu = \bigoplus_{\lambda \normeq \mu} m_{\lambda \mu} S^\lambda \]
+    where $m_{\lambda\mu}$ is a generic coefficent with diagonal multiplicity $m_{\mu \mu} =1$.
+  \end{cor}
+  The following lemma will enable us to use Young's rule to decompose our module into irreducibles.
+  \begin{lemma}
+    Suppose $\CC \Omega_k $ is the $k$-element module of $n$. Then
+    \[ \CC \Omega_k  \cong M^{(n-k,k)}\]
+    as modules.
+  \end{lemma}
+  \begin{proof}
+    \todo{proof of isomorphism by an explicit function is maybe less elegant than desired}
+    \ytableausetup{tabloids,centertableaux, boxsize = 2.5em}
+    For a given partition $\lambda = (n-k,k) \vdash n$, we define the function $f: \Omega_k \to \{\{t_1\}, \{t_2\}, \cdots \{t_j\} \}$ where $\{t_1\}, \{t_2\}, \cdots, \{t_j\}$ is a complete set of $\lambda$-tabloids:
+    \[  \{ \omega_1, \omega_2, \cdots, \omega_k \} \mapsto
+      \begin{ytableau}
+        \omega_{k+1} & \omega_{k+2} & \none[\cdots] & \omega_n \\
+        \omega_1 & \omega_2 & \none[\cdots] & \omega_k
+      \end{ytableau}.
+    \]
+    The values $\omega_{k+1}, \omega_{k+2}, \cdots, \omega_n$ come from the set complement $ [n] \setminus \{ \omega_1, \omega_2, \cdots, \omega_k \} = \{ \omega_{k+1}, \omega_{k+2}, \cdots, \omega_n \}$.
+    This function linearly extends to a function $F: \CC \Omega \to M^{n-k,k}$.
+    Note that the rows of $M^\lambda$ can be listed in any order and produce an isomorphic module. This means that $M^\lambda$ is defined for \emph{ordered} partitions $\lambda$
+    \todo{says this in the book but i don't know if this is convincing},
+    so
+    this function is still well-defined if $k > n-k$.
+    We observe that if
+    \todo{this feels really ugly, the bijection seems too obvious to need this; also feels insufficent}
+    \[f(\{ \omega_1, \omega_2, \cdots, \omega_k \})= f( \{ \omega'_1, \omega'_2, \cdots, \omega'_k \}),\] then
+    \[\{ \omega_1, \omega_2, \cdots, \omega_k \} = \{ \omega'_1, \omega'_2, \cdots, \omega'_k \};\]
+    because a $(n-k,k)$ tabloid is determined by the integers in its bottom row whose doesn't matter due to the equivalence relation, $f$ is injective.
+    Furthermore $|\Omega_k| = \binom{n}{k}$, and $|\{\{t_1\}, \{t_2\}, \cdots, \{t_j\} \}| = \binom{n}{k}$ because the tabloid is determined by choosing the integers in its bottom row, so $f$ is a bijection and by linear extension $F$
+    is a vector space isomorphism.
+    Finally, we observe that
+    \ytableausetup{tabloids,centertableaux,boxsize = 2.5em}
+    \begin{align*}      
+      \sigma \cdot f(\{ \omega_1, \omega_2, \cdots, \omega_k \}) &=
+      \sigma \cdot
+      \begin{ytableau}
+         \omega_{k+1} &  \omega_{k+2} & \none[\cdots] & \omega_n \\
+        \omega_1 & \omega_2 & \none[\cdots] &  \omega_k
+      \end{ytableau}                                                                   
+      \\
+      &=
+      \begin{ytableau}
+        \scriptstyle \sigma \cdot \omega_{k+1} &  \scriptstyle \sigma \cdot \omega_{k+2} & \none[\cdots] &  \sigma \cdot \omega_n \\
+         \sigma \cdot \omega_1 &  \sigma \cdot \omega_2 & \none[\cdots] &  \sigma \cdot \omega_k
+      \end{ytableau}
+      \\
+      &=
+      f(\sigma \cdot \{ \omega_1, \omega_2, \cdots, \omega_k \})
+    \end{align*}
+    so by linear extension $F$ is indeed a module isomorphism.
+  \end{proof}
+  We are now ready to decompose $\CC \Omega_k$ using Young's rule.
+  \begin{lemma}
+    Suppose $ \CC\Omega_k $ is the $k$-element module of $n$. Then
+    \[ \CC \Omega_k  \cong \bigoplus_{j=0}^{k} S^{(n-j,j)}.\]
+  \end{lemma}
+  \begin{proof}
+    We first recall that $\CC \Omega_k  \cong M^{(n-k,k)}$, and apply corollary $3.1.5$ \todo{maybe cleverref this}.
+    In order to have a nonzero multiplicity, $\lambda$ must dominate $(n-k,k)$ in $K_{\lambda (n-k,k)}$.
+    If $\lambda$ has parts in some third or more part which sum to nonzero $h$,
+    then $n - k + k - h = n -h \ngeq n-k + k = n$, so it cannot dominate $(n-k,k)$. Furthermore, it cannot have a first part smaller than $n-k$, as then $n-k -h \ngeq n-k$.
+    The only partitions left are the partitions $(n- j, j)$ for $j \in \ZZ:0 \leq j \leq k$.
+    These dominate $(n-k, k)$ as $n - j \geq n-k$ and $n -j + j  = n \geq n-k + k = n$.
+    Looking at the semistandard tableaux of shape $(n- j, j)$ with content $(n-k,k)$,
+    we see that the only  way to form a valid semistandard tableaux is to place the $n-k$ $1$'s into the first row and to fill the rest of the slots with the $k$ $2$'s:
+    \ytableausetup{notabloids,centertableaux, boxsize = normal}
+    \[
+      \begin{ytableau}
+        1 & 1 & \none[\cdots] & 1 & 2 & 2 & \none[\cdots] & 2 \\
+        2 & 2 & \none[\cdots] & 2
+      \end{ytableau}.
+    \]
+    We can thus conclude by Young's rule that
+    \[ \CC \Omega_k  \cong M^{(n-k,k)} \cong \bigoplus_{j=0}^{k} S^{(n-j,j)}.\]
+  \end{proof}
+  Our next result will rely on the concept of \emph{restricted} and \emph{induced} representations, where new representations are created using a group and its supergroup or subgroup.
+  \begin{defn}[{ \cite[Section 3.3]{fulton2004} }]
+    If $H \subseteq G$, any (module) representation of $G$ restricts to a representation of $H$ by restricting the action $G \acts V$ to $H \acts V$; likewise for a matrix representation $X$ with $G$ as its domain,
+    the restriction $\res_H^G (X)$ is a function with $H$ as its domain where $\res_H^G(X(h)) = X(h)$.
+    \par
+    Suppose $V$ is a (module) representation of $G$, and $W \subseteq V$ is a subspace which is $H$-invariant.
+    For any $g$ in $G$, the subspace $g \cdot W = \{ g \cdot w: w \in W\}$ depends only on the left coset $gH$ of $g$ modulo $H$, since $gh \cdot W = g \cdot (h \cdot W) = g \cdot W$;
+    for a coset $\sigma$ in $G/H$, we write $\sigma \cdot W$ for this subspace of $V$. We say that $V$ is induced by $W$ if every element in $V$ can be written uniquely as a sum of elements in such translates of $W$, i.e.,
+    \[ V = \bigoplus_{\sigma \in G/H} \sigma \cdot W.\]
+    In this case we write $\ind^G_H (W = V)$.
+  \end{defn}
+  We assume the existence and uniqueness of induced representations as the proof is outside of our scope.
+  We now need the following lemma which is left as an excercise in \cite[Excercise 3.16]{fulton2004}.
+  \begin{lemma}
+    Suppose that $U$ is a (module) representation of $G$ and $W$ a representation of $H$. Then
+    \[ U \otimes \ind (W) = \ind( \res (U) \otimes W).\]
+    In particular, $\ind ( \res (U)) = U \otimes P$, where $P$ is the permutation representation of $G$ on $G/H$.
+  \end{lemma}
+  \begin{proof}
+    We observe that
+    \begin{align*}
+      \ind^G_H ((\res^G_H(U) \otimes W)) &= \bigoplus_{\sigma \in G/H} ( \res^G_H(U) \otimes W) \\
+                                       &= (\bigoplus_{\sigma \in G/H}  \res^G_H(U)) \otimes (\bigoplus_{\sigma \in G/H} W) \\
+                                       &= ( \ind^G_H (\res^G_H(U))) \otimes ( \ind^G_H ( W)) \\
+                                       &= U \otimes \ind^G_H (W).
+    \end{align*}
+    If we let $W$ be the trivial representation of $H$, then as a subspace $W$ will be trivial, and the subspace $g \cdot W$ is determined by the coset $gH \in G/H$. Therefore
+    this induced representation $P$ has basis $\{e_\sigma : \sigma \in G/H\}$,
+    so $P$ is the permutation representation of $G/H$.
+    By substition we see that
+    \[ \ind^G_H ((\res^G_H(U) \otimes \CC e_H)) =  \ind^G_H (\res^G_H(U)) = U \otimes \ind^G_H (W) = U \otimes P,\]
+    which is the particular formula we were looking for.
+  \end{proof}
+  We will combine this lemma with the following theorem:
+  \begin{thm}[{ \cite[2.8.3]{sagan}, Branching Rule }]
+    If $\lambda \vdash n$, then
+    \begin{enumerate}
+    \item $\res^{S_{n}}_{S_{n-1}} (S^\lambda) \cong \bigoplus_{\lambda^-} S^{\lambda^-}$, and
+    \item $\ind^{S_{n+1}}_{S_{n}} (S^\lambda) \cong \bigoplus_{\lambda^+} S^{\lambda^+},$
+    \end{enumerate}
+    where $\lambda^-$ is any partition created by the removal of a node in $\lambda$ such that the result is a partition,
+    and likewise $\lambda^+$ is any partition created by the valid addition of a node to $\lambda$.
+  \end{thm}
+  We now can provide a simple proof of the lemma used on page $13$ by \cite{copeland}:
+  \begin{lemma}
+    Let $V_\lambda$ be the specht module corresponding to the partition $\lambda \vdash n$, and let $V$ be the permutation module $V = S^{(n)} \oplus S^{(n-1,1)}$.
+    Then
+    \[V \otimes V_\lambda \cong \bigoplus_ {\mu \in \lambda^\pm} m_\mu S^\mu \]
+    for positive $m_\mu$; $\lambda^\pm$ is the set of partions of $n$ obtained by removing then adding a valid node to $\lambda$.
+  \end{lemma}
+  The multiplicity $m_\mu$ is left undetermined because it is not relevant to the quantum base size.
+  \begin{proof}
+    We observe that $V$ is the permutation representation of $S_n / S_{n-1}$ \todo{expand on this or prove it maybe}, so using the permutation representation case of lemma $3.1.9$ \todo{clever ref} we see that
+    \begin{align*}
+      V \otimes V_\lambda &\cong \ind^{S_{n}}_{S_{n-1}} ( \res^{S_{n}}_{S_{n-1}} (V_\lambda))\\
+                          &\cong \ind^{S_{n}}_{S_{n-1}} (\bigoplus_{\lambda^-} S^{\lambda^-})\\
+                          &\cong \bigoplus_{\lambda^-} \ind^{S_{n}}_{S_{n-1}} ( S^{\lambda^-}) \\
+                          &\cong \bigoplus_{\lambda^-} \bigoplus_{\lambda^+} S^{\lambda^{-+}} \\
+                          &\cong \bigoplus_ {\mu \in \lambda^\pm} m_\mu S^\mu
+    \end{align*}
+    where the comutativity of induction is proven in \cite[Excercise 3.15]{fulton2004}.
+  \end{proof}
+  \section{Data and Conjectures}
+  
+  
+  \chapter{Disscussion}
 
 
 

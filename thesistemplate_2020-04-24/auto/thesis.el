@@ -5,10 +5,10 @@
                      '(("reedthesis" "12pt" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("url" "hyphens") ("cleveref" "capitalise") ("natbib" "numbers")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "reedthesis"
@@ -170,6 +170,8 @@
     "Syl"
     "tr"
     "vep"
+    "ind"
+    "res"
     "acts")
    (LaTeX-add-labels
     "motivation"
