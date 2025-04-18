@@ -40,7 +40,7 @@
 # new version that associates a partition with each irreducible character
 quantumQueryComplexity := function(tbl, permutationCharacter, groupDegree)
     local queries, tensorChar, constituents, probabilityOfSuccess, boundedQueries,
-    irr, cp, mapping, partitionsHistory, groupOrder, i, pos, currentIterationPartitions;
+    irr, cp, mapping, partitionsHistory, groupOrder, i, pos, currentIterationPartitions, tensorCheck;
     
     queries := 0;
     boundedQueries := 0;  
@@ -56,7 +56,7 @@ quantumQueryComplexity := function(tbl, permutationCharacter, groupDegree)
     # Compute group order as the sum of squares of the degrees.
     groupOrder := Sum(irr, x -> x[1]^2);
     
-    # Get the character parameters; each entry isq of the form [ 1, partition ].
+    # Get the character parameters; each entry is of the form [ 1, partition ].
     cp := CharacterParameters(tbl);
     # Build a mapping: for each irreducible (by position), store the associated partition.
     mapping := [];
@@ -213,6 +213,75 @@ TensorPartitions := function(partition1, partition2, n)
     od;
     
     return result;
+end;
+
+DecomposeCharacterTensorPairs := function(char1, char2, n, filename)
+    local tbl, irr, cp, mapping, constit1, constit2,
+    i, j, chi1, chi2, pos1, pos2, part1, part2,
+    tensor, decomp, tensorParts, constituent, pos, pairRecord, results;
+    
+    # Obtain the character table for S_n.
+    tbl := CharacterTable("symmetric", n);
+    
+    # Get the list of irreducible characters.
+    irr := Irr(tbl);
+    
+    # Get the character parameters; each entry is of the form [ 1, partition ].
+    cp := CharacterParameters(tbl);
+    
+    # Build a mapping so that mapping[i] is the partition corresponding to irr[i].
+    mapping := [];
+    for i in [1..Length(cp)] do
+        mapping[i] := cp[i][2];
+    od;
+    
+    # Decompose each input character into its irreducible constituents.
+    constit1 := ConstituentsOfCharacter(tbl, char1);
+    constit2 := ConstituentsOfCharacter(tbl, char2);
+    
+    results := [];
+    
+    # Iterate over each pair of constituents.
+    for i in [1..Length(constit1)] do
+        chi1 := constit1[i];
+        pos1 := Position(irr, chi1);
+        if pos1 = fail then
+            part1 := [];
+        else
+            part1 := mapping[pos1];
+        fi;
+        for j in [1..Length(constit2)] do
+            chi2 := constit2[j];
+            pos2 := Position(irr, chi2);
+            if pos2 = fail then
+                part2 := [];
+            else
+                part2 := mapping[pos2];
+            fi;
+            # Compute the tensor product of the two irreducible characters.
+            tensor := chi1 * chi2;
+            # Decompose the tensor product into irreducible characters.
+            decomp := ConstituentsOfCharacter(tbl, tensor);
+            tensorParts := [];
+            for constituent in decomp do
+                pos := Position(irr, constituent);
+                if pos = fail then
+                    Add(tensorParts, []);
+                else
+                    Add(tensorParts, mapping[pos]);
+                fi;
+            od;
+            pairRecord := rec(
+                char1_partition := part1,
+                char2_partition := part2,
+                tensor_decomposition := tensorParts
+            );
+            Add(results, pairRecord);
+        od;
+    od;
+    
+    PrintCSV(filename, results, ["char1_partition", "char2_partition", "tensor_decomposition"]);
+    return results;
 end;
 
 # manually getting a csv of the partitions of a specific action
@@ -374,6 +443,43 @@ ProcessQuantumQueryComplexitiesSubsets := function(groupConstructor, groupName, 
     return results;
 end;
 
+ProcessQuantumQueryComplexitiesSubsetsCatalan := function(groupConstructor, groupName, filename)
+    local results, n, k, ret;
+    
+    results := [];
+    k := 1;
+
+    
+    while true do
+        n := 2 * k;
+        Print("Starting computation for n = ", n, "\n");
+        
+        ret := IO_CallWithTimeout( rec(hours := 10), 
+            function()
+                return quantumQueryComplexity(
+                           CharacterTable(groupName, n),
+                           regActSubsetsChar(n, k, groupConstructor),
+                           n
+                       );
+            end );
+        
+        if ret[1] = false then
+            Print("Timeout encountered for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = fail then
+            Print("Computation failed for group with n = ", n, ". Stopping loop.\n");
+            break;
+        elif ret[1] = true then
+            Add(results, ret[2]);
+        fi;
+        
+        k := k + 1;
+    od;
+    
+    PrintCSV(filename, results, ["groupDegree", "queries", "boundedQueries", "partitionHistory"]);
+    return results;
+end;
+
 ProcessQuantumQueryProbabilityHistoryRegular := function(groupConstructor, groupName, b, filename)
     local results, a, n, ret;
     
@@ -444,7 +550,6 @@ ProcessQuantumQueryProbabilityHistorySubsets := function(groupConstructor, group
     PrintCSV(filename, results, ["groupDegree", "probabilities"]);
     return results;
 end;
-
 
 ProcessCharacterPartitionsFactorizations := function(groupConstructor, groupName, filename)
     local results, n, factors, a, b, ret, factorPairs, factorFound, recEntry, usedFactorPairs;

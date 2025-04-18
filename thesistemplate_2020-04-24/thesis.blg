@@ -5,67 +5,76 @@ The style file: annotate.bst
 Database file #1: thesisdsldesktop.bib
 Warning--entry type for "copeland" isn't style-file defined
 --line 17 of file thesisdsldesktop.bib
-Warning--entry type for "morris2021" isn't style-file defined
+Warning--entry type for "morris21" isn't style-file defined
 --line 77 of file thesisdsldesktop.bib
 Warning--entry type for "spiga23" isn't style-file defined
 --line 125 of file thesisdsldesktop.bib
-Warning--entry type for "spiga24" isn't style-file defined
+Warning--entry type for "valle2023" isn't style-file defined
 --line 142 of file thesisdsldesktop.bib
+Warning--entry type for "valle24" isn't style-file defined
+--line 158 of file thesisdsldesktop.bib
 Warning--entry type for "zhandryQuantumOracleClassification2015" isn't style-file defined
---line 157 of file thesisdsldesktop.bib
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry spiga24
+--line 173 of file thesisdsldesktop.bib
+Warning--I didn't find a database entry for "valle23"
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
 while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry spiga24
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
 while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry spiga24
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
+while executing---line 1208 of file annotate.bst
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
+while executing---line 1208 of file annotate.bst
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
 while executing---line 1208 of file annotate.bst
 Warning--empty year in bhattacharjeeWreathProducts1998
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry spiga24
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
 while executing---line 1273 of file annotate.bst
 Warning--empty year in fulton2004
+Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
+while executing---line 1273 of file annotate.bst
 Warning--empty year in fulton
 Warning--empty year in jamesRepresentationsCharactersGroups2001
 Warning--empty year in nielsen2010
 Warning--empty year in sagan
-You've used 11 entries,
+You've used 12 entries,
             2588 wiz_defined-function locations,
-            606 strings with 5921 characters,
-and the built_in function-call counts, 3661 in all, are:
-= -- 321
-> -- 177
+            610 strings with 6069 characters,
+and the built_in function-call counts, 3976 in all, are:
+= -- 349
+> -- 196
 < -- 7
-+ -- 60
-- -- 56
-* -- 222
-:= -- 591
-add.period$ -- 29
-call.type$ -- 11
-change.case$ -- 60
-chr.to.int$ -- 10
-cite$ -- 17
-duplicate$ -- 156
-empty$ -- 305
-format.name$ -- 71
-if$ -- 749
++ -- 67
+- -- 62
+* -- 238
+:= -- 641
+add.period$ -- 31
+call.type$ -- 12
+change.case$ -- 66
+chr.to.int$ -- 11
+cite$ -- 18
+duplicate$ -- 166
+empty$ -- 331
+format.name$ -- 78
+if$ -- 814
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 11
-newline$ -- 58
-num.names$ -- 33
-pop$ -- 131
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 142
 preamble$ -- 1
-purify$ -- 75
+purify$ -- 82
 quote$ -- 0
-skip$ -- 122
+skip$ -- 136
 stack$ -- 0
-substring$ -- 104
-swap$ -- 22
+substring$ -- 112
+swap$ -- 23
 text.length$ -- 7
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 68
+type$ -- 76
 warning$ -- 6
-while$ -- 32
-width$ -- 14
-write$ -- 129
-(There were 4 error messages)
+while$ -- 35
+width$ -- 15
+write$ -- 139
+(There were 7 error messages)

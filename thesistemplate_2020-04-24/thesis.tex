@@ -40,7 +40,7 @@
 \usepackage{ytableau}
 \usepackage[capitalise]{cleveref}
 \usepackage{algpseudocodex}
-
+\usepackage[noadjust]{cite}
 % make notes fit in margins
 \usepackage{todonotes}
 \setlength{\marginparwidth}{2cm}
@@ -60,6 +60,8 @@
 
 % beware, math preamble paste begins
 
+
+
 \theoremstyle{plain}   % This is the default, anyway
 \newtheorem{thm}{Theorem}[section] % numbered theorem
 \makeatletter\let\c@thm\c@thm\makeatother
@@ -71,7 +73,8 @@
 \makeatletter\let\c@prop\c@thm\makeatother
 \newtheorem{claim}{Claim}[section]
 \makeatletter\let\c@claim\c@thm\makeatother
-
+\newtheorem{conj}{Conjecture}[section]
+\makeatletter\let\c@conj\c@thm\makeatother
 
 \newtheorem*{unnumberedtheorem}{Theorem}  % unnumbered theorem
 \newtheorem*{unnumberedcorollary}{Corollary}
@@ -158,6 +161,7 @@
 
 \def\ind{\mathrm{Ind}}
 \def\res{\mathrm{Res}}
+\def\irr{\mathrm{Irr}}
 
 % \usepackage{mathabx}
 \def\acts{\circlearrowright} %group action
@@ -180,7 +184,8 @@
 \newcommand\fmatrix[1]{\text{\footnotesize$\begin{pmatrix}#1\end{pmatrix}$}}
 \newcommand\tmatrix[1]{\text{\tiny$\begin{pmatrix}#1\end{pmatrix}$}}
 
-
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 % math preamble ends
 
 
@@ -220,7 +225,7 @@
 % Acknowledgements (Acceptable American spelling) are optional
 % So are Acknowledgments (proper English spelling)
   \chapter*{Acknowledgements}
-  I want to thank a few people.
+  Zajj Daugherty!
 
   % The preface is optional
   % To remove it, comment it out or delete it.
@@ -279,7 +284,7 @@
   Here we define the oracle $O$ to offer information to the algorithm through the black-box function $O(x) \coloneq f(x)$.
   A classical algorithm would have to make $2$ queries to $O$ for exact learning, as it must query every element of the codomain to learn the values of $a_o$ and $a_1$.
   As it turns out, a well known quantum algorithm called Deutsch's algorithm can learn the value of $a_0 \oplus a_1$ with certainty after just $1$ query! \par
-  Also of interest in oracle problems is \emph{bounded error} learning, where we consider how many queries are needed until an algorithm has some $\geq \frac{1}{2}$ chance of guessing the characteristic correctly.
+  Also of interest in oracle problems is \emph{bounded error} learning, where we consider how many queries are needed until an algorithm has some $> \frac{1}{2}$ chance of guessing the characteristic correctly.
   Contrast the previous example with a problem where the algorithm has to learn $f$ exactly; before making any queries the classical algorithm has a $\frac{1}{2}$ of guessing $a_0 \oplus a_1$ correctly,
   and this doesn't change after making a query. On the other hand learning the exact function has a $\frac{1}{4}$ chance of success with $0$ queries, and a $\frac{1}{2}$ chance of success with $1$ query.
   If we considered an extreme version of this problem, $f: \{a_0, a_1 \} \to \ZZ / 1000\ZZ$, then we observe that a classical algorithm has a near-zero chance of guessing the function before it makes its final query.
@@ -289,7 +294,8 @@
   The function will be nearly unknown for the first few queries, but after some asymptotically \todo{maybe this asymptotic claim is false}
   smaller number of queries than that needed for exact learning, nearly the whole function will be known!
   We are thus concerned with comparing the exact classical query complexity with both the exact and bounded error quantum query complexity of a given oracle problem.
-  Of note is that we are proving we have found a neccesary and sufficent number of queries to solve the problem; we prove the existence of an algorithm which solves the problem with the given asymptotics, and it is optimal,
+  Of note is that if we find a proof using our methods, we have found a neccesary and sufficent number of queries to solve the problem;
+  we prove the existence of an algorithm which solves the problem with the given asymptotics, and it is optimal,
   meaning no algorithm make asymptotically less queries.
   % In fact, we will be able to prove that there exists an algorithm which has a given query complexity, and that furthermore no algorithm exists which can do better --- the algorithm will be optimal.
   \par
@@ -357,7 +363,7 @@
   (approximate) truth will be neccesary if we are to physically realize quantum computers and employ the alogrithms we design.
   If we take these postulates at face value, phenomenon that are strange from a classical physics standpoint feel like natural consequences of the mathematics;
   in that sense it can be helpful to abstract away your physical intution and instead focus on the consequences of these postulates when we start doing computation.
-  \begin{post}[ {\cite[2.2.1]{nielsen2010}} ]
+  \begin{post}[{\cite[2.2.1]{nielsen2010}}]
     Associated to any isolated physical system is a complex vector space
     with inner product (that is, a Hilbert space) known as the \emph{state space} of the
     system. The system is completely described by its \emph{state vector}, which is a unit
@@ -855,7 +861,7 @@
   to show that each $S^\lambda$ is disjoint to $S^{\lambda'}$ when $\lambda < \lambda'$ and $\lambda \neq \lambda'$.
   \par
   We begin by defining the lexicographical and dominance orderings:
-  \begin{defn}[ {\cite[pg. 36]{fulton}} ]
+  \begin{defn}[{\cite[pg. 36]{fulton}}]
     The \emph{lexicographic} ordering on partitions of size $n$, denoted $ \lambda \leq \lambda'$, means that
     for the first $i$ for which $\lambda_i \neq \lambda'_i$ (if any), has $\lambda_i < \lambda'_i$ (in the standard ordering on integers).
     It is a linear order.
@@ -872,7 +878,7 @@
     so $\lambda$ and $\lambda'$ are incomparable.
   \end{defn}
   We can now state the following lemma:
-  \begin{lemma}[ {\cite[Lemma 7.1]{fulton}} ] \label{lem1}
+  \begin{lemma}[{\cite[Lemma 7.1]{fulton}}] \label{lem1}
     Let $T$ and $T'$ be tableaux of shape $\lambda$ and $\lambda'$ respectively, each of size $n$. Note that they can have different shape!
     Assume that $\lambda$ does not strictly dominate $\lambda'$.
     Then exactly one of the following occurs:
@@ -902,7 +908,7 @@
     We can now conclude that there is some $p' \in R(T)$ such that $p' \cdot T' = q \cdot T$.
   \end{proof}
   We now define our needed linear ordering; note that this ordering is on all tableaux of size $n$, not just partitions!
-  \begin{defn}[ { \cite[pg. 84-85]{fulton} } ]
+  \begin{defn}[{ \cite[pg. 84-85]{fulton} }]
     We denote the linear ordering $T < T'$ on tableaux to mean either:
     \begin{enumerate}
     \item The shape of $T'$ is larger than the shape of $T$ in the lexicographical order.
@@ -1121,7 +1127,7 @@
 
   \section{Oracle Formalism}
   We are now equipped to state our oracle problem and key theorem formally.
-  \begin{defn}[{ \cite[Section 2]{copeland} }]
+  \begin{defn}[{\cite[Section 2]{copeland}}]
     A \emph{classical oracle problem} is a tuple $(Y, \Omega, \pi, f)$ where
     \begin{enumerate}
     \item $Y$ is a set of hidden information.
@@ -1133,7 +1139,7 @@
     The goal is to determine $f(y)$.
     The average case case success probability is the probability of correctly outputting $f(y)$ assuming $y$ is sampled uniformly from $Y$.
   \end{defn}
-  \begin{defn}[{ \cite[Section 2]{copeland} }]
+  \begin{defn}[{\cite[Section 2]{copeland}}]
     A \emph{quantum oracle problem} is a tuple $(Y, V, \pi, f)$ where
     \begin{enumerate}
     \item $Y$ is a set of hidden information.
@@ -1146,7 +1152,7 @@
     oracles will act on the Hilbert space $\CC \Omega$ \todo{doesn't Omega need to be an abelian group?} by permutation matrices.
     Henceforth when we provide an instance of a classical oracle problem we are also providing an instance of a quantum oracle problem.
   \end{defn}
-  \begin{defn}[{ \cite[Section 2]{copeland} }]
+  \begin{defn}[{\cite[Section 2]{copeland}}]
     A \emph{symmetric oracle problem} is a classical/quantum oracle problem where
     \begin{enumerate}
     \item we require that the hidden information $Y$ be a group $G$.
@@ -1159,23 +1165,23 @@
     due to the relationship between representations and modules.
   \end{defn}
 
-  \begin{defn}[{ \cite[Section 2]{copeland} }]
+  \begin{defn}[{\cite[Section 2]{copeland}}]
     A \emph{coset identification problem} is a symmetric oracle problem where
     the function to be learned $f: G \to X$ is constant on left cosets of a subgroup $H \leq G$ and distinct on distinct cosets.
     We also assume $f$ is surjective.
     The typical example is when $X = \{gH | g \in G\}$ is the set of left cosets of $H$ and $f(g) = gH$.
     We cite without proof the fact that worst case and average case success probabilities are equal in the coset identification problem.
   \end{defn}
-  \begin{defn}[{ \cite[Section 2]{copeland} }]
+  \begin{defn}[{\cite[Section 2]{copeland}}]
     The \emph{exact}
-    query complexity of a learning problem is the minimum number of queries needed by an algorithm
-    to compute $f (y)$ with zero probability of error. The \emph{bounded} error query complexity is the minimum
+    query complexity of a learning problem, denoted $\gamma$, is the minimum number of queries needed by an algorithm
+    to compute $f (y)$ with zero probability of error. The \emph{bounded} error query complexity, denoted $\gamma^{bdd}$, is the minimum
     number of queries needed by an algorithm to compute $f (y)$ with probability $\geq 2/3$. The bounded
     error query complexity is often studied for a family of problems growing with a parameter $n$ and
     so changing the constant $2/3$ above to any number strictly greater than $1/2$ will only change the
     query complexity by a constant factor mostly ignored in asymptotic analysis.
   \end{defn}
-  \begin{defn}[{ \cite[Section 4]{copeland} }]
+  \begin{defn}[{\cite[Section 4]{copeland}}]
     \emph{Symmetric oracle discrimination} is a coset identification problem a la the typical example where $X = \{gH | g \in G\}$, $f(g) = gH$, and $H = \{e\}$, so $f(g) = g e = g$.
     This means an element $g$ is hidden and the goal is to find $g$.
     We have fixed $f$, so such a problem is determined by a choice of finite group $G$, a $G$-set $\Omega$ or a vector space $\CC \Omega$, and an action $G \acts \Omega$ or a (finite dimensional) unitary representation $\pi: G \to U(V)$.
@@ -1254,7 +1260,7 @@
   The latter result is assumed in \cite{copeland} but no proof is provided or easily accessible online.
   Our other results will revolve around conjectures regarding the quantum query complexity of each oracle problem and the behavior of the tensor products of representations leading to this behavior.
   \par
-  We will also introduce the \emph{base size} of $S_n \acts \Omega$ for the $k$-element action and the regular partition action as found in \cite{spiga23} and \cite{spiga24}.
+  We will also introduce the \emph{base size} of $S_n \acts \Omega$ for the $k$-element action and the regular partition action as found in \cite{spiga23} and \cite{morris21}.
   The base size as defined in \cite{copeland} is the length of the smallest tuple $(\omega_1, \cdots, \omega_t) \in \Omega^t$ with the property that $(g\cdot \omega_1, \cdots, g\cdot \omega_t) = (\omega_1, \cdots, \omega_t)$
   if and only if $g=1$, which is to say the tuple has trivial pointwise stabilizer.
   This definition corresponds to the non-adaptive (queries all made at the same time) classical query complexity; by the orbit stabilizer theorem there is a bijective function
@@ -1262,12 +1268,12 @@
   This in fact proves that the base size is also the \emph{adaptive} classical query complexity, where the algorithm is allowed to consider $g \cdot \omega_i$ before choosing $\omega_{i+1}$ to query.
   Any sequence $(\omega_1, \cdots, \omega_t)$ which was chosen adaptively and suffices to identify some particular $g \in G$ can identify \emph{any} element of $G$, because the sequence has to have pointwise
   trivial stabilizer to rule out every other group element that $g \in G$ could have been, and the same orbit stabilizer argument follows. Base size is thus equivalent to classical query complexity for symmetric oracle discrimination,
-  and the results of \cite{spiga23} and \cite{spiga24} will allow us to compare the classical and quantum query complexity of our oracle problems.
+  and the results of \cite{valle23} and \cite{morris21} will allow us to compare the classical and quantum query complexity of our oracle problems. Because of this equivalence we will sometimes refer to the quantum query complexity as the \emph{quantum base size}, denoted $\gamma$.
   In fact, they will play an important role in our conjectures, because our data indicates that the classical and quantum query complexities are the same for $k$-element discrimination.
   \section{Decompositions}
   To decompose the $k$-element module, we will need more theorems from the representation theory of the symmetric group.
   Like before, we will be using Young tableaux; however, we are now interested in a less restrictive version of standard young tableaux:
-  \begin{defn}[{ \cite{sagan}[2.9.1] }]
+  \begin{defn}[{\cite{sagan}[2.9.1]}]
     A tableau is \emph{semistandard} if the nodes of the Young diagram of the partition $\lambda$ are filled with positive integers, repetitions allowed;
     additionally, its rows must be weakly increasing and its columns must be strongly increasing.
     The latter condition follows suite with standard tableau, while now repetitions and integers greater than the number of nodes in the diagram are allowed.
@@ -1290,15 +1296,15 @@
     \]
     is not a semistandard tableaux.
   \end{ex}
-  \begin{defn}[{ \cite{sagan}[2.11.1] }]
+  \begin{defn}[{\cite{sagan}[2.11.1]}]
     The \emph{Kostka numbers} $K_{\lambda \mu }$ are the number of semistandard tableaux of a partition $\lambda$ with type $\mu$.
   \end{defn}
-  \begin{thm}[{ \cite{sagan}[2.11.2], Young's Rule }]
+  \begin{thm}[{\cite{sagan}[2.11.2], Young's Rule}]
     The multiplicity of the specht module $S^\lambda$ in the permutation module $M^\mu$ is equal to the number of semistandard tableaux of shape $\lambda$ and content $\mu$; that is,
     \[ M^\mu \cong \bigoplus_\lambda K_{\lambda \mu} S^\lambda .\]
   \end{thm}
   Thanks to the following (unrelated) corollary, we will only have to calculate the Kostka numbers $K_{\lambda \mu}$ when $\lambda \normeq \mu$, as they are otherwise zero.
-  \begin{cor}[{ \cite{sagan}[2.4.7] }]
+  \begin{cor}[{\cite{sagan}[2.4.7]}]
     The permutation modules decompose as
     \[M^\mu = \bigoplus_{\lambda \normeq \mu} m_{\lambda \mu} S^\lambda \]
     where $m_{\lambda\mu}$ is a generic coefficent with diagonal multiplicity $m_{\mu \mu} =1$.
@@ -1378,7 +1384,7 @@
     \[ \CC \Omega_k  \cong M^{(n-k,k)} \cong \bigoplus_{j=0}^{k} S^{(n-j,j)}.\]
   \end{proof}
   Our next result will rely on the concept of \emph{restricted} and \emph{induced} representations, where new representations are created using a group and its supergroup or subgroup.
-  \begin{defn}[{ \cite[Section 3.3]{fulton2004} }]
+  \begin{defn}[{\cite[Section 3.3]{fulton2004}}]
     If $H \subseteq G$, any (module) representation of $G$ restricts to a representation of $H$ by restricting the action $G \acts V$ to $H \acts V$; likewise for a matrix representation $X$ with $G$ as its domain,
     the restriction $\res_H^G (X)$ is a function with $H$ as its domain where $\res_H^G(X(h)) = X(h)$.
     \par
@@ -1411,7 +1417,7 @@
     which is the particular formula we were looking for.
   \end{proof}
   We will combine this lemma with the following theorem:
-  \begin{thm}[{ \cite[2.8.3]{sagan}, Branching Rule }]
+  \begin{thm}[{\cite[2.8.3]{sagan}, Branching Rule}]
     If $\lambda \vdash n$, then
     \begin{enumerate}
     \item $\res^{S_{n}}_{S_{n-1}} (S^\lambda) \cong \bigoplus_{\lambda^-} S^{\lambda^-}$, and
@@ -1424,8 +1430,9 @@
   \begin{lemma}
     Let $V_\lambda$ be the specht module corresponding to the partition $\lambda \vdash n$, and let $V$ be the permutation module $V = S^{(n)} \oplus S^{(n-1,1)}$.
     Then
-    \[V \otimes V_\lambda \cong \bigoplus_ {\mu \in \lambda^\pm} m_\mu S^\mu \]
-    for positive $m_\mu$; $\lambda^\pm$ is the set of partions of $n$ obtained by removing then adding a valid node to $\lambda$.
+    \[V \otimes V_\lambda \cong \bigoplus_ {\mu \in \lambda^\pm} (S^\mu)^{m_\mu} \]
+    for positive $m_\mu$; $\lambda^\pm$ is the set of partions of $n$ obtained by removing then adding a valid node to $\lambda$,
+    and $(S^\mu)^{m_\mu} = S^\mu \oplus S^\mu \oplus \cdots \oplus S^\mu $ $m_\mu$ times.
   \end{lemma}
   The multiplicity $m_\mu$ is left undetermined because it is not relevant to the quantum base size.
   \begin{proof}
@@ -1434,15 +1441,229 @@
       V \otimes V_\lambda &\cong \ind^{S_{n}}_{S_{n-1}} ( \res^{S_{n}}_{S_{n-1}} (V_\lambda))\\
                           &\cong \ind^{S_{n}}_{S_{n-1}} (\bigoplus_{\lambda^-} S^{\lambda^-})\\
                           &\cong \bigoplus_{\lambda^-} \ind^{S_{n}}_{S_{n-1}} ( S^{\lambda^-}) \\
-                          &\cong \bigoplus_{\lambda^-} \bigoplus_{\lambda^+} S^{\lambda^{-+}} \\
+                          &\cong \bigoplus_{\lambda^-} \bigoplus_{\lambda^+} S^{\lambda^{-^+}} \\
                           &\cong \bigoplus_ {\mu \in \lambda^\pm} m_\mu S^\mu
     \end{align*}
-    where the comutativity of induction is proven in \cite[Excercise 3.15]{fulton2004}.
+    where the distributivity of induction is proven in \cite[Excercise 3.15]{fulton2004}.
   \end{proof}
   \section{Data and Conjectures}
-  
-  
-  \chapter{Disscussion}
+  The problem of finding the multiplicities of irreducible representations present in the decomposition of the tensor product of two $S_n$ modules, known as finding the \emph{Kronecker coefficents},
+  is generally unsolved and very difficult. Formally the Kronecker coefficents $g^\lambda_{\mu \nu}$ of $\mu, \nu, \lambda \vdash n$ appear in the decomposition
+  \[ S^\mu \otimes S^\nu \cong \bigoplus_{\lambda \vdash n}  (S^\lambda)^{\oplus g^\lambda_{\mu \nu}}\]
+  where $(S^\lambda)^{\oplus g^\lambda_{\mu \nu}} = S^\lambda \oplus S^\lambda \oplus \cdots \oplus S^\lambda $ $g^\lambda_{\mu \nu}$ times.
+  In terms of characters, the Kronecker coefficents can be solved for as the projection of the tensor product of $\chi^\mu$ and $\chi^\nu$ onto $\chi^\lambda$:
+  \[ g^\lambda_{\mu \nu} = \langle \chi^{\lambda} , \chi^\mu \chi^{\nu} \rangle = \dfrac{1}{n!} \sum_{\pi \in S_n} \chi^\mu(\pi) \chi^\nu(\pi) \chi^\lambda (\pi),\]
+  where the inner product of characters $\langle \chi, \phi \rangle$ over the complex numbers is defined as $\dfrac{1}{|G|} \sum_{g \in G} \chi(g) \overline{\phi(g)}$.
+  Through this latter method we are able to compute the Kronecker coefficents for small partitions, although computing the Kronecker coefficents is in general $P\#$ complete.\todo{cite this  and formulas maybe}
+  The difficulty of this problem meant that we were able to find evidence for conjectures regarding the behavior of the quantum query complexity of the $k$ element action but were unable to prove them in general.
+  The regular partition action offered less evidence and presents an even greater challenge to understand.
+  \subsection{The K Element Action}
+  We computed the quantum query complexity of $S_n \acts \CC \Omega_k$ for small values of $n$ and $k$ as shown table \ref{tableone}. Of interest are the cases where $n = 2k$, which correspond to the
+  asymptotics of the logarithm of the dedekind numbers $\binom{n}{\lfloor{n/2} \rfloor}$\todo{maybe don't gain anything from saying this}.
+
+  \begin{table}[htbp]
+\caption[Quantum Query Complexity Of Symmetric Oracle Discrimination for $S_n$ Acting On $k$-Element Subsets of ${[n ]}$]{Quantum Query Complexity Of Symmetric Oracle Discrimination for $S_n$ Acting On $k$-Element Subsets of ${[n]}$} 
+% The words in square brackets of the caption command end up in the Table of Tables. The words in curly braces are the caption directly over the table.
+\begin{center} 
+% makes the table centered
+\begin{tabular}{c  c c c c c c c c c c c} 
+% the tabular environment is used to make the table itself. The {c c c c} specify that the table will have four columns and they will all be center-aligned. You can make the cell contents left aligned by replacing the Cs with Ls or right aligned by using Rs instead. Add more letters for more columns, and pipes (the vertical line above the backslash) for vertical lines. Another useful type of column is the p{width} column, which forces text to wrap within whatever width you specify e.g. p{1in}. Text will wrap badly in narrow columns though, so beware.
+\toprule % a horizontal line, slightly thicker than \hline, depends on the booktabs package
+  n\textbackslash k &  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\ % the first row of the table. Separate columns with ampersands and end the line with two backslashes. An environment begun in one cell will not carry over to adjacent rows.
+  \midrule % another horizontal line 
+        1 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        2 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        3 & ~ & 2 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        4 & ~ & 2 & 4 & ~ & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        5 & ~ & 3 & 4 & 4 & ~ & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        6 & ~ & 4 & 4 & 4 & 5 & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        7 & ~ & 4 & 4 & 3 & 4 & 6 & ~ & ~ & ~ & ~ & ~ \\ 
+        8 & ~ & 5 & 5 & 3 & 4 & 5 & 7 & ~ & ~ & ~ & ~ \\ 
+        9 & ~ & 6 & 5 & 4 & 4 & 4 & 6 & 8 & ~ & ~ & ~ \\ 
+        10 & ~ & 6 & 6 & 4 & 4 & 4 & 5 & 6 & 9 & ~ & ~ \\ 
+        11 & ~ & 7 & 6 & 4 & 4 & 4 & 4 & 5 & 7 & 10 & ~ \\ 
+        12 & ~ & 8 & 7 & 5 & 4 & 4 & 4 & 5 & 6 & 8 & ~ \\ 
+        13 & ~ & 8 & 7 & 5 & 5 & 4 & 4 & 5 & 5 & 6 & ~ \\ 
+        14 & ~ & 9 & 8 & 6 & 5 & 5 & 4 & 5 & 5 & 6 & ~ \\ 
+        15 & ~ & 10 & 8 & 6 & 5 & 5 & 4 & 4 & 5 & 5 & ~ \\ 
+        16 & ~ & 10 & 9 & 6 & 5 & 5 & 5 & 4 & 5 & 5 & ~ \\ 
+        17 & ~ & 11 & 9 & 7 & 6 & 5 & 5 & 5 & 5 & 5 & ~ \\ 
+        18 & ~ & 12 & 10 & 7 & 6 & 6 & 5 & 5 & 5 & 5 & ~ \\ 
+        19 & ~ & 12 & 10 & 8 & 6 & 6 & 5 & 5 & 5 & 5 & ~ \\ 
+        20 & ~ & 13 & 11 & 8 & 7 & 6 & 6 & 5 & 5 & 5 & ~ \\ 
+        21 & ~ & 14 & 11 & 8 & 7 & 6 & 6 & 5 & 5 & 5 & ~ \\ 
+        22 & ~ & 14 & 12 & 9 & 7 & 6 & 6 & 6 & 5 & 5 & ~ \\ 
+        23 & ~ & 15 & 12 & 9 & 8 & 7 & 6 & 6 & 6 & 5 & ~ \\ 
+        24 & ~ & 16 & 13 & 10 & 8 & 7 & 6 & 6 & ~ & ~ & 5 \\ 
+        25 & ~ & 16 & 13 & 10 & 8 & 7 & 7 & ~ & ~ & ~ & ~ \\ 
+        26 & ~ & 17 & 14 & 10 & 9 & 8 & ~ & ~ & ~ & ~ & ~ \\ 
+        27 & ~ & ~ & 14 & ~ & 9 & 8 & ~ & ~ & ~ & ~ & ~ \\ 
+        28 & ~ & ~ & 15 & ~ & 9 & 8 & ~ & ~ & ~ & ~ & ~ \\ 
+        29 & ~ & ~ & ~ & ~ & 10 & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+        30 & ~ & ~ & ~ & ~ & 10 & ~ & ~ & ~ & ~ & ~ & ~ \\ 
+\bottomrule % yet another horizontal line
+\end{tabular}
+\end{center}
+\label{tableone} % labels are useful when you have more than one table or figure in your document. See our online documentation for more on this.
+\end{table}
+We now introduce the base size of $\Omega_k$ for comparision.
+\begin{thm}[{\cite{valle2023}, \cite{spiga23}}]
+  Let $\Omega_k$ be the set of $k$-element subsets of $[n]$, and let $S_n$ act on $\Omega_k$ naturally.
+  Let $b(n,k)$ denote the base size of $S_n \acts \Omega_k$.
+  \begin{enumerate}
+  \item When $n \geq \lfloor (k^2 +k) / 2 \rfloor + 1$,
+    \[ b(n,k) = \ceil*{ \dfrac{2n - 2}{k +1}}.\]
+  \item When $n \geq 2k$,
+    \[ b(n,k) \geq \ceil*{ \log_2 n },\]
+    with equality when $n = 2k$.
+  \end{enumerate}
+\end{thm}
+We noticed from our data that $b(n,k) = \gamma(n,k)$ for $n,k$ such that $b(n,k)$ is closed; here $\gamma$ is the quantum base size.
+In fact, we observed the maximum number of parts present in the partitions corresponding to the irreducible representations of $(\CC \Omega)^{\otimes \ell}$ for each $\ell$ and found that the number
+of parts was growing exponentially by $2^\ell$ up to $n = 2k$ and then after some stabilization was growing constantly by a factor of $(\dfrac{k+1}{2})\ell$; when this factor was odd the growth each iteration alternated.
+Additionally, due to the fact that the maximum number of part present grew strictly, we found that the conjecture
+\begin{conj}
+  \[S^{(1^n)} \in \irr((\CC \Omega_k)^{\otimes \ell}) \implies \irr(\CC [S_n]) = \irr((\CC \Omega_k)^{\otimes \ell}),\]
+  which is to say that the alternating representation $S^{(1^n)}$ is present in the decomposition of $(\CC \Omega)^{\otimes \ell}$ only if every other irreducible representation is in $(\CC \Omega)^{\otimes \ell}$.
+\end{conj}
+held true in all our data. Notably, this did not hold for the regular partition module.
+In the corresponding classical base size case, \cite{valle24} found that
+\begin{thm}
+  Let $\mathrm{sgn}$ be the sign character of $S_n$ and $\chi$ the permutation character of $S_n \acts \Omega_k$. Then
+  \[ b(n,k) = \min \{ l \in \NN: \langle \mathrm{sgn}, \chi^l \rangle \neq 0 \}.\]
+  In greater generality, a homomorphism $\phi: G \to \{1,-1\}$, for $G \leq \mathrm{Sym}(\Omega)$ is \emph{base-controlling} if for every tuple $A$ of points of $\Omega$, $A$ is a base if and only if $\phi(G_A) = 1$.
+  If we consider $\{1,-1\}$ as one-dimensional vector space, it becomes clear that $\phi$ is an irreducible representation (a one-dimensional representation cannot be reduced), and also an irreducible character as $\tr(\phi) = \phi$.
+  If $G$ has permutation character $\chi$ and admits a base controlling homomorphism $\phi$, then
+  \[  b(G) = \min \{ l \in \NN: \langle \phi, \chi^l \rangle \neq 0 \}.\]
+\end{thm}
+which is an equivalent statement formulated in character theoretic language.
+For an irreducible character $\chi_{(i)}$ of a irreducible module $V^{(i)}$ with multiplicity $m_i$ in a module $V \cong m_1V^{(1)} \oplus m_2V^{(2)} \oplus \cdots \oplus m_kV^{(k)}$, we have by \cite[Cor. 1.9.4]{sagan}
+that $\langle \chi, \chi^{(i)} \rangle = m_i$;
+this is to say that an inner product with an irreducible character is a projection upon the given irreducible character.
+The equivalence lends further credence to our conjecture that
+\begin{conj}
+  For the action $S_n \acts \Omega_k$,
+  \[ b(n,k) = \gamma(n,k).\]
+\end{conj}
+and leads us to a new (mostly unevidenced) conjecture
+\begin{conj}
+  If a permutation group $G$ admits a base-controlling homomorphism $\phi$, then
+  \[ b(G) = \gamma(G).\]
+\end{conj}
+We now focus on the case where $n = 2k$.
+\begin{thm}
+  Let $S_{2k} \acts \Omega^{2k}_k$ naturally where $\Omega^{2k}_k$ is the set of $k$-element subsets of $[2k]$. Then
+  \[b(2k,k) = \gamma(2k,k).\]
+\end{thm}
+\begin{proof}
+  By a restriction of Dvir's theorem \todo{cite and define this}, we know that
+  \[ (h S^\lambda \otimes S^\mu) \leq h( S^\lambda) \cdot h (S^\mu),\]
+  where $h(S^\lambda)$ is the number of parts in $\lambda$.
+  Therefore as $\ell$ increases by $1$ each query,
+  \[ 2 \cdot \max\{ h(S^\lambda) \in \irr ( \Omega^{2k}_k)^{\otimes \ell -1} \geq \max\{ h(S^\lambda) \in \irr ( \Omega^{2k}_k)^{\otimes \ell} \}.\]
+  Because we know the sign representation $S^{(1^{2k})}$ must be in the decomposition in order for the decomposition to contain every irreducible module, it takes at least
+  $\ell = \ceil*{ \log_2 2k }$ queries for $S^{(1^{2k})} \in \irr(( \Omega^{2k}_k)^{\otimes \ell})$.
+  We thus have a lower bound
+  \[\ceil*{ \log_2 2k } = b(2k,k) \leq \gamma(2k,k).\]
+  Because we can always simulate a classical computer on a quantum computer, we also have the upper bound
+  \[\gamma(2k,k) \leq b(2k,k).\]
+  Combining these two statements we see that
+  \[ b(2k,k) = \gamma(2k,k).\]
+\end{proof}
+
+One experiment we did was to count how many partitions were showing up in $(\CC \Omega)^{\otimes \ell}$ for each $\ell$.
+We found that at each step, where the maximum number of parts that appeared in an irreducible representation was $2^\ell$, that all partitions with $\leq 2^\ell$ parts appeared in $(\CC \Omega)^{\otimes \ell}$.
+We thus conjecture:
+\begin{conj}
+  Let $n = 2k$, and let $\Omega^{n}_k$ denote the set of $k$ elment subsets of $[n]$. Then
+  \[\irr((\CC \Omega^{2k}_k)^{\otimes \ell}) = \{S^\mu |  \text{ $\mu$ has at least $n - 2^\ell$ columns}\}.\]
+\end{conj}
+If this conjecture is true, then we can neatly prove the following theorem:
+\begin{thm}
+  Let $\gamma^{\mathrm{bdd}}(n,k)$ denote the bounded quantum base size for $S_n$ acting on $k$ element subsets of $n$. Then
+  \[ \gamma^{\mathrm{bdd}}(2k,k) = \log_2(n -2\sqrt{n} + \Theta(n^{1/6}))\]
+  queries are neccesary and sufficent to succeed with probability $2/3$ and in fact any probability $1 - \epsilon$ for $\epsilon \in (0,1)$.
+\end{thm}
+\begin{proof}
+  In \cite{copeland}, they prove a similar theorem for the case $k=1$, first proving that
+  \[\irr((\CC \Omega_1)^{\otimes\ell}) = \{ S^\mu | \text{ $\mu$ has at least $n - \ell$ columns}\}.\]
+  Using the Robinson-Schensted correspondence, they prove that the sum of the square of the constituent irreducible representation dimensions corresponds to the number of permutations with longest increasing subsequence
+  at least $n-\ell$.
+  They then employ the Tracy-Widom distribution
+  of the longest increasing subsequence $l_n$ of a random permutation: formally they cite that for cumulative distribution function $F(x)$ of the Tracy-Widom distribution
+  \[ \lim_{n \rightarrow \infty} Prob \left( \dfrac{l_n - 2 \sqrt{n}}{n^{1/6}} \leq x \right) = F(x).\]
+  Because our conjecture is exactly analogous to their proof, we can use this formula in the same manner as they do with $n- 2^\ell$ instead of $n -\ell$.
+  We find that if we use $\ell = \log_2( n - 2 \sqrt{n} + cn^{1/6})$ queries for any real number $c$ then
+  \[Prob( l_n \geq n - 2^\ell) = 1 - Prob( l_n <  n - 2^\ell) = 1 - Prob( l_n <  n - 2 \sqrt{n} + cn^{1/6}) = \]
+  \[ 1 - Prob \left(\dfrac{l_n - 2 \sqrt{n}}{n^{1/6}} < -c \right) \rightarrow_{n \rightarrow \infty} 1 - F(-c).\]
+  Thus for any $\epsilon \in (0,1)$, if we wish to succeed with probability $1- \epsilon$, it will be necessary and sufficent to use $\ell = \log_2( n - 2 \sqrt{n} + cn^{1/6})$ queries, where $c = -F^{-1}(\epsilon)$
+  and we assume $n$ is sufficently large.
+\end{proof}
+
+
+% We end with a weaker conjecture which, if proven, could lead to an inductive proof of $\Omega_k^{2k}$'s quantum query complexity when $2k$ is a power of $2$.
+% \begin{conj}
+%   Let $G = S_{2k}$, $2k = 2^j$ for some integer $j$, and $X= \Omega_k^{2k}$. Then
+%   \[ M^{(2k / 2^\ell)^2^\ell)} \subseteq (\CC\Omega_k^{2k})^{\otimes \ell}\]
+% \end{conj}
+% What we observed is that $S^{(k,k)} \otimes S^{(2k / 2^j)^2^j)}$ would contain the representation $S^{(2k / 2^{j+1} )^2^{j+1})}$.
+% If, on the other hand, $2k$ isn't a power of $2$,
+% then for $2k/2^j \nin \ZZ$, the rows get shorter so that $\sum \lambda_i = 2k$.
+% For example, if $k = 5$, then $S^{(5,5)} \otimes S^{(5,5)}$ contains the partition $(3^2,2^2)$ intead of $(3^4)$, and likwise $S^{(5,5)} \otimes (S^{(5,5)})^{\otimes 2}$ contains $(2^2,1^6)$ instead of $(2^8)$.
+% We can thus formulate a more general conjecture that $M^{(2k / 2^\ell)^2^\ell)}$ with enough rows shortened is contained in $(\CC\Omega_k^{2k})^{\otimes \ell}$ for any $k$.
+% That being said, $(\CC\Omega_k^{2k})^{\otimes (\ell - 1)}$
+
+
+
+\subsection{The Regular Partition Action}
+The action on regular partitions posed and even greater challenge than the action on $k$-elements.
+One of the main issues was that our method of calculating the query complexity quickly became infeasible due to the explosive growth in the number of regular partitions;
+as such we lacked enough data to have much confidence in a conjecture about its asymptotic behaviour.
+Even the decomposition of the regular partition module proved to be difficult; combinatorially we can calculate that $\CC \Omega_p^{a,b}$ has dimension
+\[ \dfrac{\binom{ab}{a,a,a,\cdots,a \text{b times}}}{b!}\]
+where $\binom{n}{k_1,k_2,\cdots,k_m} = \dfrac{n!}{k_1! k_2! \cdots k_m!}$ is the multinomial coefficent.
+This expression comes from the choice of picking $a$ from $ab$ total numbers to be in a given part $b$ times, and then accounting for the equivalence of regular partitions under permuting the $b$ parts.
+On the other hand we have by \cite[Proposition 2.1.11]{sagan} that
+\[ \dim M^\lambda = \binom{n}{\lambda_1, \lambda_2, \cdots, \lambda_\ell} =   n! /\lambda!\]
+which counts the number of $\lambda$ tabloids.
+The natural choice would be to consider the module $M^{(a^b)}$, but here a factor of $1/b!$ is missing in its dimension.
+We suspect that no permutation module of $S_{ab}$ is isomporphic to the module formed by our action, which would imply that the decomposition must be done without Young's rule.
+The behaviour of the decomposition of $\CC \Omega_p^{a,b}$ we gathered through our data disproves that it is in general isomorphic to some $M^{\lambda \vdash ab}$.
+The simplest example would be $\CC \Omega_p^{3,2}$ which we have computed to decompose as
+\[
+  m_1 \
+  \begin{ytableau}
+    ~ & & &  \\
+    & \\
+  \end{ytableau}
+  \oplus
+  m_2 \
+  \begin{ytableau}
+    ~ & & & & &
+  \end{ytableau}
+\]
+for some positive $m_i$. We see that $S^{(4,2)}$ is present, so if we assume $\CC \Omega_p^{3,2}$ is some $M^\mu$ module then it must be that $ \mu \normeq (4,2)$.
+Furthermore we can compute that $(4,2) \normeq (5,2)$, so by transitivity $\mu \normeq (5,1)$, but then by corollary $2.4.7$ in \cite{sagan} the coefficent $m_j S^{(5,1)}$ must be positive.
+This is a contradiction, so $\CC \Omega_p^{3,2}$ cannot be a $M^\mu$ module for any $\mu \vdash ab$.
+Experimentally we find that the decomposition of a regular partition module always contains the partition $(ab-2,2)$ and not the partition $(ab-1,1)$, so none of them are $M^\mu$ modules.
+What follows is a list of various observations on our data:
+\begin{enumerate}
+
+\item In the decomposition of $\CC \Omega_p^{a,b}$, $b$ equals the maximum number of parts present in an irreducible representation of the decomposition.
+\item If $a$ or $b$ equals $2$, then $\CC \Omega_p^{a,b}$ decomposes into all the partitions that can be made by adding two blocks in a row at a time to an initially empty partition until there are $ab$ blocks.
+\item for $a \geq b$,
+  \[ \CC \Omega_p^{a,b} \subseteq \CC \Omega_p^{b,a}.\]
+\end{enumerate}
+Once both $a,b \geq 3$ the behavior of the decomposition loses a clear pattern and the most of the decompositions are too slow to compute.
+A final interesting remark is that $\CC \Omega_p^{b,a}$ does not in general admit $\mathrm{sgn}$ as a sign-controlling homomorphism, as
+\[S^{(1^{ab})} \in \irr((\CC \Omega_p^{2,4})^{\otimes 2})\] but \[ \irr((\CC \Omega_p^{2,4})^{\otimes 2}) \subsetneq \irr(\CC [S_{ab}]).\]
+In general we conjecture that when $a=2, b= 2j$, then $S^{(1^{ab})} \in \irr((\CC \Omega_p^{a,b})^{\otimes 2})$. This is due to our observation that $S^{(1^{2k})} \in \irr(S^{(2^k)} \otimes S^{(k,k)})$ in accordance with
+our last conjecture regarding the $k$-element action.
+
+\chapter{Disscussion}
+We had great difficulty proving any of our conjecture due to the general difficulty of the Kronecker coefficent problem.
+That being said, Kronecker coefficents can be solved for with greatly restricted assumptions, so it seems like some of these conjectures could be proven by recourse to character theory
+or by devising a family of module isomorphisms.
 
 
 
@@ -1459,9 +1680,6 @@
 
 
    
-
-
-
 
 
 
@@ -1533,159 +1751,159 @@
 
 
         
-    \chapter{The First}
-    	This is the first page of the first chapter. You may delete the contents of this chapter so you can add your own text; it's just here to show you some examples. 
+%     \chapter{The First}
+%     	This is the first page of the first chapter. You may delete the contents of this chapter so you can add your own text; it's just here to show you some examples. 
 	
-\section{References, Labels, Custom Commands and Footnotes}
-It is easy to refer to anything within your document using the \texttt{label} and \texttt{ref} tags.  Labels must be unique and shouldn't use any odd characters; generally sticking to letters and numbers (no spaces) should be fine. Put the label on whatever you want to refer to, and put the reference where you want the reference. \LaTeX\ will keep track of the chapter, section, and figure or table numbers for you. 
+% \section{References, Labels, Custom Commands and Footnotes}
+% It is easy to refer to anything within your document using the \texttt{label} and \texttt{ref} tags.  Labels must be unique and shouldn't use any odd characters; generally sticking to letters and numbers (no spaces) should be fine. Put the label on whatever you want to refer to, and put the reference where you want the reference. \LaTeX\ will keep track of the chapter, section, and figure or table numbers for you. 
 
-\subsection{References and Labels}
-Sometimes you'd like to refer to a table or figure, e.g. you can see in Figure \ref{subd2} that you can rotate figures . Start by labeling your figure or table with the label command (\verb=\label{labelvariable}=) below the caption (see the chapter on graphics and tables for examples). Then when you would like to refer to the table or figure, use the ref command (\verb=\ref{labelvariable}=). Make sure your label variables are unique; you can't have two elements named ``default." Also, since the reference command only puts the figure or table number, you will have to put  ``Table" or ``Figure" as appropriate, as seen in the following examples:
+% \subsection{References and Labels}
+% Sometimes you'd like to refer to a table or figure, e.g. you can see in Figure \ref{subd2} that you can rotate figures . Start by labeling your figure or table with the label command (\verb=\label{labelvariable}=) below the caption (see the chapter on graphics and tables for examples). Then when you would like to refer to the table or figure, use the ref command (\verb=\ref{labelvariable}=). Make sure your label variables are unique; you can't have two elements named ``default." Also, since the reference command only puts the figure or table number, you will have to put  ``Table" or ``Figure" as appropriate, as seen in the following examples:
 
- As I showed in Table \ref{inheritance} many factors can be assumed to follow from inheritance. Also see the Figure \ref{subd} for an illustration.
+%  As I showed in Table \ref{inheritance} many factors can be assumed to follow from inheritance. Also see the Figure \ref{subd} for an illustration.
  
-\subsection{Custom Commands}\label{commands}
-Are you sick of writing the same complex equation or phrase over and over? 
+% \subsection{Custom Commands}\label{commands}
+% Are you sick of writing the same complex equation or phrase over and over? 
 
-The custom commands should be placed in the preamble, or at least prior to the first usage of the command. The structure of the \verb=\newcommand= consists of the name of the new command in curly braces, the number of arguments to be made in square brackets and then, inside a new set of curly braces, the command(s) that make up the new command. The whole thing is sandwiched inside a larger set of curly braces. 
+% The custom commands should be placed in the preamble, or at least prior to the first usage of the command. The structure of the \verb=\newcommand= consists of the name of the new command in curly braces, the number of arguments to be made in square brackets and then, inside a new set of curly braces, the command(s) that make up the new command. The whole thing is sandwiched inside a larger set of curly braces. 
 
-% Note: you cannot use numbers in your commands!
-\newcommand{\hydro}{H$_2$SO$_4$}
+% % Note: you cannot use numbers in your commands!
+% \newcommand{\hydro}{H$_2$SO$_4$}
 
-In other words, if you want to make a shorthand for H$_2$SO$_4$, which doesn't include an argument, you would write: \verb=\newcommand{\hydro}{H$_2$SO$_4$}= and then when you needed  to use the command you would type \verb=\hydro=. (sans verb and the equals sign brackets, if you're looking at the .tex version). For example: \hydro
+% In other words, if you want to make a shorthand for H$_2$SO$_4$, which doesn't include an argument, you would write: \verb=\newcommand{\hydro}{H$_2$SO$_4$}= and then when you needed  to use the command you would type \verb=\hydro=. (sans verb and the equals sign brackets, if you're looking at the .tex version). For example: \hydro
 
-\subsection{Footnotes and Endnotes}
-	You might want to footnote something.\footnote{footnote text} Be sure to leave no spaces between the word immediately preceding the footnote command and the command itself. The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site.
+% \subsection{Footnotes and Endnotes}
+% 	You might want to footnote something.\footnote{footnote text} Be sure to leave no spaces between the word immediately preceding the footnote command and the command itself. The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. More information can be found about both on the CUS site.
 	
-\section{Bibliographies}
-	Of course you will need to cite things, and you will probably accumulate an armful of sources. This is why BibTeX was created. For more information about BibTeX and bibliographies, see our CUS site (\url{web.reed.edu/cis/help/latex/index.html}). There are three pages on this topic: {\it bibtex} (which talks about using BibTeX, at \url{/latex/bibtex.html}), {\it bibtexstyles} (about how to find and use the bibliography style that best suits your needs, at \url{/latex/bibtexstyles.html}) and {\it bibman} (which covers how to make and maintain a bibliography by hand, without BibTeX, at at \url{/latex/bibman.html}). The last page will not be useful unless you have only a few sources. There used to be APA stuff here, but we don't need it since I've fixed this with my apa-good natbib style file.
+% \section{Bibliographies}
+% 	Of course you will need to cite things, and you will probably accumulate an armful of sources. This is why BibTeX was created. For more information about BibTeX and bibliographies, see our CUS site (\url{web.reed.edu/cis/help/latex/index.html}). There are three pages on this topic: {\it bibtex} (which talks about using BibTeX, at \url{/latex/bibtex.html}), {\it bibtexstyles} (about how to find and use the bibliography style that best suits your needs, at \url{/latex/bibtexstyles.html}) and {\it bibman} (which covers how to make and maintain a bibliography by hand, without BibTeX, at at \url{/latex/bibman.html}). The last page will not be useful unless you have only a few sources. There used to be APA stuff here, but we don't need it since I've fixed this with my apa-good natbib style file.
 	
-\subsection{Tips for Bibliographies}
-\begin{enumerate}
-\item Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
-\item The cite key (a citation's label) needs to be unique from the other entries.
-\item When you have more than one author or editor, you need to separate each author's name by the word ``and'' e.g.\\ \verb+Author = {Noble, Sam and Youngberg, Jessica},+.
-\item Bibliographies made using BibTeX (whether manually or using a manager) accept LaTeX markup, so you can italicize and add symbols as necessary.
-\item To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
-\item You can add a Reed Thesis citation option. The best way to do this is to use the phdthesis type of citation, and use the optional ``type'' field to enter ``Reed thesis'' or ``Undergraduate thesis''. Here's a test of Chicago, showing the second cite in a row being different. Also the second time not in a row should be different. Of course in other styles they'll all look the same.
-\end{enumerate}
-\section{Anything else?}
-If you'd like to see examples of other things in this template, please contact CUS (email cus@reed.edu) with your suggestions. We love to see people using \LaTeX\ for their theses, and are happy to help.
+% \subsection{Tips for Bibliographies}
+% \begin{enumerate}
+% \item Like with thesis formatting, the sooner you start compiling your bibliography for something as large as thesis, the better. Typing in source after source is mind-numbing enough; do you really want to do it for hours on end in late April? Think of it as procrastination.
+% \item The cite key (a citation's label) needs to be unique from the other entries.
+% \item When you have more than one author or editor, you need to separate each author's name by the word ``and'' e.g.\\ \verb+Author = {Noble, Sam and Youngberg, Jessica},+.
+% \item Bibliographies made using BibTeX (whether manually or using a manager) accept LaTeX markup, so you can italicize and add symbols as necessary.
+% \item To force capitalization in an article title or where all lowercase is generally used, bracket the capital letter in curly braces.
+% \item You can add a Reed Thesis citation option. The best way to do this is to use the phdthesis type of citation, and use the optional ``type'' field to enter ``Reed thesis'' or ``Undergraduate thesis''. Here's a test of Chicago, showing the second cite in a row being different. Also the second time not in a row should be different. Of course in other styles they'll all look the same.
+% \end{enumerate}
+% \section{Anything else?}
+% If you'd like to see examples of other things in this template, please contact CUS (email cus@reed.edu) with your suggestions. We love to see people using \LaTeX\ for their theses, and are happy to help.
 
 
-\chapter{Mathematics and Science}	
-\section{Math}
-	\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics. 
+% \chapter{Mathematics and Science}	
+% \section{Math}
+% 	\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics. 
 	
-	If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over this next big red section. (It's red in the .tex file but does not show up in the .pdf.)
+% 	If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over this next big red section. (It's red in the .tex file but does not show up in the .pdf.)
 
-\chapter{Tables and Graphics}
+% \chapter{Tables and Graphics}
 
-\section{Tables}
-	The following section contains examples of tables, most of which have been commented out for brevity. (They will show up in the .tex document in red, but not at all in the .pdf). For more help in constructing a table (or anything else in this document), please see the LaTeX pages on the CUS site. 
+% \section{Tables}
+% 	The following section contains examples of tables, most of which have been commented out for brevity. (They will show up in the .tex document in red, but not at all in the .pdf). For more help in constructing a table (or anything else in this document), please see the LaTeX pages on the CUS site. 
 
-\begin{table}[htbp] % begins the table floating environment. This enables LaTeX to fit the table where it works best and lets you add a caption.
-\caption[Correlation of Inheritance Factors between Parents and Child]{Correlation of Inheritance Factors between Parents and Child} 
-% The words in square brackets of the caption command end up in the Table of Tables. The words in curly braces are the caption directly over the table.
-\begin{center} 
-% makes the table centered
-\begin{tabular}{c c c c} 
-% the tabular environment is used to make the table itself. The {c c c c} specify that the table will have four columns and they will all be center-aligned. You can make the cell contents left aligned by replacing the Cs with Ls or right aligned by using Rs instead. Add more letters for more columns, and pipes (the vertical line above the backslash) for vertical lines. Another useful type of column is the p{width} column, which forces text to wrap within whatever width you specify e.g. p{1in}. Text will wrap badly in narrow columns though, so beware.
-\toprule % a horizontal line, slightly thicker than \hline, depends on the booktabs package
-  Factors &  Correlation between Parents \& Child & Inherited \\ % the first row of the table. Separate columns with ampersands and end the line with two backslashes. An environment begun in one cell will not carry over to adjacent rows.
-  \midrule % another horizontal line
-	Education 				& -0.49 & Yes 	 \\ % another row
-	Socio-Economic Status 	& 0.28 	& Slight \\
-	Income 					& 0.08 	& No	 \\
-	Family Size 			& 0.19 	& Slight \\
-	Occupational Prestige 	& 0.21 	& Slight \\
-\bottomrule % yet another horizontal line
-\end{tabular}
-\end{center}
-\label{inheritance} % labels are useful when you have more than one table or figure in your document. See our online documentation for more on this.
-\end{table}
+% \begin{table}[htbp] % begins the table floating environment. This enables LaTeX to fit the table where it works best and lets you add a caption.
+% \caption[Correlation of Inheritance Factors between Parents and Child]{Correlation of Inheritance Factors between Parents and Child} 
+% % The words in square brackets of the caption command end up in the Table of Tables. The words in curly braces are the caption directly over the table.
+% \begin{center} 
+% % makes the table centered
+% \begin{tabular}{c c c c} 
+% % the tabular environment is used to make the table itself. The {c c c c} specify that the table will have four columns and they will all be center-aligned. You can make the cell contents left aligned by replacing the Cs with Ls or right aligned by using Rs instead. Add more letters for more columns, and pipes (the vertical line above the backslash) for vertical lines. Another useful type of column is the p{width} column, which forces text to wrap within whatever width you specify e.g. p{1in}. Text will wrap badly in narrow columns though, so beware.
+% \toprule % a horizontal line, slightly thicker than \hline, depends on the booktabs package
+%   Factors &  Correlation between Parents \& Child & Inherited \\ % the first row of the table. Separate columns with ampersands and end the line with two backslashes. An environment begun in one cell will not carry over to adjacent rows.
+%   \midrule % another horizontal line
+% 	Education 				& -0.49 & Yes 	 \\ % another row
+% 	Socio-Economic Status 	& 0.28 	& Slight \\
+% 	Income 					& 0.08 	& No	 \\
+% 	Family Size 			& 0.19 	& Slight \\
+% 	Occupational Prestige 	& 0.21 	& Slight \\
+% \bottomrule % yet another horizontal line
+% \end{tabular}
+% \end{center}
+% \label{inheritance} % labels are useful when you have more than one table or figure in your document. See our online documentation for more on this.
+% \end{table}
 
-	\clearpage 
-%% \clearpage ends the page, and also dumps out all floats. 
-%% Floats are things like tables and figures.
+% 	\clearpage 
+% %% \clearpage ends the page, and also dumps out all floats. 
+% %% Floats are things like tables and figures.
 
-If you want to make a table that is longer than a page, you will want to use the longtable environment. Uncomment the table below to see an example, or see our online documentation.
+% If you want to make a table that is longer than a page, you will want to use the longtable environment. Uncomment the table below to see an example, or see our online documentation.
 
    
-   \section{Figures}
+%    \section{Figures}
    
-	If your thesis has a lot of figures, \LaTeX\ might behave better for you than that other word processor.  One thing that may be annoying is the way it handles ``floats'' like tables and figures. \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies.   There are some optional arguments to the figure and table environments to specify where you want it to appear; see the comments in the first figure.
+% 	If your thesis has a lot of figures, \LaTeX\ might behave better for you than that other word processor.  One thing that may be annoying is the way it handles ``floats'' like tables and figures. \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies.   There are some optional arguments to the figure and table environments to specify where you want it to appear; see the comments in the first figure.
 
-	If you need a graphic or tabular material to be part of the text, you can just put it inline. If you need it to appear in the list of figures or tables, it should be placed in the floating environment. 
+% 	If you need a graphic or tabular material to be part of the text, you can just put it inline. If you need it to appear in the list of figures or tables, it should be placed in the floating environment. 
 	
-	To get a figure from StatView, JMP, SPSS or other statistics program into a figure, you can print to pdf or save the image as a jpg or png. Precisely how you will do this depends on the program: you may need to copy-paste figures into Photoshop or other graphic program, then save in the appropriate format.
+% 	To get a figure from StatView, JMP, SPSS or other statistics program into a figure, you can print to pdf or save the image as a jpg or png. Precisely how you will do this depends on the program: you may need to copy-paste figures into Photoshop or other graphic program, then save in the appropriate format.
 	
-	Below we have put a few examples of figures. For more help using graphics and the float environment, see our online documentation.
+% 	Below we have put a few examples of figures. For more help using graphics and the float environment, see our online documentation.
 	
-	And this is how you add a figure with a graphic:
-	\begin{figure}[h]
-	% the options are h = here, t = top, b = bottom, p = page of figures.
-	% you can add an exclamation mark to make it try harder, and multiple
-	% options if you have an order of preference, e.g.
-	% \begin{figure}[h!tbp]
+% 	And this is how you add a figure with a graphic:
+% 	\begin{figure}[h]
+% 	% the options are h = here, t = top, b = bottom, p = page of figures.
+% 	% you can add an exclamation mark to make it try harder, and multiple
+% 	% options if you have an order of preference, e.g.
+% 	% \begin{figure}[h!tbp]
 	   
-	       \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	    \includegraphics{subdivision}
-	     \caption{A Figure}
-	 \label{subd}
-	\end{figure}
+% 	       \centering
+% 	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
+% 	    \includegraphics{subdivision}
+% 	     \caption{A Figure}
+% 	 \label{subd}
+% 	\end{figure}
 
-\clearpage %% starts a new page and stops trying to place floats such as tables and figures
+% \clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
-\section{More Figure Stuff}
-You can also scale and rotate figures.
- 	\begin{figure}[h!]
+% \section{More Figure Stuff}
+% You can also scale and rotate figures.
+%  	\begin{figure}[h!]
 	   
-	       \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	    \includegraphics[scale=0.5,angle=180]{subdivision}
-	    % if your figure shows up not where you want it, it may just be too big to fit. You can use the scale argument to shrink it, e.g. scale=0.85 is 85 percent of the original size. 
-	     \caption{A Smaller Figure, Flipped Upside Down}
-	 \label{subd2}
-	\end{figure}
+% 	       \centering
+% 	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
+% 	    \includegraphics[scale=0.5,angle=180]{subdivision}
+% 	    % if your figure shows up not where you want it, it may just be too big to fit. You can use the scale argument to shrink it, e.g. scale=0.85 is 85 percent of the original size. 
+% 	     \caption{A Smaller Figure, Flipped Upside Down}
+% 	 \label{subd2}
+% 	\end{figure}
 
-\section{Even More Figure Stuff}
-With some clever work you can crop a figure, which is handy if (for instance) your EPS or PDF is a little graphic on a whole sheet of paper. The viewport arguments are the lower-left and upper-right coordinates for the area you want to crop.
+% \section{Even More Figure Stuff}
+% With some clever work you can crop a figure, which is handy if (for instance) your EPS or PDF is a little graphic on a whole sheet of paper. The viewport arguments are the lower-left and upper-right coordinates for the area you want to crop.
 
- 	\begin{figure}[h!]
-	    	       \centering
-	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
-	   \includegraphics[clip=true, viewport=.0in .0in 1in 1in]{subdivision}
-	    \caption{A Cropped Figure}
-	 \label{subd3}
-	\end{figure}
+%  	\begin{figure}[h!]
+% 	    	       \centering
+% 	    % DO NOT ADD A FILENAME EXTENSION TO THE GRAPHIC FILE
+% 	   \includegraphics[clip=true, viewport=.0in .0in 1in 1in]{subdivision}
+% 	    \caption{A Cropped Figure}
+% 	 \label{subd3}
+% 	\end{figure}
 	
-      \subsection{Common Modifications}
-      The following figure features the more popular changes thesis students want to their figures. This information is also on the web at \url{web.reed.edu/cis/help/latex/graphics.html}.
-    %\renewcommand{\thefigure}{0.\arabic{figure}} 	% Renumbers the figure to the type 0.x
-    %\addtocounter{figure}{4} 						% starts the figure numbering at 4
-    \begin{figure}[htbp]
-    \begin{center}
-   \includegraphics[scale=0.5]{subdivision}
-    \caption[Subdivision of arc segments]{\footnotesize{Subdivision of arc segments. You can see that $ p_3 = p_6^\prime$.}} %the special ToC caption is in square brackets. The \footnotesize makes the figure caption smaller
-    \label{barplot}
-    \end{center}
-    \end{figure} 
+%       \subsection{Common Modifications}
+%       The following figure features the more popular changes thesis students want to their figures. This information is also on the web at \url{web.reed.edu/cis/help/latex/graphics.html}.
+%     %\renewcommand{\thefigure}{0.\arabic{figure}} 	% Renumbers the figure to the type 0.x
+%     %\addtocounter{figure}{4} 						% starts the figure numbering at 4
+%     \begin{figure}[htbp]
+%     \begin{center}
+%    \includegraphics[scale=0.5]{subdivision}
+%     \caption[Subdivision of arc segments]{\footnotesize{Subdivision of arc segments. You can see that $ p_3 = p_6^\prime$.}} %the special ToC caption is in square brackets. The \footnotesize makes the figure caption smaller
+%     \label{barplot}
+%     \end{center}
+%     \end{figure} 
 
-\chapter*{Conclusion}
-         \addcontentsline{toc}{chapter}{Conclusion}
-	\chaptermark{Conclusion}
-	\markboth{Conclusion}{Conclusion}
-	\setcounter{chapter}{4}
-	\setcounter{section}{0}
+% \chapter*{Conclusion}
+%          \addcontentsline{toc}{chapter}{Conclusion}
+% 	\chaptermark{Conclusion}
+% 	\markboth{Conclusion}{Conclusion}
+% 	\setcounter{chapter}{4}
+% 	\setcounter{section}{0}
 	
-Here's a conclusion, demonstrating the use of all that manual incrementing and table of contents adding that has to happen if you use the starred form of the chapter command. The deal is, the chapter command in \LaTeX\ does a lot of things: it increments the chapter counter, it resets the section counter to zero, it puts the name of the chapter into the table of contents and the running headers, and probably some other stuff. 
+% Here's a conclusion, demonstrating the use of all that manual incrementing and table of contents adding that has to happen if you use the starred form of the chapter command. The deal is, the chapter command in \LaTeX\ does a lot of things: it increments the chapter counter, it resets the section counter to zero, it puts the name of the chapter into the table of contents and the running headers, and probably some other stuff. 
 
-So, if you remove all that stuff because you don't like it to say ``Chapter 4: Conclusion'', then you have to manually add all the things \LaTeX\ would normally do for you. Maybe someday we'll write a new chapter macro that doesn't add ``Chapter X'' to the beginning of every chapter title.
+% So, if you remove all that stuff because you don't like it to say ``Chapter 4: Conclusion'', then you have to manually add all the things \LaTeX\ would normally do for you. Maybe someday we'll write a new chapter macro that doesn't add ``Chapter X'' to the beginning of every chapter title.
 
-\section{More info}
-And here's some other random info: the first paragraph after a chapter title or section head \emph{shouldn't be} indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there. 
+% \section{More info}
+% And here's some other random info: the first paragraph after a chapter title or section head \emph{shouldn't be} indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there. 
 
 
 %If you feel it necessary to include an appendix, it goes here.

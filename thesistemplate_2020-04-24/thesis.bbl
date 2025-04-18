@@ -11,7 +11,7 @@ Meenaxi Bhattacharjee, Dugald Macpherson, Rögnvaldur~G. Möller, and Peter~M.
 Daniel Copeland and Jamie Pommersheim.
 \newblock Quantum query complexity of symmetric oracle problems.
 
-\bibitem[fam]{spiga24}
+\bibitem[fam]{valle24}
 prefix=del~useprefix=false family=Valle, given=Coen.
 \newblock A character theoretic formula for base size.
 
@@ -21,6 +21,10 @@ William Fulton and Joe Harris.
   {{Texts}} in {{Mathematics}}}.
 \newblock Springer.
 
+
+\bibitem[fRD]{valle2023}
+prefix=del~useprefix=false family=Valle, given=Coen and Colva~M. Roney-Dougal.
+\newblock The base size of the symmetric group acting on subsets.
 
 \bibitem[Ful]{fulton}
 William Fulton.
@@ -40,7 +44,7 @@ Giovanni Mecenero and Pablo Spiga.
 \newblock A formula for the base size of the symmetric group in its action on
   subsets.
 
-\bibitem[MSb]{morris2021}
+\bibitem[MSb]{morris21}
 Joy Morris and Pablo Spiga.
 \newblock On the base size of the symmetric and the alternating group acting on
   partitions.

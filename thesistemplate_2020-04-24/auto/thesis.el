@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("reedthesis" "12pt" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("url" "hyphens") ("cleveref" "capitalise") ("natbib" "numbers")))
+                     '(("url" "hyphens") ("cleveref" "capitalise") ("cite" "noadjust") ("natbib" "numbers")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "url")
@@ -28,6 +28,7 @@
     "ytableau"
     "cleveref"
     "algpseudocodex"
+    "cite"
     "todonotes"
     "natbib")
    (TeX-add-symbols
@@ -35,7 +36,6 @@
     '("fmatrix" 1)
     '("smatrix" 1)
     '("Pmatrix" 1)
-    "hydro"
     "cA"
     "cB"
     "cC"
@@ -172,19 +172,14 @@
     "vep"
     "ind"
     "res"
+    "irr"
     "acts")
    (LaTeX-add-labels
     "motivation"
     "lem1"
     "lem2"
     "prop1"
-    "labelvariable"
-    "commands"
-    "inheritance"
-    "subd"
-    "subd2"
-    "subd3"
-    "barplot")
+    "tableone")
    (LaTeX-add-bibliographies
     "thesisdsldesktop")
    (LaTeX-add-amsthm-newtheorems
@@ -193,6 +188,7 @@
     "lemma"
     "prop"
     "claim"
+    "conj"
     "unnumberedtheorem"
     "unnumberedcorollary"
     "unnumberedlemma"
@@ -208,6 +204,9 @@
     "observation"
     "unnumberedtheoremremark"
     "unnumberedtheoremexample"
-    "unnumberedtheoremdefinition"))
+    "unnumberedtheoremdefinition")
+   (LaTeX-add-mathtools-DeclarePairedDelimiters
+    '("ceil" "")
+    '("floor" "")))
  :latex)
 
