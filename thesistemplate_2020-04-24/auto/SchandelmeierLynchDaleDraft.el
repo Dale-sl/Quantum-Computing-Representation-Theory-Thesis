@@ -1,10 +1,10 @@
 (TeX-add-style-hook
- "thesis"
+ "SchandelmeierLynchDaleDraft"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("reedthesis" "12pt" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("url" "hyphens") ("cleveref" "capitalise") ("biblatex" "style=authoryear" "backend=biber" "useprefix=false" "sortcites=true")))
+                     '(("url" "hyphens") ("cleveref" "capitalise") ("biblatex" "style=authoryear" "backend=biber" "useprefix=false" "sortcites=true") ("microtype" "final")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "url")
@@ -29,7 +29,10 @@
     "cleveref"
     "algpseudocodex"
     "todonotes"
-    "biblatex")
+    "tikz"
+    "float"
+    "biblatex"
+    "microtype")
    (TeX-add-symbols
     '("tmatrix" 1)
     '("fmatrix" 1)
@@ -175,6 +178,7 @@
     "stab"
     "acts")
    (LaTeX-add-labels
+    "circuit"
     "motivation"
     "lem1"
     "lem2"
@@ -182,7 +186,7 @@
     "tableone"
     "thm:numcols")
    (LaTeX-add-bibliographies
-    "thesisdsldesktop")
+    "thesisnew")
    (LaTeX-add-amsthm-newtheorems
     "thm"
     "cor"

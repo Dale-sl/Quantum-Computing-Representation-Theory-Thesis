@@ -9,13 +9,13 @@
 \contentsline {subsection}{\numberline {1.3.1}Motivation}{18}{}%
 \contentsline {subsection}{\numberline {1.3.2}Tableaux and Tabloids}{19}{}%
 \contentsline {subsection}{\numberline {1.3.3}The modules $M^\lambda $ and $S^\lambda $}{21}{}%
-\contentsline {subsection}{\numberline {1.3.4}Irreducibility and completeness of the $S^\lambda $ modules}{23}{}%
+\contentsline {subsection}{\numberline {1.3.4}Irreducibility and completeness of the $S^\lambda $-modules}{23}{}%
 \contentsline {subsection}{\numberline {1.3.5}A basis for $S^\lambda $}{29}{}%
 \contentsline {section}{\numberline {1.4}Oracle Formalism}{30}{}%
 \contentsline {chapter}{Chapter 2: Methods}{35}{}%
 \contentsline {chapter}{Chapter 3: Results}{37}{}%
 \contentsline {section}{\numberline {3.1}Decompositions}{38}{}%
 \contentsline {section}{\numberline {3.2}Data and Conjectures}{43}{}%
-\contentsline {subsection}{\numberline {3.2.1}The K Element Action}{44}{}%
+\contentsline {subsection}{\numberline {3.2.1}The k-element Action}{44}{}%
 \contentsline {subsection}{\numberline {3.2.2}The Regular Partition Action}{49}{}%
-\contentsline {chapter}{Chapter 4: Disscussion}{51}{}%
+\contentsline {chapter}{Chapter 4: Discussion}{51}{}%

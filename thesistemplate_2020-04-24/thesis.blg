@@ -1,80 +1,18 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: thesis.aux
-The style file: annotate.bst
-Database file #1: thesisdsldesktop.bib
-Warning--entry type for "copeland" isn't style-file defined
---line 17 of file thesisdsldesktop.bib
-Warning--entry type for "morris21" isn't style-file defined
---line 77 of file thesisdsldesktop.bib
-Warning--entry type for "spiga23" isn't style-file defined
---line 125 of file thesisdsldesktop.bib
-Warning--entry type for "valle2023" isn't style-file defined
---line 142 of file thesisdsldesktop.bib
-Warning--entry type for "valle24" isn't style-file defined
---line 158 of file thesisdsldesktop.bib
-Warning--entry type for "zhandryQuantumOracleClassification2015" isn't style-file defined
---line 173 of file thesisdsldesktop.bib
-Warning--I didn't find a database entry for "valle23"
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
-while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
-while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
-while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
-while executing---line 1208 of file annotate.bst
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
-while executing---line 1208 of file annotate.bst
-Warning--empty year in bhattacharjeeWreathProducts1998
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false" for entry valle24
-while executing---line 1273 of file annotate.bst
-Warning--empty year in fulton2004
-Too many commas in name 1 of "family=Valle, given=Coen, prefix=del, useprefix=false and Roney-Dougal, Colva M." for entry valle2023
-while executing---line 1273 of file annotate.bst
-Warning--empty year in fulton
-Warning--empty year in jamesRepresentationsCharactersGroups2001
-Warning--empty year in nielsen2010
-Warning--empty year in sagan
-You've used 12 entries,
-            2588 wiz_defined-function locations,
-            610 strings with 6069 characters,
-and the built_in function-call counts, 3976 in all, are:
-= -- 349
-> -- 196
-< -- 7
-+ -- 67
-- -- 62
-* -- 238
-:= -- 641
-add.period$ -- 31
-call.type$ -- 12
-change.case$ -- 66
-chr.to.int$ -- 11
-cite$ -- 18
-duplicate$ -- 166
-empty$ -- 331
-format.name$ -- 78
-if$ -- 814
-int.to.chr$ -- 2
-int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 62
-num.names$ -- 36
-pop$ -- 142
-preamble$ -- 1
-purify$ -- 82
-quote$ -- 0
-skip$ -- 136
-stack$ -- 0
-substring$ -- 112
-swap$ -- 23
-text.length$ -- 7
-text.prefix$ -- 4
-top$ -- 0
-type$ -- 76
-warning$ -- 6
-while$ -- 35
-width$ -- 15
-write$ -- 139
-(There were 7 error messages)
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'thesis.blg'
+[163] biber-MSWIN64:340> INFO - === 
+[219] Biber.pm:419> INFO - Reading 'thesis.bcf'
+[404] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[427] Biber.pm:4419> INFO - Processing section 0
+[443] Biber.pm:4610> INFO - Looking for bibtex file 'thesisdsldesktop.bib' for section 0
+[537] bibtex.pm:1713> INFO - LaTeX decoding ...
+[587] bibtex.pm:1519> INFO - Found BibTeX data source 'thesisdsldesktop.bib'
+[757] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[758] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[758] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[758] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[782] bbl.pm:660> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[793] bbl.pm:763> INFO - Output to thesis.bbl
+[793] Biber.pm:131> WARN - ISBN '978-1-4419-2869-6 978-1-4757-6804-6' in entry 'sagan' is invalid - run biber with '--validate_datamodel' for details.
+[793] Biber.pm:131> WARN - ISBN '978-3-540-00539-1 978-1-4612-0979-9' in entry 'fulton2004' is invalid - run biber with '--validate_datamodel' for details.
+[793] Biber.pm:133> INFO - WARNINGS: 2

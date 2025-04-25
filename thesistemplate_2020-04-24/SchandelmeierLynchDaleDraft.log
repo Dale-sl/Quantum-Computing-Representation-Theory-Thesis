@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  18 APR 2025 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  24 APR 2025 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**thesis.tex
-(./thesis.tex
+**SchandelmeierLynchDaleDraft.tex
+(./SchandelmeierLynchDaleDraft.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
 (./reedthesis.cls
@@ -685,6 +685,131 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \c@@todonotes@numberoftodonotes=\count332
 )
+(c:/texlive/2023/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz2.code.tex
+(c:/texlive/2023/texmf-dist/tex/latex/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+\xargs@max=\count333
+\xargs@toksa=\toks51
+\xargs@toksb=\toks52
+)
+(c:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count334
+\xs_countb=\count335
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+(c:/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(c:/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(c:/texlive/2023/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.cod
+e.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen292
+\pgfarrowlength=\dimen293
+\pgfarrowwidth=\dimen294
+\pgfarrowlinewidth=\dimen295
+))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
+\pgfdecoratedcompleteddistance=\dimen296
+\pgfdecoratedremainingdistance=\dimen297
+\pgfdecoratedinputsegmentcompleteddistance=\dimen298
+\pgfdecoratedinputsegmentremainingdistance=\dimen299
+\pgf@decorate@distancetomove=\dimen300
+\pgf@decorate@repeatstate=\count336
+\pgfdecorationsegmentamplitude=\dimen301
+\pgfdecorationsegmentlength=\dimen302
+)
+\tikz@lib@dec@box=\box77
+)
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.s
+ymbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.m
+isc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.markings.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.markings.code.tex))
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymath.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryfpu.code.tex
+(c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count337
+\tikz@math@dimen=\dimen303
+\tikz@math@toks=\toks53
+)
+\pgf@layerbox@background=\box78
+\pgf@layerboxsaved@background=\box79
+\pgf@layerbox@quantback=\box80
+\pgf@layerboxsaved@quantback=\box81
+\c@dummy=\count338
+\myl=\skip97
+\myh=\skip98
+\myd=\skip99
+\c@aaa=\count339
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 10
+44.
+(c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 104
+4.
+
+(c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 104
+4.
+
+(c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+\c@wirenumberpermute=\count340
+)
+(c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count341
+\float@exts=\toks54
+\float@box=\box82
+\@float@everytoks=\toks55
+\@floatcapt=\box83
+)
 (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
@@ -704,68 +829,68 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count333
+\lrq@indent=\count342
 
 (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count334
-\c@listtotal=\count335
-\c@listcount=\count336
-\c@liststart=\count337
-\c@liststop=\count338
-\c@citecount=\count339
-\c@citetotal=\count340
-\c@multicitecount=\count341
-\c@multicitetotal=\count342
-\c@instcount=\count343
-\c@maxnames=\count344
-\c@minnames=\count345
-\c@maxitems=\count346
-\c@minitems=\count347
-\c@citecounter=\count348
-\c@maxcitecounter=\count349
-\c@savedcitecounter=\count350
-\c@uniquelist=\count351
-\c@uniquename=\count352
-\c@refsection=\count353
-\c@refsegment=\count354
-\c@maxextratitle=\count355
-\c@maxextratitleyear=\count356
-\c@maxextraname=\count357
-\c@maxextradate=\count358
-\c@maxextraalpha=\count359
-\c@abbrvpenalty=\count360
-\c@highnamepenalty=\count361
-\c@lownamepenalty=\count362
-\c@maxparens=\count363
-\c@parenlevel=\count364
-\blx@tempcnta=\count365
-\blx@tempcntb=\count366
-\blx@tempcntc=\count367
-\c@blx@maxsection=\count368
-\blx@maxsegment@0=\count369
-\blx@notetype=\count370
-\blx@parenlevel@text=\count371
-\blx@parenlevel@foot=\count372
-\blx@sectionciteorder@0=\count373
-\blx@sectionciteorderinternal@0=\count374
-\blx@entrysetcounter=\count375
-\blx@biblioinstance=\count376
-\labelnumberwidth=\skip97
-\labelalphawidth=\skip98
-\biblabelsep=\skip99
-\bibitemsep=\skip100
-\bibnamesep=\skip101
-\bibinitsep=\skip102
-\bibparsep=\skip103
-\bibhang=\skip104
+\c@tabx@nest=\count343
+\c@listtotal=\count344
+\c@listcount=\count345
+\c@liststart=\count346
+\c@liststop=\count347
+\c@citecount=\count348
+\c@citetotal=\count349
+\c@multicitecount=\count350
+\c@multicitetotal=\count351
+\c@instcount=\count352
+\c@maxnames=\count353
+\c@minnames=\count354
+\c@maxitems=\count355
+\c@minitems=\count356
+\c@citecounter=\count357
+\c@maxcitecounter=\count358
+\c@savedcitecounter=\count359
+\c@uniquelist=\count360
+\c@uniquename=\count361
+\c@refsection=\count362
+\c@refsegment=\count363
+\c@maxextratitle=\count364
+\c@maxextratitleyear=\count365
+\c@maxextraname=\count366
+\c@maxextradate=\count367
+\c@maxextraalpha=\count368
+\c@abbrvpenalty=\count369
+\c@highnamepenalty=\count370
+\c@lownamepenalty=\count371
+\c@maxparens=\count372
+\c@parenlevel=\count373
+\blx@tempcnta=\count374
+\blx@tempcntb=\count375
+\blx@tempcntc=\count376
+\c@blx@maxsection=\count377
+\blx@maxsegment@0=\count378
+\blx@notetype=\count379
+\blx@parenlevel@text=\count380
+\blx@parenlevel@foot=\count381
+\blx@sectionciteorder@0=\count382
+\blx@sectionciteorderinternal@0=\count383
+\blx@entrysetcounter=\count384
+\blx@biblioinstance=\count385
+\labelnumberwidth=\skip100
+\labelalphawidth=\skip101
+\biblabelsep=\skip102
+\bibitemsep=\skip103
+\bibnamesep=\skip104
+\bibinitsep=\skip105
+\bibparsep=\skip106
+\bibhang=\skip107
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language89
-\c@mincomprange=\count377
-\c@maxcomprange=\count378
-\c@mincompwidth=\count379
+\c@mincomprange=\count386
+\c@maxcomprange=\count387
+\c@mincompwidth=\count388
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -776,88 +901,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count380
-\c@savedafterword=\count381
-\c@annotator=\count382
-\c@savedannotator=\count383
-\c@author=\count384
-\c@savedauthor=\count385
-\c@bookauthor=\count386
-\c@savedbookauthor=\count387
-\c@commentator=\count388
-\c@savedcommentator=\count389
-\c@editor=\count390
-\c@savededitor=\count391
-\c@editora=\count392
-\c@savededitora=\count393
-\c@editorb=\count394
-\c@savededitorb=\count395
-\c@editorc=\count396
-\c@savededitorc=\count397
-\c@foreword=\count398
-\c@savedforeword=\count399
-\c@holder=\count400
-\c@savedholder=\count401
-\c@introduction=\count402
-\c@savedintroduction=\count403
-\c@namea=\count404
-\c@savednamea=\count405
-\c@nameb=\count406
-\c@savednameb=\count407
-\c@namec=\count408
-\c@savednamec=\count409
-\c@translator=\count410
-\c@savedtranslator=\count411
-\c@shortauthor=\count412
-\c@savedshortauthor=\count413
-\c@shorteditor=\count414
-\c@savedshorteditor=\count415
-\c@labelname=\count416
-\c@savedlabelname=\count417
-\c@institution=\count418
-\c@savedinstitution=\count419
-\c@lista=\count420
-\c@savedlista=\count421
-\c@listb=\count422
-\c@savedlistb=\count423
-\c@listc=\count424
-\c@savedlistc=\count425
-\c@listd=\count426
-\c@savedlistd=\count427
-\c@liste=\count428
-\c@savedliste=\count429
-\c@listf=\count430
-\c@savedlistf=\count431
-\c@location=\count432
-\c@savedlocation=\count433
-\c@organization=\count434
-\c@savedorganization=\count435
-\c@origlocation=\count436
-\c@savedoriglocation=\count437
-\c@origpublisher=\count438
-\c@savedorigpublisher=\count439
-\c@publisher=\count440
-\c@savedpublisher=\count441
-\c@language=\count442
-\c@savedlanguage=\count443
-\c@origlanguage=\count444
-\c@savedoriglanguage=\count445
-\c@pageref=\count446
-\c@savedpageref=\count447
-\shorthandwidth=\skip105
-\shortjournalwidth=\skip106
-\shortserieswidth=\skip107
-\shorttitlewidth=\skip108
-\shortauthorwidth=\skip109
-\shorteditorwidth=\skip110
-\locallabelnumberwidth=\skip111
-\locallabelalphawidth=\skip112
-\localshorthandwidth=\skip113
-\localshortjournalwidth=\skip114
-\localshortserieswidth=\skip115
-\localshorttitlewidth=\skip116
-\localshortauthorwidth=\skip117
-\localshorteditorwidth=\skip118
+\c@afterword=\count389
+\c@savedafterword=\count390
+\c@annotator=\count391
+\c@savedannotator=\count392
+\c@author=\count393
+\c@savedauthor=\count394
+\c@bookauthor=\count395
+\c@savedbookauthor=\count396
+\c@commentator=\count397
+\c@savedcommentator=\count398
+\c@editor=\count399
+\c@savededitor=\count400
+\c@editora=\count401
+\c@savededitora=\count402
+\c@editorb=\count403
+\c@savededitorb=\count404
+\c@editorc=\count405
+\c@savededitorc=\count406
+\c@foreword=\count407
+\c@savedforeword=\count408
+\c@holder=\count409
+\c@savedholder=\count410
+\c@introduction=\count411
+\c@savedintroduction=\count412
+\c@namea=\count413
+\c@savednamea=\count414
+\c@nameb=\count415
+\c@savednameb=\count416
+\c@namec=\count417
+\c@savednamec=\count418
+\c@translator=\count419
+\c@savedtranslator=\count420
+\c@shortauthor=\count421
+\c@savedshortauthor=\count422
+\c@shorteditor=\count423
+\c@savedshorteditor=\count424
+\c@labelname=\count425
+\c@savedlabelname=\count426
+\c@institution=\count427
+\c@savedinstitution=\count428
+\c@lista=\count429
+\c@savedlista=\count430
+\c@listb=\count431
+\c@savedlistb=\count432
+\c@listc=\count433
+\c@savedlistc=\count434
+\c@listd=\count435
+\c@savedlistd=\count436
+\c@liste=\count437
+\c@savedliste=\count438
+\c@listf=\count439
+\c@savedlistf=\count440
+\c@location=\count441
+\c@savedlocation=\count442
+\c@organization=\count443
+\c@savedorganization=\count444
+\c@origlocation=\count445
+\c@savedoriglocation=\count446
+\c@origpublisher=\count447
+\c@savedorigpublisher=\count448
+\c@publisher=\count449
+\c@savedpublisher=\count450
+\c@language=\count451
+\c@savedlanguage=\count452
+\c@origlanguage=\count453
+\c@savedoriglanguage=\count454
+\c@pageref=\count455
+\c@savedpageref=\count456
+\shorthandwidth=\skip108
+\shortjournalwidth=\skip109
+\shortserieswidth=\skip110
+\shorttitlewidth=\skip111
+\shortauthorwidth=\skip112
+\shorteditorwidth=\skip113
+\locallabelnumberwidth=\skip114
+\locallabelalphawidth=\skip115
+\localshorthandwidth=\skip116
+\localshortjournalwidth=\skip117
+\localshortserieswidth=\skip118
+\localshorttitlewidth=\skip119
+\localshortauthorwidth=\skip120
+\localshorteditorwidth=\skip121
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -869,19 +994,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count448
-\c@textcitetotal=\count449
-\c@textcitemaxnames=\count450
-\c@biburlbigbreakpenalty=\count451
-\c@biburlbreakpenalty=\count452
-\c@biburlnumpenalty=\count453
-\c@biburlucpenalty=\count454
-\c@biburllcpenalty=\count455
+\c@textcitecount=\count457
+\c@textcitetotal=\count458
+\c@textcitemaxnames=\count459
+\c@biburlbigbreakpenalty=\count460
+\c@biburlbreakpenalty=\count461
+\c@biburlnumpenalty=\count462
+\c@biburlucpenalty=\count463
+\c@biburllcpenalty=\count464
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count456
+\c@smartand=\count465
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
@@ -893,8 +1018,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count457
-\c@bbx:relatedtotal=\count458
+\c@bbx:relatedcount=\count466
+\c@bbx:relatedtotal=\count467
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -925,57 +1050,84 @@ Package biblatex Info: ... and expl3
 (c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
-\c@thm=\count459
-\c@cor=\count460
-\c@lemma=\count461
-\c@prop=\count462
-\c@claim=\count463
-\c@conj=\count464
-\c@defn=\count465
-\c@const=\count466
-\c@notn=\count467
-\c@outline=\count468
-\c@post=\count469
-\c@rem=\count470
-\c@ex=\count471
-\c@observation=\count472
-\@quotelevel=\count473
-\@quotereset=\count474
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+\MT@toks=\toks56
+\MT@tempbox=\box84
+\MT@count=\count468
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks57
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen304
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count469
 
-(./thesis.aux
-\c@algpx@indentEndPage-0@totc=\count475
-\c@algpx@indentEndPage-1@totc=\count476
-\c@algpx@indentEndPage-2@totc=\count477
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip122
 )
-\openout1 = `thesis.aux'.
+Package microtype Info: Loading configuration file microtype.cfg.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 221.
-LaTeX Font Info:    ... okay on input line 221.
- (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+))
+\c@thm=\count470
+\c@cor=\count471
+\c@lemma=\count472
+\c@prop=\count473
+\c@claim=\count474
+\c@conj=\count475
+\c@defn=\count476
+\c@const=\count477
+\c@notn=\count478
+\c@outline=\count479
+\c@post=\count480
+\c@rem=\count481
+\c@ex=\count482
+\c@observation=\count483
+\@quotelevel=\count484
+\@quotereset=\count485
+
+(./SchandelmeierLynchDaleDraft.aux
+\c@algpx@indentEndPage-0@totc=\count486
+\c@algpx@indentEndPage-1@totc=\count487
+\c@algpx@indentEndPage-2@totc=\count488
+)
+\openout1 = `SchandelmeierLynchDaleDraft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
+LaTeX Font Info:    ... okay on input line 228.
+
+(c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count478
-\scratchdimen=\dimen292
-\scratchbox=\box77
-\nofMPsegments=\count479
-\nofMParguments=\count480
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count481
-\MPscratchDim=\dimen293
-\MPnumerator=\count482
-\makeMPintoPDFobject=\count483
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count489
+\scratchdimen=\dimen305
+\scratchbox=\box85
+\nofMPsegments=\count490
+\nofMParguments=\count491
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count492
+\MPscratchDim=\dimen306
+\MPnumerator=\count493
+\makeMPintoPDFobject=\count494
+\everyMPtoPDFconversion=\toks59
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -994,30 +1146,40 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `thesis.bcf'.
+\openout4 = `SchandelmeierLynchDaleDraft.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' found.
- (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 221.
-Package biblatex Info: Reference segment=0 on input line 221.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 22
-3.
+Package biblatex Info: ... file 'SchandelmeierLynchDaleDraft.bbl' found.
 
-(c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+(./SchandelmeierLynchDaleDraft.bbl)
+Package biblatex Info: Reference section=0 on input line 228.
+Package biblatex Info: Reference segment=0 on input line 228.
+LaTeX Info: Redefining \microtypecontext on input line 228.
+Package microtype Info: Applying patch `item' on input line 228.
+Package microtype Info: Applying patch `toc' on input line 228.
+Package microtype Info: Applying patch `eqnum' on input line 228.
+Package microtype Info: Applying patch `footnote' on input line 228.
+Package microtype Info: Applying patch `verbatim' on input line 228.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 228.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 223
-.
-
-(c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 223
-.
-
-(c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(c:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 Non-PDF special ignored!
 <special> !% Reed College LaTeX Thesis Class 2001/12/04 SN
@@ -1035,9 +1197,9 @@ Non-PDF special ignored!
 
 ] [2
 
-] (./thesis.toc)
+] (./SchandelmeierLynchDaleDraft.toc)
 \tf@toc=\write5
-\openout5 = `thesis.toc'.
+\openout5 = `SchandelmeierLynchDaleDraft.toc'.
 
  [3] [4
 
@@ -1062,7 +1224,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 Chapter 1.
-[5
+
+Underfull \vbox (badness 5446) has occurred while \output is active []
+
+ [5
 
 ]
 
@@ -1074,9 +1239,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-Underfull \vbox (badness 6016) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1086,9 +1248,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1116,6 +1275,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
+Underfull \vbox (badness 1762) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1125,9 +1287,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1182,8 +1341,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Overfull \hbox (10.93774pt too wide) in paragraph at lines 693--693
-[]\OT1/cmr/bx/n/17.28 Representation The-ory of the Sym-met-ric Group 
+Overfull \hbox (3.35336pt too wide) in paragraph at lines 721--721
+[]\OT1/cmr/bx/n/17.28 (-20) Representation The-ory of the Sym-met-ric Group 
  []
 
 
@@ -1204,11 +1363,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-Overfull \hbox (16.95825pt too wide) in paragraph at lines 753--756
-\OT1/cmr/m/n/12 If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A \OML/
-cmm/m/it/12 T$ \OT1/cmr/m/n/12 we now see that $\OML/cmm/m/it/12 ^^[\OT1/cmr/m/
-n/12 (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = (12)(34)(143)(12)(34) =
+Overfull \hbox (9.40465pt too wide) in paragraph at lines 787--790
+\OT1/cmr/m/n/12 (-20) If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A
+ \OML/cmm/m/it/12 T$ \OT1/cmr/m/n/12 (-20) we now see that $\OML/cmm/m/it/12 ^^
+[\OT1/cmr/m/n/12 (-20) (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 (-20) = (12)
+(34)(143)(12)(34) =
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1264,7 +1428,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-Overfull \hbox (23.59337pt too wide) detected at line 994
+Overfull \hbox (23.59337pt too wide) detected at line 1028
 [] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 f\OML
 /cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 q \OMS/cmsy/m/n/12 ^^A \
 OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 q\
@@ -1277,7 +1441,7 @@ m/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 q[]\OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1008
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1042
 
  []
 
@@ -1311,9 +1475,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-Underfull \vbox (badness 2334) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1341,7 +1502,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31]
-Overfull \hbox (31.36456pt too wide) detected at line 1210
+Overfull \hbox (31.36456pt too wide) detected at line 1255
 []
  []
 
@@ -1366,9 +1527,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 2.
-\c@algpx@indentEndPage-0=\count484
-\c@algpx@indentEndPage-1=\count485
-\c@algpx@indentEndPage-2=\count486
+\c@algpx@indentEndPage-0=\count495
+\c@algpx@indentEndPage-1=\count496
+\c@algpx@indentEndPage-2=\count497
 [35]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1432,8 +1593,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41]
+Underfull \vbox (badness 1953) has occurred while \output is active []
 
-LaTeX Warning: Marginpar on page 42 moved.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1444,9 +1605,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [42]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1457,12 +1615,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [43]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-476.
+525.
  (c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1476.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1525.
 
 
 
@@ -1483,13 +1641,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [45]
-Overfull \hbox (46.96582pt too wide) in paragraph at lines 1560--1563
-\OT1/cmr/m/it/12 of $\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 . This is the num-be
-r of parts in $\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 . Fur-ther-more write $\OM
-L/cmm/m/it/12 ^^U \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 ^^V \OT1/cmr/m/n/12 = ([]
-(\OML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/
-n/12 (\OML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] \OT1/
-cmr/m/n/12 )$\OT1/cmr/m/it/12 ,
+Overfull \hbox (27.37932pt too wide) in paragraph at lines 1609--1612
+\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 (-20) . This is the num-ber of parts in $
+\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 (-20) . Fur-ther-more write $\OML/cmm/m/i
+t/12 ^^U \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 ^^V \OT1/cmr/m/n/12 (-20) = ([](\O
+ML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 (-20) )\OML/cmm/m/it/12 ; []\OT1/cmr
+/m/n/12 (-20) (\OML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 (-20) )\OML/cmm/m/i
+t/12 ; [] \OT1/cmr/m/n/12 (-20) )$\OT1/cmr/m/it/12 (-20) ,
  []
 
 
@@ -1553,13 +1711,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [52]
-Overfull \hbox (0.78868pt too wide) in paragraph at lines 1958--1958
-[][]\OT1/cmr/m/n/12 James, Gor-don and Mar-tin Liebeck (2001). \OT1/cmr/m/it/12
- Rep-re-sen-ta-tions and Char-ac-ters of Groups\OT1/cmr/m/n/12 .
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (2.21446pt too wide) in paragraph at lines 2007--2007
+[][]\OT1/cmr/m/it/12 (-20) GAP -- Groups, Al-go-rithms, and Pro-gram-ming, Ver-
+sion 4.14.0 \OT1/cmr/m/n/12 (-20) (2024). The GAP~Group.
  []
 
 
-Overfull \hbox (36.78004pt too wide) in paragraph at lines 1958--1958
+Overfull \hbox (36.78004pt too wide) in paragraph at lines 2007--2007
 \OT1/cmtt/m/n/12 representations -[] and -[] characters -[] of -[] groups / 9F5
 25E6ACAC7FFADFDBDECE98C115F40$
  []
@@ -1567,12 +1730,7 @@ Overfull \hbox (36.78004pt too wide) in paragraph at lines 1958--1958
 [53
 
 
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Overfull \hbox (5.90503pt too wide) in paragraph at lines 1958--1958
-\OT1/cmtt/m/n/12 cambridge . org / highereducation / books / quantum -[] comput
-ation -[] and -[] quantum -[]
- []
-
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1581,23 +1739,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54] (./thesis.aux)
+[54] (./SchandelmeierLynchDaleDraft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-Package logreq Info: Writing requests to 'thesis.run.xml'.
-\openout1 = `thesis.run.xml'.
+Package logreq Info: Writing requests to 'SchandelmeierLynchDaleDraft.run.xml'.
+
+\openout1 = `SchandelmeierLynchDaleDraft.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27232 strings out of 474927
- 543291 string characters out of 5763541
- 1968785 words of memory out of 5000000
- 48353 multiletter control sequences out of 15000+600000
- 570733 words of font info for 88 fonts, out of 8000000 for 9000
+ 33167 strings out of 474927
+ 677850 string characters out of 5763541
+ 1962785 words of memory out of 5000000
+ 53941 multiletter control sequences out of 15000+600000
+ 578947 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,14n,101p,1926b,1499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 96i,20n,101p,1952b,1507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-d
@@ -1614,11 +1773,11 @@ lic/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
 pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-<c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on thesis.pdf (62 pages, 391504 bytes).
+
+Output written on SchandelmeierLynchDaleDraft.pdf (62 pages, 403687 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 37389 words of extra memory for PDF output out of 42996 (max. 10000000)
 

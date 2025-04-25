@@ -90,6 +90,83 @@
       \verb https://doi.org/10.1007/BFb0092558
       \endverb
     \endentry
+    \entry{burgisser2008}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=db24e25ecb58722cbf1fcc3eb766e5e1}{%
+           family={Bürgisser},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c2895b8a67c4907449d5b847a115bb3}{%
+           family={Ikenmeyer},
+           familyi={I\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=9552a63e1d12a152ac9b6d0ad4f4374a}{%
+           family={{Krattenthaler}},
+           familyi={K\bibinitperiod}}}%
+        {{hash=db6017bd1f27118d44083a172a82409f}{%
+           family={{Christian}},
+           familyi={C\bibinitperiod}}}%
+        {{hash=46f4c101ae8c790e373b6ab465c9e17b}{%
+           family={{Sagan}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=4be90ed9c41356ec34247e49aec714a9}{%
+           family={{Bruce}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Viña del Mar, Chile}%
+      }
+      \list{publisher}{1}{%
+        {Discrete Mathematics and Theoretical Computer Science}%
+      }
+      \strng{namehash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{fullhash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{bibnamehash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{authorbibnamehash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{authornamehash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{authorfullhash}{9cbbafb9aa0db946305f5bbb00de5bad}
+      \strng{editorbibnamehash}{be035c221a5901365429152b22b2b5ff}
+      \strng{editornamehash}{be035c221a5901365429152b22b2b5ff}
+      \strng{editorfullhash}{069e801e5c6e3f56fd96d82df64fbb3f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Kronecker coefficients are the multiplicities in the tensor product decomposition of two irreducible representations of the symmetric group SnSnS\_n. They can also be interpreted as the coefficients of the expansion of the internal product of two Schur polynomials in the basis of Schur polynomials. We show that the problem KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} of computing Kronecker coefficients is very difficult. More specifically, we prove that KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} is \#PP\textbackslash mathrm\{P\}-hard and contained in the complexity class GapPGapP\textbackslash mathrm\{GapP\}. Formally, this means that the existence of a polynomial time algorithm for KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} is equivalent to the existence of a polynomial time algorithm for evaluating permanents.}
+      \field{booktitle}{{{DMTCS Proceedings}}}
+      \field{series}{{{DMTCS Proceedings}}}
+      \field{title}{The Complexity of Computing {{Kronecker}} Coefficients}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{DMTCS Proceedings vol. AJ, 20th Annual International Conference on Formal Power Series and Algebraic Combinatorics (FPSAC 2008)}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{357\bibrangedash 368}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.46298/dmtcs.3622
+      \endverb
+      \verb{file}
+      \verb C:\Users\dinko\Zotero\storage\QFXWHI4W\Bürgisser and Ikenmeyer - 2008 - The complexity of computing Kronecker coefficients.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://inria.hal.science/hal-01185157
+      \endverb
+      \verb{url}
+      \verb https://inria.hal.science/hal-01185157
+      \endverb
+      \keyw{computational complexity,Kronecker coefficients,representations of symmetric groups,tensor products}
+    \endentry
     \entry{copeland}{online}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=e15bc9549f8c86e391012f94a5db102b}{%
@@ -167,14 +244,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Let χρ, χλ, χμ be irreducible Sn characters and assume χρ appears in the Kronecker product χλ⊗χμ with maximal first part ρ1. Then ρ1 = |λ∩μ| = ∑min(λi, μi). A similar result holds for the maximal first column. We also give a recursive formula for χλ⊗χμ. As an application, we show that if n = λ1 + μ1 − ρ1, then 〈χλ⊗χμχρ〉sn = 〈χ(λ2, λ3, ...)⊗χ(μ2, μ3, ...), χ(ρ2, ρ3, ...) 〉sn − ρ1 where ⊗ denotes the outer tensor product. These results are applied to study the character ∑χλ⊗χλ where λ runs through the partitions with no more then k parts. This character is closely related to the polynomial identities of the algebra of k × k matrices.}
-      \field{day}{1}
-      \field{issn}{0021-8693}
+      \field{issn}{00218693}
       \field{journaltitle}{Journal of Algebra}
+      \field{langid}{english}
       \field{month}{1}
       \field{number}{1}
       \field{shortjournal}{Journal of Algebra}
-      \field{title}{On the {{Kronecker Product}} of \{\$\vphantom\}{{S}}\_n\$\vphantom\{\} {{Characters}}}
+      \field{title}{On the Kronecker Product of {$S_n$} Characters}
       \field{urlday}{18}
       \field{urlmonth}{4}
       \field{urlyear}{2025}
@@ -187,14 +263,11 @@
       \verb{doi}
       \verb 10.1006/jabr.1993.1008
       \endverb
-      \verb{file}
-      \verb C\:\\Users\\dinko\\Zotero\\storage\\9U848PQV\\Dvir - 1993 - On the Kronecker Product of Sn Characters.pdf;C\:\\Users\\dinko\\Zotero\\storage\\Q9FWRX7Z\\S0021869383710082.html
-      \endverb
       \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0021869383710082
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021869383710082
       \endverb
       \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0021869383710082
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021869383710082
       \endverb
     \endentry
     \entry{fulton}{book}{}
@@ -288,6 +361,25 @@
       \verb http://link.springer.com/10.1007/978-1-4612-0979-9
       \endverb
       \keyw{Abelian group,algebra,cohomology,cohomology group,finite group,group action,homology,Lie algebra,lie group,representation theory,Vector space}
+    \endentry
+    \entry{GAP4}{software}{}
+      \list{organization}{1}{%
+        {The GAP\textasciitilde Group}%
+      }
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GAP}} -- {{Groups}}, {{Algorithms}}, and {{Programming}}, {{Version}} 4.14.0}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gap-system.org
+      \endverb
+      \verb{url}
+      \verb https://www.gap-system.org
+      \endverb
     \endentry
     \entry{jamesRepresentationsCharactersGroups2001}{book}{}
       \name{author}{2}{}{%
@@ -681,6 +773,46 @@
       \verb http://arxiv.org/abs/2308.04360
       \endverb
       \keyw{Mathematics - Combinatorics,Mathematics - Group Theory}
+    \endentry
+    \entry{wang2021}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fe111972d3b386883f2bf3e75f885dbe}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ruoyu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fe111972d3b386883f2bf3e75f885dbe}
+      \strng{fullhash}{fe111972d3b386883f2bf3e75f885dbe}
+      \strng{bibnamehash}{fe111972d3b386883f2bf3e75f885dbe}
+      \strng{authorbibnamehash}{fe111972d3b386883f2bf3e75f885dbe}
+      \strng{authornamehash}{fe111972d3b386883f2bf3e75f885dbe}
+      \strng{authorfullhash}{fe111972d3b386883f2bf3e75f885dbe}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Symmetric Functions and Kronecker Coefficients}
+      \field{langid}{english}
+      \field{title}{Symmetric {{Functions}} and {{Kronecker Coefficients}}}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\dinko\Zotero\storage\36TMWFX5\Wang - 2021 - Symmetric Functions and Kronecker Coefficients.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-441279
+      \endverb
+      \verb{url}
+      \verb https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-441279
+      \endverb
     \endentry
     \entry{zhandryQuantumOracleClassification2015}{online}{}
       \name{author}{1}{}{%

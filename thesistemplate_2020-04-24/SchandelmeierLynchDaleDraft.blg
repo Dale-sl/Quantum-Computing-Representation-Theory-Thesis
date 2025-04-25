@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'SchandelmeierLynchDaleDraft.blg'
+[281] biber-MSWIN64:340> INFO - === 
+[378] Biber.pm:419> INFO - Reading 'SchandelmeierLynchDaleDraft.bcf'
+[599] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[621] Biber.pm:4419> INFO - Processing section 0
+[656] Biber.pm:4610> INFO - Looking for bibtex file 'thesisnew.bib' for section 0
+[715] bibtex.pm:1713> INFO - LaTeX decoding ...
+[769] bibtex.pm:1519> INFO - Found BibTeX data source 'thesisnew.bib'
+[1049] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1049] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1049] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1049] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1116] bbl.pm:660> INFO - Writing 'SchandelmeierLynchDaleDraft.bbl' with encoding 'UTF-8'
+[1129] bbl.pm:763> INFO - Output to SchandelmeierLynchDaleDraft.bbl
+[1129] Biber.pm:131> WARN - ISBN '978-1-4419-2869-6 978-1-4757-6804-6' in entry 'sagan' is invalid - run biber with '--validate_datamodel' for details.
+[1129] Biber.pm:131> WARN - ISBN '978-3-540-00539-1 978-1-4612-0979-9' in entry 'fulton2004' is invalid - run biber with '--validate_datamodel' for details.
+[1129] Biber.pm:133> INFO - WARNINGS: 2
