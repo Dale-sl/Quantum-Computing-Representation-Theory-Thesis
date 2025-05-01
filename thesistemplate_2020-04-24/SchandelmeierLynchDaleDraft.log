@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  24 APR 2025 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.24)  28 APR 2025 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -898,7 +898,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count389
@@ -1008,11 +1008,11 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count465
 )
-Package biblatex Info: Trying to load bibliography style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
 
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
@@ -1021,18 +1021,22 @@ File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count466
 \c@bbx:relatedtotal=\count467
 ))
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
 
-(c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -1100,20 +1104,20 @@ File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 )
 \openout1 = `SchandelmeierLynchDaleDraft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 228.
-LaTeX Font Info:    ... okay on input line 228.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 231.
+LaTeX Font Info:    ... okay on input line 231.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1152,21 +1156,21 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'SchandelmeierLynchDaleDraft.bbl' found.
 
 (./SchandelmeierLynchDaleDraft.bbl)
-Package biblatex Info: Reference section=0 on input line 228.
-Package biblatex Info: Reference segment=0 on input line 228.
-LaTeX Info: Redefining \microtypecontext on input line 228.
-Package microtype Info: Applying patch `item' on input line 228.
-Package microtype Info: Applying patch `toc' on input line 228.
-Package microtype Info: Applying patch `eqnum' on input line 228.
-Package microtype Info: Applying patch `footnote' on input line 228.
-Package microtype Info: Applying patch `verbatim' on input line 228.
+Package biblatex Info: Reference section=0 on input line 231.
+Package biblatex Info: Reference segment=0 on input line 231.
+LaTeX Info: Redefining \microtypecontext on input line 231.
+Package microtype Info: Applying patch `item' on input line 231.
+Package microtype Info: Applying patch `toc' on input line 231.
+Package microtype Info: Applying patch `eqnum' on input line 231.
+Package microtype Info: Applying patch `footnote' on input line 231.
+Package microtype Info: Applying patch `verbatim' on input line 231.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 228.
+LaTeX Info: Redefining \showhyphens on input line 231.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1211,9 +1215,6 @@ Non-PDF special ignored!
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-
-LaTeX Warning: Marginpar on page 4 moved.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1275,7 +1276,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-Underfull \vbox (badness 1762) has occurred while \output is active []
+Underfull \vbox (badness 7221) has occurred while \output is active []
 
 
 
@@ -1296,6 +1297,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1304,7 +1308,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[13
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1341,7 +1347,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Overfull \hbox (3.35336pt too wide) in paragraph at lines 721--721
+Overfull \hbox (3.35336pt too wide) in paragraph at lines 756--756
 []\OT1/cmr/bx/n/17.28 (-20) Representation The-ory of the Sym-met-ric Group 
  []
 
@@ -1363,16 +1369,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-Overfull \hbox (9.40465pt too wide) in paragraph at lines 787--790
+Overfull \hbox (9.40465pt too wide) in paragraph at lines 825--828
 \OT1/cmr/m/n/12 (-20) If we per-form the ac-tion $(12)(34) \OMS/cmsy/m/n/12 ^^A
  \OML/cmm/m/it/12 T$ \OT1/cmr/m/n/12 (-20) we now see that $\OML/cmm/m/it/12 ^^
 [\OT1/cmr/m/n/12 (-20) (143)\OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 (-20) = (12)
 (34)(143)(12)(34) =
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1392,6 +1394,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1428,7 +1433,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-Overfull \hbox (23.59337pt too wide) detected at line 1028
+Overfull \hbox (23.59337pt too wide) detected at line 1064
 [] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 f\OML
 /cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 q \OMS/cmsy/m/n/12 ^^A \
 OML/cmm/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [] [](\OML/cmm/m/it/12 q\
@@ -1441,7 +1446,19 @@ m/m/it/12 T\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = [](\OML/cmm/m/it/12 q[]\OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1040--1042
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
 
  []
 
@@ -1453,19 +1470,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1502,7 +1507,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [31]
-Overfull \hbox (31.36456pt too wide) detected at line 1255
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
+Overfull \hbox (31.36456pt too wide) detected at line 1291
 []
  []
 
@@ -1514,7 +1528,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
+[33]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1523,14 +1537,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33] [34
-
-]
+[34]
 Chapter 2.
 \c@algpx@indentEndPage-0=\count495
 \c@algpx@indentEndPage-1=\count496
 \c@algpx@indentEndPage-2=\count497
-[35]
+[35
+
+]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1541,10 +1560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [36]
 Chapter 3.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37
+[37
 
 ]
 
@@ -1557,16 +1573,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [38]
 
-LaTeX Warning: Marginpar on page 39 moved.
-
-
-LaTeX Warning: Marginpar on page 39 moved.
-
-
-Underfull \vbox (badness 3312) has occurred while \output is active []
-
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1575,6 +1581,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [39]
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1593,9 +1602,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41]
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1615,12 +1621,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [43]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-525.
+591.
  (c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1525.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1591.
 
 
 
@@ -1641,15 +1647,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [45]
-Overfull \hbox (27.37932pt too wide) in paragraph at lines 1609--1612
-\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 (-20) . This is the num-ber of parts in $
-\OML/cmm/m/it/12 ^^U$\OT1/cmr/m/it/12 (-20) . Fur-ther-more write $\OML/cmm/m/i
-t/12 ^^U \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 ^^V \OT1/cmr/m/n/12 (-20) = ([](\O
-ML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 (-20) )\OML/cmm/m/it/12 ; []\OT1/cmr
-/m/n/12 (-20) (\OML/cmm/m/it/12 ^^U[]; ^^V[]\OT1/cmr/m/n/12 (-20) )\OML/cmm/m/i
-t/12 ; [] \OT1/cmr/m/n/12 (-20) )$\OT1/cmr/m/it/12 (-20) ,
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1677,6 +1674,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1710,24 +1710,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (2.21446pt too wide) in paragraph at lines 2007--2007
-[][]\OT1/cmr/m/it/12 (-20) GAP -- Groups, Al-go-rithms, and Pro-gram-ming, Ver-
-sion 4.14.0 \OT1/cmr/m/n/12 (-20) (2024). The GAP~Group.
- []
-
-
-Overfull \hbox (36.78004pt too wide) in paragraph at lines 2007--2007
-\OT1/cmtt/m/n/12 representations -[] and -[] characters -[] of -[] groups / 9F5
-25E6ACAC7FFADFDBDECE98C115F40$
- []
-
-[53
+[52] [53
 
 
 ]
@@ -1739,7 +1722,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54] (./SchandelmeierLynchDaleDraft.aux)
+[54]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[55] (./SchandelmeierLynchDaleDraft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -1750,13 +1742,13 @@ Package logreq Info: Writing requests to 'SchandelmeierLynchDaleDraft.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33167 strings out of 474927
- 677850 string characters out of 5763541
- 1962785 words of memory out of 5000000
- 53941 multiletter control sequences out of 15000+600000
- 578947 words of font info for 209 fonts, out of 8000000 for 9000
+ 32944 strings out of 474927
+ 673879 string characters out of 5763541
+ 1956785 words of memory out of 5000000
+ 53722 multiletter control sequences out of 15000+600000
+ 578686 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,20n,101p,1952b,1507s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 96i,20n,101p,1952b,1657s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-d
@@ -1774,10 +1766,10 @@ ts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 t12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
 pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on SchandelmeierLynchDaleDraft.pdf (62 pages, 403687 bytes).
+Output written on SchandelmeierLynchDaleDraft.pdf (63 pages, 407569 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  37389 words of extra memory for PDF output out of 42996 (max. 10000000)
 

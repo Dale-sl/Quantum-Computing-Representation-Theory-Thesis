@@ -18,33 +18,29 @@
 
 
 \refsection{0}
-  \datalist[entry]{nyt/global//global/global}
+  \datalist[entry]{nty/global//global/global}
     \entry{bhattacharjeeWreathProducts1998}{incollection}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=a5689859902cb7d1367618056643e82b}{%
+        {{hash=a5689859902cb7d1367618056643e82b}{%
            family={Bhattacharjee},
            familyi={B\bibinitperiod},
            given={Meenaxi},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cbaea8583636fae06ba6f20e6d22c740}{%
+           giveni={M\bibinitperiod}}}%
+        {{hash=cbaea8583636fae06ba6f20e6d22c740}{%
            family={Macpherson},
            familyi={M\bibinitperiod},
            given={Dugald},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=41ffdd85db3a46699f7be8b071d4c5b5}{%
+           giveni={D\bibinitperiod}}}%
+        {{hash=41ffdd85db3a46699f7be8b071d4c5b5}{%
            family={Möller},
            familyi={M\bibinitperiod},
            given={Rögnvaldur\bibnamedelima G.},
-           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5b6c8880ad3a62af29d8ab3651adf847}{%
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=5b6c8880ad3a62af29d8ab3651adf847}{%
            family={Neumann},
            familyi={N\bibinitperiod},
            given={Peter\bibnamedelima M.},
-           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {Berlin, Heidelberg}%
@@ -60,8 +56,6 @@
       \strng{authorfullhash}{49e907beaa314d19208968c9c9447dd4}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Notes on {{Infinite Permutation Groups}}}
@@ -92,18 +86,16 @@
     \endentry
     \entry{burgisser2008}{inproceedings}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=db24e25ecb58722cbf1fcc3eb766e5e1}{%
+        {{hash=db24e25ecb58722cbf1fcc3eb766e5e1}{%
            family={Bürgisser},
            familyi={B\bibinitperiod},
            given={Peter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3c2895b8a67c4907449d5b847a115bb3}{%
+           giveni={P\bibinitperiod}}}%
+        {{hash=3c2895b8a67c4907449d5b847a115bb3}{%
            family={Ikenmeyer},
            familyi={I\bibinitperiod},
            given={Christian},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
+           giveni={C\bibinitperiod}}}%
       }
       \name{editor}{4}{}{%
         {{hash=9552a63e1d12a152ac9b6d0ad4f4374a}{%
@@ -136,8 +128,6 @@
       \strng{editorfullhash}{069e801e5c6e3f56fd96d82df64fbb3f}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Kronecker coefficients are the multiplicities in the tensor product decomposition of two irreducible representations of the symmetric group SnSnS\_n. They can also be interpreted as the coefficients of the expansion of the internal product of two Schur polynomials in the basis of Schur polynomials. We show that the problem KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} of computing Kronecker coefficients is very difficult. More specifically, we prove that KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} is \#PP\textbackslash mathrm\{P\}-hard and contained in the complexity class GapPGapP\textbackslash mathrm\{GapP\}. Formally, this means that the existence of a polynomial time algorithm for KRONCOEFFKRONCOEFF\textbackslash mathrm\{KRONCOEFF\} is equivalent to the existence of a polynomial time algorithm for evaluating permanents.}
@@ -169,18 +159,16 @@
     \endentry
     \entry{copeland}{online}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=e15bc9549f8c86e391012f94a5db102b}{%
+        {{hash=e15bc9549f8c86e391012f94a5db102b}{%
            family={Copeland},
            familyi={C\bibinitperiod},
            given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e3558b34cc16ac6a4ce35d5f3f288a38}{%
+           giveni={D\bibinitperiod}}}%
+        {{hash=e3558b34cc16ac6a4ce35d5f3f288a38}{%
            family={Pommersheim},
            familyi={P\bibinitperiod},
            given={Jamie},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{428cf87b15868740f08fd6531db75c7f}
       \strng{fullhash}{428cf87b15868740f08fd6531db75c7f}
@@ -190,8 +178,6 @@
       \strng{authorfullhash}{428cf87b15868740f08fd6531db75c7f}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We study the query complexity of quantum learning problems in which the oracles form a group \$G\$ of unitary matrices. In the simplest case, one wishes to identify the oracle, and we find a description of the optimal success probability of a \$t\$-query quantum algorithm in terms of group characters. As an application, we show that \$\textbackslash Omega(n)\$ queries are required to identify a random permutation in \$S\_n\$. More generally, suppose \$H\$ is a fixed subgroup of the group \$G\$ of oracles, and given access to an oracle sampled uniformly from \$G\$, we want to learn which coset of \$H\$ the oracle belongs to. We call this problem coset identification and it generalizes a number of well-known quantum algorithms including the Bernstein-Vazirani problem, the van Dam problem and finite field polynomial interpolation. We provide character-theoretic formulas for the optimal success probability achieved by a \$t\$-query algorithm for this problem. One application involves the Heisenberg group and provides a family of problems depending on \$n\$ which require \$n+1\$ queries classically and only \$1\$ query quantumly.}
@@ -225,12 +211,11 @@
     \endentry
     \entry{dvir1993}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=312398a9aa96291ee0d396cec817e3d6}{%
+        {{hash=312398a9aa96291ee0d396cec817e3d6}{%
            family={Dvir},
            familyi={D\bibinitperiod},
            given={Y.},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
+           giveni={Y\bibinitperiod}}}%
       }
       \strng{namehash}{312398a9aa96291ee0d396cec817e3d6}
       \strng{fullhash}{312398a9aa96291ee0d396cec817e3d6}
@@ -240,8 +225,6 @@
       \strng{authorfullhash}{312398a9aa96291ee0d396cec817e3d6}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00218693}
@@ -272,12 +255,11 @@
     \endentry
     \entry{fulton}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=205bfcbd8ec5b58401ee1d5cbd94a5de}{%
+        {{hash=205bfcbd8ec5b58401ee1d5cbd94a5de}{%
            family={Fulton},
            familyi={F\bibinitperiod},
            given={William},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
+           giveni={W\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Cambridge University Press}%
@@ -290,8 +272,6 @@
       \strng{authorfullhash}{205bfcbd8ec5b58401ee1d5cbd94a5de}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Young tableaux are fillings of the boxes of diagrams that correspond to partitions with positive integers, that are strictly increasing down columns and weakly increasing along rows. The aim of this book is to develop the combinatorics of Young tableaux and to show them in action in the algebra of symmetric functions, the representations of the symmetric and general linear groups, and the geometry of flag varieties. Many of these applications have not been available in book form.}
@@ -310,18 +290,16 @@
     \endentry
     \entry{fulton2004}{book}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=205bfcbd8ec5b58401ee1d5cbd94a5de}{%
+        {{hash=205bfcbd8ec5b58401ee1d5cbd94a5de}{%
            family={Fulton},
            familyi={F\bibinitperiod},
            given={William},
-           giveni={W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=38017df6aee91d3bb1c985bade8eb930}{%
+           giveni={W\bibinitperiod}}}%
+        {{hash=38017df6aee91d3bb1c985bade8eb930}{%
            family={Harris},
            familyi={H\bibinitperiod},
            given={Joe},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {New York, NY}%
@@ -337,8 +315,6 @@
       \strng{authorfullhash}{dc874865e376c50bda90a6157bd8e260}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-00539-1 978-1-4612-0979-9}
@@ -368,8 +344,6 @@
       }
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labeltitlesource}{title}
       \field{title}{{{GAP}} -- {{Groups}}, {{Algorithms}}, and {{Programming}}, {{Version}} 4.14.0}
       \field{year}{2024}
@@ -381,20 +355,18 @@
       \verb https://www.gap-system.org
       \endverb
     \endentry
-    \entry{jamesRepresentationsCharactersGroups2001}{book}{}
+    \entry{james2001}{book}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=edd39085ad668628baaaf4fb67477bcb}{%
+        {{hash=edd39085ad668628baaaf4fb67477bcb}{%
            family={James},
            familyi={J\bibinitperiod},
            given={Gordon},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=38f3d43a3a8e23af3e1e75dc77c7ae1c}{%
+           giveni={G\bibinitperiod}}}%
+        {{hash=38f3d43a3a8e23af3e1e75dc77c7ae1c}{%
            family={Liebeck},
            familyi={L\bibinitperiod},
            given={Martin},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
+           giveni={M\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {Cambridge}%
@@ -410,8 +382,6 @@
       \strng{authorfullhash}{9d3a77fc723d54e622f7bd440e6a029d}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This book provides a modern introduction to the representation theory of finite groups. Now in its second edition, the authors have revised the text and added much new material. The theory is developed in terms of modules, since this is appropriate for more advanced work, but considerable emphasis is placed upon constructing characters. Included here are the character tables of all groups of order less than 32, and all simple groups of order less than 1000. Applications covered include Burnside's paqb theorem, the use of character theory in studying subgroup structure and permutation groups, and how to use representation theory to investigate molecular vibration. Each chapter features a variety of exercises, with full solutions provided at the end of the book. This will be ideal as a course text in representation theory, and in view of the applications, will be of interest to chemists and physicists as well as mathematicians.}
@@ -424,7 +394,6 @@
       \field{year}{2001}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \true{nocite}
       \verb{doi}
       \verb 10.1017/CBO9780511814532
       \endverb
@@ -432,26 +401,24 @@
       \verb C\:\\Users\\dinko\\Zotero\\storage\\WJ22Y34R\\James and Liebeck - 2001 - Representations and Characters of Groups.pdf;C\:\\Users\\dinko\\Zotero\\storage\\UA6K3VVB\\9F525E6ACAC7FFADFDBDECE98C115F40.html
       \endverb
       \verb{urlraw}
-      \verb https://www.cambridge.org/core/books/representations-and-characters-of-groups/9F525E6ACAC7FFADFDBDECE98C115F40
+      \verb https://www.cambridge.org/core/books/representations-and-characters-of-groups/
       \endverb
       \verb{url}
-      \verb https://www.cambridge.org/core/books/representations-and-characters-of-groups/9F525E6ACAC7FFADFDBDECE98C115F40
+      \verb https://www.cambridge.org/core/books/representations-and-characters-of-groups/
       \endverb
     \endentry
     \entry{spiga23}{online}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=8f74283456200e5aac696c1483698842}{%
+        {{hash=8f74283456200e5aac696c1483698842}{%
            family={Mecenero},
            familyi={M\bibinitperiod},
            given={Giovanni},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=10824d5d43b252aba7b59d9266409807}{%
+           giveni={G\bibinitperiod}}}%
+        {{hash=10824d5d43b252aba7b59d9266409807}{%
            family={Spiga},
            familyi={S\bibinitperiod},
            given={Pablo},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
+           giveni={P\bibinitperiod}}}%
       }
       \strng{namehash}{1696fa9a28bbe10a45059c440a2e3d2f}
       \strng{fullhash}{1696fa9a28bbe10a45059c440a2e3d2f}
@@ -461,8 +428,6 @@
       \strng{authorfullhash}{1696fa9a28bbe10a45059c440a2e3d2f}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Given two positive integers \$n\$ and \$k\$, we obtain a formula for the base size of the symmetric group of degree \$n\$ in its action on \$k\$-subsets. Then, we use this formula to compute explicitly the base size for each \$n\$ and for each \$k\textbackslash le 14\$.}
@@ -498,18 +463,16 @@
     \endentry
     \entry{morris21}{online}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=45cd75026875ce094fb3cb370e6aaf95}{%
+        {{hash=45cd75026875ce094fb3cb370e6aaf95}{%
            family={Morris},
            familyi={M\bibinitperiod},
            given={Joy},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=10824d5d43b252aba7b59d9266409807}{%
+           giveni={J\bibinitperiod}}}%
+        {{hash=10824d5d43b252aba7b59d9266409807}{%
            family={Spiga},
            familyi={S\bibinitperiod},
            given={Pablo},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
+           giveni={P\bibinitperiod}}}%
       }
       \strng{namehash}{659e490e11d409b3935e58c7c5a7f837}
       \strng{fullhash}{659e490e11d409b3935e58c7c5a7f837}
@@ -519,8 +482,6 @@
       \strng{authorfullhash}{659e490e11d409b3935e58c7c5a7f837}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Given three positive integers \$n,a,b\$ with \$n=ab\$, we determine the base size of the symmetric group and of the alternating group of degree \$n\$ in their action on the set of partitions into \$b\$ parts having cardinality \$a\$.}
@@ -556,18 +517,16 @@
     \endentry
     \entry{nielsen2010}{book}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=afe17482fc813e497188aee3b3783879}{%
+        {{hash=afe17482fc813e497188aee3b3783879}{%
            family={Nielsen},
            familyi={N\bibinitperiod},
            given={Michael\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=415ddff2f58b25977b1a2dedf18f4501}{%
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=415ddff2f58b25977b1a2dedf18f4501}{%
            family={Chuang},
            familyi={C\bibinitperiod},
            given={Isaac\bibnamedelima L.},
-           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Cambridge University Press}%
@@ -580,8 +539,6 @@
       \strng{authorfullhash}{456599bb4a61c2e997e2a7e1a21b25b4}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{One of the most cited books in physics of all time, Quantum Computation and Quantum Information remains the best textbook in this exciting field of science. This 10th anniversary edition includes an introduction from the authors setting the work in context. This comprehensive textbook describes such remarkable effects as fast quantum algorithms, quantum teleportation, quantum cryptography and quantum error-correction. Quantum mechanics and computer science are introduced before moving on to describe what a quantum computer is, how it can be used to solve problems faster than 'classical' computers and its real-world implementation. It concludes with an in-depth treatment of quantum information. Containing a wealth of figures and exercises, this well-known textbook is ideal for courses on the subject, and will interest beginning graduate students and researchers in physics, computer science, mathematics, and electrical engineering.}
@@ -612,12 +569,11 @@
     \endentry
     \entry{sagan}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2b1601ffc02a16c070aba1cb8902d4a6}{%
+        {{hash=2b1601ffc02a16c070aba1cb8902d4a6}{%
            family={Sagan},
            familyi={S\bibinitperiod},
            given={Bruce\bibnamedelima E.},
-           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {New York, NY}%
@@ -633,8 +589,6 @@
       \strng{authorfullhash}{2b1601ffc02a16c070aba1cb8902d4a6}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-4419-2869-6 978-1-4757-6804-6}
@@ -663,15 +617,13 @@
     \endentry
     \entry{valle24}{online}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,useprefix=false,hash=8261a85395210b29ae7504a2e99ab509}{%
+        {{useprefix=false,hash=8261a85395210b29ae7504a2e99ab509}{%
            family={Valle},
            familyi={V\bibinitperiod},
            given={Coen},
            giveni={C\bibinitperiod},
-           givenun=0,
            prefix={del},
-           prefixi={d\bibinitperiod},
-           prefixun=0}}%
+           prefixi={d\bibinitperiod}}}%
       }
       \strng{namehash}{8261a85395210b29ae7504a2e99ab509}
       \strng{fullhash}{8261a85395210b29ae7504a2e99ab509}
@@ -681,8 +633,6 @@
       \strng{authorfullhash}{8261a85395210b29ae7504a2e99ab509}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A base for a permutation group \$G\$ acting on a set \$\textbackslash Omega\$ is a sequence \$\textbackslash mathcal\{B\}\$ of points of \$\textbackslash Omega\$ such that the pointwise stabiliser \$G\_\{\textbackslash mathcal\{B\}\}\$ is trivial. The base size of \$G\$ is the size of a smallest base for \$G\$. We derive a character theoretic formula for the base size of a class of groups admitting a certain kind of irreducible character. Moreover, we prove a formula for enumerating the non-equivalent bases for \$G\$ of size \$l\textbackslash in\textbackslash mathbb\{N\}\$. As a consequence of our results, we present a very short, entirely algebraic proof of the formula of Mecenero and Spiga\textasciitilde\textbackslash cite\{MeSp\} for the base size of the symmetric group \$\textbackslash mathrm\{S\}\_n\$ acting on the \$k\$-element subsets of \$\textbackslash\{1,2,3,\textbackslash dots,n\textbackslash\}\$. Our methods also provide a formula for the base size of many product-type permutation groups.}
@@ -716,21 +666,18 @@
     \endentry
     \entry{valle23}{online}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,useprefix=false,hash=8261a85395210b29ae7504a2e99ab509}{%
+        {{useprefix=false,hash=8261a85395210b29ae7504a2e99ab509}{%
            family={Valle},
            familyi={V\bibinitperiod},
            given={Coen},
            giveni={C\bibinitperiod},
-           givenun=0,
            prefix={del},
-           prefixi={d\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=6665290a42c175bd8f801ee690d777db}{%
+           prefixi={d\bibinitperiod}}}%
+        {{hash=6665290a42c175bd8f801ee690d777db}{%
            family={Roney-Dougal},
            familyi={R\bibinithyphendelim D\bibinitperiod},
            given={Colva\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \strng{namehash}{f2c8e38a82420c3e881cf21797809a57}
       \strng{fullhash}{f2c8e38a82420c3e881cf21797809a57}
@@ -740,8 +687,6 @@
       \strng{authorfullhash}{f2c8e38a82420c3e881cf21797809a57}
       \field{sortinit}{V}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A base for a permutation group \$G\$ acting on a set \$\textbackslash Omega\$ is a subset \$\textbackslash mathcal\{B\}\$ of \$\textbackslash Omega\$ such that the pointwise stabiliser \$G\_\{(\textbackslash mathcal\{B\})\}\$ is trivial. Let \$n\$ and \$r\$ be positive integers with \$n{$>$}2r\$. The symmetric and alternating groups \$\textbackslash mathrm\{S\}\_n\$ and \$\textbackslash mathrm\{A\}\_n\$ admit natural primitive actions on the set of \$r\$-element subsets of \$\textbackslash\{1,2,\textbackslash dots, n\textbackslash\}\$. Building on work of Halasi [6], we provide explicit expressions for the base sizes of all of these actions, and hence determine the base size of all primitive actions of \$\textbackslash mathrm\{S\}\_n\$ and \$\textbackslash mathrm\{A\}\_n\$.}
@@ -776,12 +721,11 @@
     \endentry
     \entry{wang2021}{book}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fe111972d3b386883f2bf3e75f885dbe}{%
+        {{hash=fe111972d3b386883f2bf3e75f885dbe}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Ruoyu},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
+           giveni={R\bibinitperiod}}}%
       }
       \strng{namehash}{fe111972d3b386883f2bf3e75f885dbe}
       \strng{fullhash}{fe111972d3b386883f2bf3e75f885dbe}
@@ -791,8 +735,6 @@
       \strng{authorfullhash}{fe111972d3b386883f2bf3e75f885dbe}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Symmetric Functions and Kronecker Coefficients}
@@ -816,12 +758,11 @@
     \endentry
     \entry{zhandryQuantumOracleClassification2015}{online}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=de90e6188942e1336d313c4670df52bf}{%
+        {{hash=de90e6188942e1336d313c4670df52bf}{%
            family={Zhandry},
            familyi={Z\bibinitperiod},
            given={Mark},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
+           giveni={M\bibinitperiod}}}%
       }
       \strng{namehash}{de90e6188942e1336d313c4670df52bf}
       \strng{fullhash}{de90e6188942e1336d313c4670df52bf}
@@ -831,8 +772,6 @@
       \strng{authorfullhash}{de90e6188942e1336d313c4670df52bf}
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Quantum Oracle Classification (QOC) problem is to classify a function, given only quantum black box access, into one of several classes without necessarily determining the entire function. Generally, QOC captures a very wide range of problems in quantum query complexity. However, relatively little is known about many of these problems. In this work, we analyze the a subclass of the QOC problems where there is a group structure. That is, suppose the range of the unknown function A is a commutative group G, which induces a commutative group law over the entire function space. Then we consider the case where A is drawn uniformly at random from some subgroup A of the function space. Moreover, there is a homomorpism f on A, and the goal is to determine f(A). This class of problems is very general, and covers several interesting cases, such as oracle evaluation; polynomial interpolation, evaluation, and extrapolation; and parity. These problems are important in the study of message authentication codes in the quantum setting, and may have other applications. We exactly characterize the quantum query complexity of every instance of QOC with group structure in terms of a particular counting problem. That is, we provide an algorithm for this general class of problems whose success probability is determined by the solution to the counting problem, and prove its exact optimality. Unfortunately, solving this counting problem in general is a non-trivial task, and we resort to analyzing special cases. Our bounds unify some existing results, such as the existing oracle evaluation and parity bounds. In the case of polynomial interpolation and evaluation, our bounds give new results for secret sharing and information theoretic message authentication codes in the quantum setting.}

@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("reedthesis" "12pt" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("url" "hyphens") ("cleveref" "capitalise") ("biblatex" "style=authoryear" "backend=biber" "useprefix=false" "sortcites=true") ("microtype" "final")))
+                     '(("url" "hyphens") ("cleveref" "capitalise") ("biblatex" "style=numeric" "backend=biber" "useprefix=false" "sortcites=true") ("microtype" "final")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "url")
@@ -176,9 +176,11 @@
     "res"
     "irr"
     "stab"
+    "prob"
     "acts")
    (LaTeX-add-labels
     "circuit"
+    "charprop"
     "motivation"
     "lem1"
     "lem2"
